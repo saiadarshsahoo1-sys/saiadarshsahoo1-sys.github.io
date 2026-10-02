@@ -25,15 +25,18 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .h2{@apply text-3xl sm:text-4xl font-bold text-white text-center mb-2}
 .sub{@apply text-slate-400 text-sm text-center max-w-2xl mx-auto mb-8}
 .chip{@apply text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 whitespace-nowrap}
-.btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition}
+.btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30}
 .btn-p{@apply btn text-white bg-gradient-to-r from-blue-500 to-violet-500 hover:opacity-90}
 .btn-g{@apply btn glass text-slate-200 hover:text-white}
 .inp{@apply w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
 .lbl{@apply block text-xs font-medium text-slate-300 mb-1}
-.nl{@apply px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors}
+.nl{@apply px-3 py-2 text-sm font-medium text-slate-300 rounded-lg transition duration-200;--c:56 189 248}
+.nl:hover,.nl.on{color:#fff;transform:translateY(-2px);background:rgb(var(--c)/.14);box-shadow:0 0 16px rgb(var(--c)/.5),inset 0 -2px 0 rgb(var(--c))}
+.nl.on{box-shadow:0 0 12px rgb(var(--c)/.35),inset 0 -2px 0 rgb(var(--c))}
 .gt{background:linear-gradient(135deg,#38bdf8,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.tab{@apply whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700}
-.tab.on{@apply bg-blue-500 text-white}
+.tab{@apply whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 transition duration-200}
+.tab:hover{@apply text-white -translate-y-0.5;box-shadow:0 0 14px rgb(59 130 246/.5);background:#1e3a8a55}
+.tab.on{@apply bg-blue-500 text-white;box-shadow:0 0 16px rgb(59 130 246/.55)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
 </style>
 </head>
@@ -216,11 +219,14 @@ const esc=s=>String(s==null?'':s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;'
 document.querySelectorAll('.ca-status').forEach(e=>e.textContent=STATUS);
 
 /* nav */
-const NAV=[['about','About'],['education','Education'],['skills','Skills'],['projects','Projects'],['testimonials','Recommendations'],['audit-simulation','Simulation'],['contact','Contact']];
-$('nav-d').innerHTML=NAV.map(n=>`<a class="nl" href="#${n[0]}">${n[1]}</a>`).join('');
-$('nav-m').innerHTML=NAV.map(n=>`<a class="nl block" href="#${n[0]}">${n[1]}</a>`).join('');
+const NAV=[['about','About','56 189 248'],['education','Education','167 139 250'],['skills','Skills','52 211 153'],['projects','Projects','96 165 250'],['testimonials','Recommendations','251 191 36'],['audit-simulation','Simulation','244 114 182'],['contact','Contact','45 212 191']];
+$('nav-d').innerHTML=NAV.map(n=>`<a class="nl" style="--c:${n[2]}" href="#${n[0]}">${n[1]}</a>`).join('');
+$('nav-m').innerHTML=NAV.map(n=>`<a class="nl block" style="--c:${n[2]}" href="#${n[0]}">${n[1]}</a>`).join('');
 $('burger').onclick=()=>{const m=$('nav-m');m.classList.toggle('hidden');$('burger').setAttribute('aria-expanded',!m.classList.contains('hidden'))};
 $('nav-m').onclick=e=>{if(e.target.tagName==='A')$('nav-m').classList.add('hidden')};
+
+/* highlight current section in the nav */
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});NAV.forEach(n=>{const el=$(n[0]);if(el)io.observe(el)})}
 
 /* snapshot */
 $('snap').innerHTML=[['CA Intermediate','Group 2 passed','Exemption in Costing (71)'],['CA Intermediate','Group 1','Result awaited'],['B.Com (Hons.)','CGPA 7.0 / 10','SSSIHL, 2021\u201324'],['Class XII (CBSE)','83.2%','2020'],['Class X (ICSE)','79.6%','2018']]
