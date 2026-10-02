@@ -76,7 +76,7 @@
             transition: all 0.3s ease;
         }
         .glass-panel-hover:hover {
-            background: rgba(26, 36, 61, 0.8);
+            background: rgba(26, 36, 61, 0.85);
             border-color: rgba(59, 130, 246, 0.4);
             transform: translateY(-3px);
             box-shadow: 0 10px 25px -8px rgba(59, 130, 246, 0.25);
@@ -325,159 +325,163 @@
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Skills &amp; Technology Stack</h2>
-                    <p class="text-slate-400 text-sm max-w-xl mx-auto">Categorized competencies and tools arranged in a clean, filterable stack format.</p>
+                    <p class="text-slate-400 text-sm max-w-2xl mx-auto">All skills and tools arranged side-by-side according to their domain categories.</p>
                 </div>
 
                 <!-- Skill Filter Tabs -->
-                <div class="flex justify-center mb-12 flex-wrap gap-2">
+                <div class="flex justify-center mb-10 flex-wrap gap-2">
                     <button onclick="filterSkills('all')" class="skill-tab active px-5 py-2.5 rounded-xl text-xs font-semibold bg-accentBlue text-white shadow-lg transition-all" data-category="all">
-                        All Categories
+                        All Skills
                     </button>
                     <button onclick="filterSkills('audit')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="audit">
-                        <i class="fa-solid fa-file-invoice-dollar mr-1 text-cyan-400"></i> Audit &amp; Accounting
+                        <i class="fa-solid fa-file-invoice-dollar mr-1 text-cyan-400"></i> Audit &amp; Assurance
                     </button>
                     <button onclick="filterSkills('tax')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="tax">
                         <i class="fa-solid fa-scale-balanced mr-1 text-purple-400"></i> Taxation
                     </button>
                     <button onclick="filterSkills('technology')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="technology">
-                        <i class="fa-solid fa-laptop-code mr-1 text-emerald-400"></i> Technology &amp; Automation
+                        <i class="fa-solid fa-laptop-code mr-1 text-emerald-400"></i> Tech &amp; Automation
                     </button>
                     <button onclick="filterSkills('business')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="business">
                         <i class="fa-solid fa-briefcase mr-1 text-blue-400"></i> Business &amp; Leadership
                     </button>
                 </div>
 
-                <!-- Dynamic Categorized Stack Groups -->
-                <div id="skills-stack-container" class="space-y-12">
+                <!-- Side-By-Side Category Grid Matrix -->
+                <div id="skills-matrix-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
 
-                    <!-- Group 1: Audit & Accounting -->
-                    <div class="skill-group" data-category="audit">
-                        <div class="flex items-center gap-3 mb-6 border-b border-slate-800 pb-3">
-                            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-sm font-bold">
-                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <!-- Column 1: Audit & Assurance -->
+                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="audit">
+                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
+                            <div class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-shield-halved"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Audit &amp; Financial Assurance</h3>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Audit &amp; Assurance</h3>
+                                <span class="text-[11px] text-cyan-400 font-medium">Core Financial Controls</span>
+                            </div>
                         </div>
 
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-cyan-400 font-bold text-sm block">Auditing Standards (SA)</span>
-                                <span class="text-xs text-slate-300 block mt-1">Voucher verification, sampling, audit trails &amp; SA compliance</span>
+                        <div class="space-y-3">
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-cyan-300 font-bold text-xs block">Auditing Standards (SA)</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Voucher verification, sampling, &amp; audit trails</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-cyan-400 font-bold text-sm block">Financial Accounting &amp; Ind AS</span>
-                                <span class="text-xs text-slate-300 block mt-1">Financial statements, Schedule III, &amp; balance sheet reconciliations</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-cyan-300 font-bold text-xs block">Financial Accounting (Ind AS)</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Schedule III statements &amp; ledger reconciliations</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-cyan-400 font-bold text-sm block">Cost &amp; Management Accounting</span>
-                                <span class="text-xs text-slate-300 block mt-1">Variance analysis, marginal costing &amp; budget control (CA Inter Exemption)</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-cyan-300 font-bold text-xs block">Cost &amp; Management Accounting</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Variance analysis &amp; costing (Exemption in Inter)</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-cyan-400 font-bold text-sm block">Financial Ratio Evaluation</span>
-                                <span class="text-xs text-slate-300 block mt-1">Profitability, liquidity, turnover &amp; capital structure analysis</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-cyan-300 font-bold text-xs block">Financial Ratio Analysis</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Liquidity, turnover, &amp; profitability evaluation</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Group 2: Taxation -->
-                    <div class="skill-group" data-category="tax">
-                        <div class="flex items-center gap-3 mb-6 border-b border-slate-800 pb-3">
-                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-sm font-bold">
+                    <!-- Column 2: Direct & Indirect Taxation -->
+                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="tax">
+                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
+                            <div class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-sm font-bold">
                                 <i class="fa-solid fa-scale-balanced"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Direct &amp; Indirect Taxation</h3>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Direct &amp; Indirect Tax</h3>
+                                <span class="text-[11px] text-purple-400 font-medium">Statutory Compliance</span>
+                            </div>
                         </div>
 
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-purple-400 font-bold text-sm block">Direct Tax &amp; TDS</span>
-                                <span class="text-xs text-slate-300 block mt-1">Income tax computations, TDS applicability &amp; Sec 194C/194J compliance</span>
+                        <div class="space-y-3">
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-purple-300 font-bold text-xs block">Direct Taxation &amp; TDS</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Tax computations &amp; Sec 194C/194J compliance</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-purple-400 font-bold text-sm block">GST &amp; Indirect Taxation</span>
-                                <span class="text-xs text-slate-300 block mt-1">GST returns, Input Tax Credit (ITC) reconciliation &amp; GSTR-2B verification</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-purple-300 font-bold text-xs block">GST &amp; Indirect Taxation</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">GST return provisions &amp; ITC GSTR-2B verification</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-purple-400 font-bold text-sm block">Tax Compliance Workflows</span>
-                                <span class="text-xs text-slate-300 block mt-1">Statutory filings, challan verification, &amp; compliance documentation</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-purple-300 font-bold text-xs block">Tax Return Documentation</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Computation sheets &amp; challan reconciliations</span>
+                            </div>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-purple-300 font-bold text-xs block">Statutory Audit Compliance</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Tax audit disclosures &amp; compliance testing</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Group 3: Technology & Automation Stack -->
-                    <div class="skill-group" data-category="technology">
-                        <div class="flex items-center gap-3 mb-6 border-b border-slate-800 pb-3">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm font-bold">
+                    <!-- Column 3: Technology & Automation Stack -->
+                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="technology">
+                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
+                            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-sm font-bold">
                                 <i class="fa-solid fa-laptop-code"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Technology &amp; Automation Stack</h3>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Technology Stack</h3>
+                                <span class="text-[11px] text-emerald-400 font-medium">Automation &amp; AI Tools</span>
+                            </div>
                         </div>
 
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">MS Excel</span>
-                                <span class="text-xs text-slate-300 block mt-1">Advanced financial analysis &amp; reporting</span>
+                        <div class="space-y-3">
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">MS Excel &amp; Power Query</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Advanced financial models &amp; data cleaning</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Excel VBA &amp; Macros</span>
-                                <span class="text-xs text-slate-300 block mt-1">Process &amp; repetitive task automation</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">Excel VBA &amp; Macros</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Process automation &amp; repetitive macro scripts</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Power Query</span>
-                                <span class="text-xs text-slate-300 block mt-1">Data transformation &amp; automated cleaning</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">Google Apps Script</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Business process automation &amp; Gmail triggers</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Google Sheets</span>
-                                <span class="text-xs text-slate-300 block mt-1">Financial workflow automation</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">Claude &amp; ChatGPT</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">AI-assisted reasoning, drafting, &amp; analysis</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Google Apps Script</span>
-                                <span class="text-xs text-slate-300 block mt-1">Business process automation &amp; Gmail triggers</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">NotebookLM &amp; Perplexity</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Document-grounded research &amp; tax search</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">ChatGPT</span>
-                                <span class="text-xs text-slate-300 block mt-1">AI-assisted analysis &amp; drafting</span>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Claude</span>
-                                <span class="text-xs text-slate-300 block mt-1">Reasoning &amp; document workflows</span>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">NotebookLM</span>
-                                <span class="text-xs text-slate-300 block mt-1">Research &amp; grounded document analysis</span>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Perplexity</span>
-                                <span class="text-xs text-slate-300 block mt-1">AI-powered technical research</span>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-emerald-400 font-bold text-sm block">Tally Prime</span>
-                                <span class="text-xs text-slate-300 block mt-1">Accounting &amp; bookkeeping workflows</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-emerald-300 font-bold text-xs block">Tally Prime</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Accounting &amp; bookkeeping workflows</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Group 4: Business Skills -->
-                    <div class="skill-group" data-category="business">
-                        <div class="flex items-center gap-3 mb-6 border-b border-slate-800 pb-3">
-                            <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-sm font-bold">
+                    <!-- Column 4: Business & Leadership -->
+                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="business">
+                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
+                            <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center text-sm font-bold">
                                 <i class="fa-solid fa-briefcase"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white">Business &amp; Leadership Capabilities</h3>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Business Capabilities</h3>
+                                <span class="text-[11px] text-blue-400 font-medium">Leadership &amp; Operations</span>
+                            </div>
                         </div>
 
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-blue-400 font-bold text-sm block">Professional Communication</span>
-                                <span class="text-xs text-slate-300 block mt-1">Structured reporting, query escalation &amp; stakeholder interaction</span>
+                        <div class="space-y-3">
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-blue-300 font-bold text-xs block">Professional Communication</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Structured reporting &amp; query resolution</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-blue-400 font-bold text-sm block">Team Leadership &amp; Logistics</span>
-                                <span class="text-xs text-slate-300 block mt-1">University event coordination &amp; team management</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-blue-300 font-bold text-xs block">Team Leadership &amp; Logistics</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">University event &amp; team coordination</span>
                             </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 glass-panel-hover">
-                                <span class="text-blue-400 font-bold text-sm block">Risk &amp; Analytical Reasoning</span>
-                                <span class="text-xs text-slate-300 block mt-1">Operational risk identification &amp; internal control evaluation</span>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-blue-300 font-bold text-xs block">Risk &amp; Analytical Reasoning</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Internal control evaluation &amp; risk checks</span>
+                            </div>
+                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
+                                <span class="text-blue-300 font-bold text-xs block">Process Optimization</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Workflow mapping &amp; task streamlining</span>
                             </div>
                         </div>
                     </div>
@@ -1213,7 +1217,7 @@
         }
 
         /* =======================================================
-           4. Skill Category Group Filtering
+           4. Skill Category Matrix Filtering
            ======================================================= */
         function filterSkills(category) {
             const tabs = document.querySelectorAll('.skill-tab');
@@ -1227,12 +1231,12 @@
                 }
             });
 
-            const groups = document.querySelectorAll('.skill-group');
-            groups.forEach(group => {
-                if (category === 'all' || group.getAttribute('data-category') === category) {
-                    group.style.display = 'block';
+            const columns = document.querySelectorAll('.skill-column');
+            columns.forEach(col => {
+                if (category === 'all' || col.getAttribute('data-category') === category) {
+                    col.style.display = 'block';
                 } else {
-                    group.style.display = 'none';
+                    col.style.display = 'none';
                 }
             });
         }
