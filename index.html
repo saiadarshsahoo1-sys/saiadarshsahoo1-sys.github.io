@@ -741,118 +741,64 @@
             </div>
         </section>
 
-        <!-- Testimonials & Endorsements Section -->
+        <!-- Testimonials Section -->
         <section id="testimonials" class="py-16 px-4 max-w-7xl mx-auto">
             <div class="text-center mb-10">
                 <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-bold border border-cyan-800 inline-block mb-3">
-                    <i class="fa-solid fa-quote-left"></i> References &amp; Endorsements
+                    <i class="fa-solid fa-quote-left"></i> Endorsements &amp; Recommendations
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Testimonials</h2>
-                <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Feedback and recommendations from academic faculty, mentors, and project peers.</p>
-            </div>
-
-            <!-- Testimonial Cards Grid -->
-            <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-1 text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 italic leading-relaxed">
-                            "Sai Adarsh demonstrated exceptional discipline, analytical depth, and strong conceptual understanding in commerce and financial accounting during his residential program at SSSIHL."
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                            SS
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-white">Department of Commerce</h4>
-                            <span class="text-[10px] text-slate-400 block">Sri Sathya Sai Institute of Higher Learning</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-1 text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 italic leading-relaxed">
-                            "His ability to combine core accounting knowledge with modern tools like Excel VBA, Apps Script, and AI research workflows makes him an exceptionally efficient article candidate."
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xs">
-                            CA
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-white">Chartered Accountant Mentor</h4>
-                            <span class="text-[10px] text-slate-400 block">ICAI Orientation &amp; ITT Program</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-1 text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 italic leading-relaxed">
-                            "As a team leader at Brindavan Studio, Sai Adarsh showed high reliability, methodical planning, and a calm approach under tight deadline pressures."
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-xs">
-                            BS
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-white">Event Coordinator</h4>
-                            <span class="text-[10px] text-slate-400 block">Brindavan Campus, SSSIHL</span>
-                        </div>
-                    </div>
+                <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Automated recommendations populated directly via Gmail and Google Sheets.</p>
+                
+                <div class="mt-3">
+                    <button onclick="toggleAdminMode()" class="text-[11px] text-slate-500 hover:text-cyan-400 transition-colors">
+                        <i class="fa-solid fa-lock text-[10px]"></i> Admin Moderation Mode
+                    </button>
                 </div>
             </div>
 
-            <!-- Submit Endorsement / Testimonial Box -->
+            <!-- Live Testimonial Cards Grid -->
+            <div id="testimonial-cards-grid" class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="col-span-full text-center py-8 text-slate-400 text-xs">
+                    <i class="fa-solid fa-circle-notch animate-spin text-cyan-400 text-lg mb-2 block"></i> Fetching live testimonials...
+                </div>
+            </div>
+
+            <!-- Website Testimonial Submission Form -->
             <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 max-w-3xl mx-auto">
                 <div class="text-center mb-6">
-                    <h3 class="text-base sm:text-lg font-bold text-white mb-1">Worked with Sai Adarsh? Leave a Recommendation</h3>
-                    <p class="text-xs text-slate-400">Your recommendation will be delivered directly via Web3Forms.</p>
+                    <h3 class="text-base sm:text-lg font-bold text-white mb-1">Leave a Recommendation for Sai Adarsh</h3>
+                    <p class="text-xs text-slate-400">Submissions are processed via secure email dispatch into our live database.</p>
                 </div>
 
-                <form id="testimonial-form" onsubmit="handleTestimonialSubmit(event)" class="space-y-4">
+                <form id="testimonial-dispatch-form" onsubmit="dispatchTestimonialEmail(event)" class="space-y-4">
                     <input type="hidden" name="access_key" value="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                    <input type="hidden" name="subject" value="[Testimonial Submission] New Endorsement for Sai Adarsh">
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="t-name" class="block text-xs font-medium text-slate-300 mb-1">Your Name &amp; Title</label>
-                            <input id="t-name" name="name" type="text" required placeholder="e.g. Prof. Sharma / CA Partner" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Name of the person</label>
+                            <input id="form-name" type="text" required placeholder="e.g. CA Partner / Prof. Sharma" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
                         </div>
                         <div>
-                            <label for="t-email" class="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
-                            <input id="t-email" name="email" type="email" required placeholder="partner@firm.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Organization</label>
+                            <input id="form-org" type="text" required placeholder="e.g. SSSIHL / ICAI Chapter" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
                         </div>
                     </div>
 
                     <div>
-                        <label for="t-org" class="block text-xs font-medium text-slate-300 mb-1">Organization / Institution</label>
-                        <input id="t-org" name="organization" type="text" required placeholder="e.g. SSSIHL / ICAI Chapter / CA Firm" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Relation to Sai Adarsh</label>
+                        <input id="form-relation" type="text" required placeholder="e.g. Mentor / Professor / Project Lead" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
                     </div>
 
                     <div>
-                        <label for="t-msg" class="block text-xs font-medium text-slate-300 mb-1">Endorsement / Recommendation</label>
-                        <textarea id="t-msg" name="message" rows="3" required placeholder="Share your experience working with Sai Adarsh..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Testimonial</label>
+                        <textarea id="form-text" rows="4" required placeholder="Share your experience working with Sai Adarsh..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400"></textarea>
                     </div>
 
                     <button type="submit" id="t-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-xs hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i> Submit Testimonial
                     </button>
-
-                    <div id="t-error-box" class="hidden p-3 rounded-xl bg-red-950/80 border border-red-500/60 text-xs text-red-200 text-center">
-                        Unable to submit testimonial via Web3Forms. Please email <a href="mailto:saiadarshsahoo1@gmail.com" class="underline font-bold">saiadarshsahoo1@gmail.com</a> directly.
-                    </div>
                 </form>
             </div>
         </section>
@@ -1014,7 +960,7 @@
                     </div>
                 </div>
 
-                <!-- Contact Form with Rectified Web3Forms Submission -->
+                <!-- Contact Form -->
                 <div class="md:col-span-7">
                     <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
                         <input type="hidden" name="access_key" value="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185">
@@ -1167,10 +1113,14 @@
     <script src="config.js"></script>
     <script>
         /* =======================================================
-           1. Canonical Web3Forms Access Key & Status
+           1. Configuration Constants & Web App Endpoint
            ======================================================= */
+        const APPS_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzeTOOZgTfdcpr5dlvksmSVycW6d38fmPQXkXh2x49M1IUVCiySzQlFZ3afpnKnK28p/exec";
         const WEB3FORMS_KEY = "8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
         const CANONICAL_CA_STATUS = "CA Intermediate — Group 2 Cleared | Group 1 Result Awaited";
+
+        let isAdmin = false;
+        let cachedKey = "";
         
         function updateCAStatus() {
             const els = document.querySelectorAll('.ca-status-text');
@@ -1258,31 +1208,138 @@
         });
 
         /* =======================================================
-           4. Web3Forms Request Engine (Fixed API Handler)
+           4. Live Testimonial Pipeline Engine
            ======================================================= */
-        async function sendToInbox(fields) {
-            const payload = Object.assign({
-                access_key: WEB3FORMS_KEY,
-                from_name: fields.name || "Portfolio Visitor",
-                subject: fields.subject || "New Web3Forms Submission"
-            }, fields);
+        async function loadTestimonials() {
+            const grid = document.getElementById('testimonial-cards-grid');
+            try {
+                const res = await fetch(APPS_SCRIPT_API_URL);
+                const data = await res.json();
 
-            const r = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json', 
-                    'Accept': 'application/json' 
-                },
-                body: JSON.stringify(payload)
-            });
+                if (!data || data.length === 0) {
+                    grid.innerHTML = `<div class="col-span-full text-center py-6 text-slate-500 text-xs">No active testimonials found in database. Be the first to submit one below!</div>`;
+                    return;
+                }
 
-            const data = await r.json();
-            if (!data.success) {
-                throw new Error(data.message || 'Web3Forms API returned failure.');
+                grid.innerHTML = data.map(item => `
+                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between relative group">
+                        ${isAdmin ? `
+                            <button onclick="deleteCard('${item.id}')" class="absolute top-3 right-3 px-2 py-1 bg-red-900/80 hover:bg-red-700 border border-red-500 text-red-100 text-[10px] rounded font-bold transition-all">
+                                <i class="fa-solid fa-trash mr-1"></i> Delete
+                            </button>
+                        ` : ''}
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-1 text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-xs text-slate-300 italic leading-relaxed">"${escapeHTML(item.testimonial)}"</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                            <div>
+                                <h4 class="text-xs font-bold text-white">${escapeHTML(item.name)}</h4>
+                                <span class="text-[10px] text-slate-400 block">${escapeHTML(item.organization)}</span>
+                            </div>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">
+                                ${escapeHTML(item.relation)}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error("Fetch Error:", err);
+                grid.innerHTML = `<div class="col-span-full text-center py-6 text-red-400 text-xs">Failed to load live testimonials.</div>`;
             }
-            return data;
         }
 
+        async function dispatchTestimonialEmail(e) {
+            e.preventDefault();
+            const btn = document.getElementById('t-submit-btn');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Dispatching Email...`;
+
+            const name = document.getElementById('form-name').value.trim();
+            const org = document.getElementById('form-org').value.trim();
+            const relation = document.getElementById('form-relation').value.trim();
+            const testimonial = document.getElementById('form-text').value.trim();
+
+            const formattedBody = `
+Name: ${name}
+Organization: ${org}
+Relation: ${relation}
+Testimonial: ${testimonial}
+            `.trim();
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_KEY,
+                        subject: "[Testimonial Submission] New Endorsement for Sai Adarsh",
+                        from_name: name,
+                        message: formattedBody
+                    })
+                });
+
+                const result = await res.json();
+                if (result.success) {
+                    btn.innerHTML = `<i class="fa-solid fa-check"></i> Sent to Inbox! Processing...`;
+                    document.getElementById('testimonial-dispatch-form').reset();
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Testimonial`;
+                        loadTestimonials();
+                    }, 3000);
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (err) {
+                alert("Email dispatch failed: " + err.message);
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Testimonial`;
+            }
+        }
+
+        function toggleAdminMode() {
+            if (!isAdmin) {
+                const pass = prompt("Enter Admin Password:");
+                if (pass) {
+                    cachedKey = pass;
+                    isAdmin = true;
+                    alert("Admin Mode Enabled. You can now delete entries directly.");
+                    loadTestimonials();
+                }
+            } else {
+                isAdmin = false;
+                cachedKey = "";
+                alert("Admin Mode Disabled.");
+                loadTestimonials();
+            }
+        }
+
+        async function deleteCard(id) {
+            if (!confirm("Are you sure you want to delete this testimonial?")) return;
+            try {
+                const res = await fetch(APPS_SCRIPT_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify({ action: 'delete', id: id, adminKey: cachedKey })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert("Deleted successfully!");
+                    loadTestimonials();
+                } else {
+                    alert("Failed to delete: " + (data.message || 'Invalid passcode'));
+                }
+            } catch (e) {
+                alert("Deletion Error: " + e.message);
+            }
+        }
+
+        /* =======================================================
+           5. Contact Form Handler
+           ======================================================= */
         async function handleContactSubmit(e) {
             e.preventDefault();
             const hp = document.getElementById('c-hp');
@@ -1298,55 +1355,29 @@
             errorBox.classList.add('hidden');
             const idleText = `<i class="fa-solid fa-paper-plane"></i> Send Message`;
             btn.disabled = true;
-            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending via Web3Forms...`;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending Message...`;
 
             try {
-                await sendToInbox({
-                    subject: 'Articleship Inquiry: ' + sj.value.trim(),
-                    from_name: nm.value.trim(), 
-                    name: nm.value.trim(), 
-                    email: em.value.trim(), 
-                    message: ms.value.trim()
+                const r = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_KEY,
+                        subject: 'Articleship Inquiry: ' + sj.value.trim(),
+                        from_name: nm.value.trim(),
+                        name: nm.value.trim(),
+                        email: em.value.trim(),
+                        message: ms.value.trim()
+                    })
                 });
+                const data = await r.json();
+                if (!data.success) throw new Error(data.message);
+
                 btn.innerHTML = `<i class="fa-solid fa-check"></i> Message Sent Successfully!`;
                 e.target.reset();
                 setTimeout(() => { btn.disabled = false; btn.innerHTML = idleText; }, 4000);
             } catch (err) {
-                console.error("Web3Forms Contact Error:", err);
-                btn.disabled = false;
-                btn.innerHTML = idleText;
-                errorBox.classList.remove('hidden');
-            }
-        }
-
-        async function handleTestimonialSubmit(e) {
-            e.preventDefault();
-            const nm = document.getElementById('t-name');
-            const em = document.getElementById('t-email');
-            const org = document.getElementById('t-org');
-            const ms = document.getElementById('t-msg');
-            const btn = document.getElementById('t-submit-btn');
-            const errorBox = document.getElementById('t-error-box');
-
-            errorBox.classList.add('hidden');
-            const idleText = `<i class="fa-solid fa-paper-plane"></i> Submit Testimonial`;
-            btn.disabled = true;
-            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Submitting...`;
-
-            try {
-                await sendToInbox({
-                    subject: 'New Testimonial Submitted by ' + nm.value.trim(),
-                    from_name: nm.value.trim() + ' (' + org.value.trim() + ')',
-                    name: nm.value.trim(),
-                    email: em.value.trim(),
-                    organization: org.value.trim(),
-                    message: ms.value.trim()
-                });
-                btn.innerHTML = `<i class="fa-solid fa-check"></i> Recommendation Submitted! Thank You.`;
-                e.target.reset();
-                setTimeout(() => { btn.disabled = false; btn.innerHTML = idleText; }, 4000);
-            } catch (err) {
-                console.error("Web3Forms Testimonial Error:", err);
+                console.error("Contact Error:", err);
                 btn.disabled = false;
                 btn.innerHTML = idleText;
                 errorBox.classList.remove('hidden');
@@ -1354,7 +1385,7 @@
         }
 
         /* =======================================================
-           5. Particle Canvas Engine
+           6. Particle Canvas Engine
            ======================================================= */
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas ? canvas.getContext('2d') : null;
@@ -1425,7 +1456,7 @@
         }
 
         /* =======================================================
-           6. Audit Simulation Game Logic
+           7. Audit Simulation Game Logic
            ======================================================= */
         const gameVouchers = [
             {
@@ -1552,7 +1583,7 @@
         }
 
         /* =======================================================
-           7. Skill Filtering Logic
+           8. Skill Filtering Logic
            ======================================================= */
         function filterSkills(category) {
             const tabs = document.querySelectorAll('.skill-tab');
@@ -1577,7 +1608,7 @@
         }
 
         /* =======================================================
-           8. Web Audio API Synthesizer
+           9. Web Audio API Synthesizer
            ======================================================= */
         let audioCtx = null;
 
@@ -1630,7 +1661,7 @@
             });
         }
 
-        /* Image Probe Helper */
+        /* Helper Utilities */
         function probeImage(base, cb) {
             const exts = ['jpg', 'jpeg', 'png', 'webp']; let i = 0;
             (function next() {
@@ -1640,6 +1671,10 @@
                 im.onerror = () => { i++; next(); };
                 im.src = base + '.' + exts[i];
             })();
+        }
+
+        function escapeHTML(str) {
+            return str ? str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)) : '';
         }
 
         /* Lightbox Modal */
@@ -1668,7 +1703,6 @@
             lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
         }
 
-        /* Media Initialization */
         function initMedia() {
             probeImage('images/profile', src => {
                 if (!src) return;
@@ -1709,7 +1743,7 @@
             })();
         }
 
-        /* Onload Initialization */
+        /* Initialization */
         window.onload = function () {
             updateCAStatus();
             typeLoop();
@@ -1722,6 +1756,7 @@
             }
 
             loadVoucher(0);
+            loadTestimonials();
             initMedia();
         };
 
