@@ -1,1771 +1,327 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Sai Adarsh Sahoo | CA Intermediate | Audit, Tax & Finance Automation</title>
-    <meta name="description" content="Sai Adarsh Sahoo - CA Intermediate student (Group 2 Cleared | Group 1 Result Awaited) and B.Com (Hons.) graduate seeking CA Articleship opportunities in Statutory Audit, Internal Audit, Risk Advisory, and Taxation.">
-    <meta name="theme-color" content="#0b0f19">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sai Adarsh Sahoo | CA Intermediate | Audit, Tax & Finance Automation">
-    <meta property="og:description" content="CA Intermediate | B.Com (Hons.) | Seeking Articleship in Statutory Audit, Internal Audit, Risk Advisory & Taxation. Excel, VBA, Power Query, Apps Script & AI Workflows.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sai Adarsh Sahoo",
-      "email": "mailto:saiadarshsahoo1@gmail.com",
-      "telephone": "+917608886682",
-      "url": "https://saiadarshsahoo1-sys.github.io/",
-      "sameAs": ["https://www.linkedin.com/in/sai-adarsh-sahoo/"],
-      "jobTitle": "CA Intermediate Student",
-      "alumniOf": "Sri Sathya Sai Institute of Higher Learning",
-      "knowsAbout": ["Statutory Audit", "Taxation", "Financial Accounting", "Excel VBA", "Power Query", "Google Apps Script", "AI Workflows"]
-    }
-    </script>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0b0f19',
-                        darkCard: '#131b2e',
-                        accentBlue: '#3b82f6',
-                        accentCyan: '#06b6d4',
-                        accentPurple: '#8b5cf6',
-                        accentEmerald: '#10b981',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    
-    <style>
-        html { scroll-padding-top: 5.5rem; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
-            color: #e2e8f0;
-            overflow-x: hidden;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        .glass-panel {
-            background: rgba(19, 27, 46, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-panel-hover {
-            transition: all 0.3s ease;
-        }
-        .glass-panel-hover:hover {
-            background: rgba(26, 36, 61, 0.85);
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px -8px rgba(59, 130, 246, 0.25);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0b0f19; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-            #particle-canvas { display: none !important; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sai Adarsh Sahoo | CA Intermediate | Articleship in Statutory Audit &amp; Risk Advisory</title>
+<meta name="description" content="Sai Adarsh Sahoo: CA Intermediate (Group 2 cleared, Group 1 result awaited) and B.Com (Hons.) graduate seeking CA Articleship in Statutory Audit and Risk Advisory.">
+<meta name="theme-color" content="#0b0f19">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sai Adarsh Sahoo | CA Intermediate | Statutory Audit &amp; Risk Advisory">
+<meta property="og:description" content="CA Intermediate (Group 2 cleared) | B.Com (Hons.) | Seeking CA Articleship in Statutory Audit and Risk Advisory.">
+<meta property="og:image" content="https://saiadarshsahoo1-sys.github.io/images/profile.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sai Adarsh Sahoo","email":"mailto:saiadarshsahoo1@gmail.com","telephone":"+917608886682","url":"https://saiadarshsahoo1-sys.github.io/","sameAs":["https://www.linkedin.com/in/sai-adarsh-sahoo/"],"jobTitle":"CA Intermediate (Group 2 cleared)","alumniOf":"Sri Sathya Sai Institute of Higher Learning"}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<style type="text/tailwindcss">
+html{scroll-padding-top:5.5rem}
+body{font-family:'Inter',sans-serif;background:#0b0f19;color:#e2e8f0;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif}
+.glass{@apply bg-[#131b2e]/70 backdrop-blur-xl border border-white/10}
+.card{@apply glass rounded-2xl p-5}
+.sec{@apply py-14 px-4 max-w-7xl mx-auto}
+.h2{@apply text-3xl sm:text-4xl font-bold text-white text-center mb-2}
+.sub{@apply text-slate-400 text-sm text-center max-w-2xl mx-auto mb-8}
+.chip{@apply text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 whitespace-nowrap}
+.btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition}
+.btn-p{@apply btn text-white bg-gradient-to-r from-blue-500 to-violet-500 hover:opacity-90}
+.btn-g{@apply btn glass text-slate-200 hover:text-white}
+.inp{@apply w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
+.lbl{@apply block text-xs font-medium text-slate-300 mb-1}
+.nl{@apply px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors}
+.gt{background:linear-gradient(135deg,#38bdf8,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tab{@apply whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700}
+.tab.on{@apply bg-blue-500 text-white}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
+</style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-accentBlue selection:text-white">
-
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#hero" class="flex items-center gap-3 group" aria-label="Sai Adarsh Sahoo Home">
-                <div class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-accentBlue to-accentPurple flex items-center justify-center text-white shadow-lg ring-2 ring-accentBlue/40 group-hover:scale-105 transition-transform">
-                    <img id="avatar-img" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover">
-                    <i id="avatar-fallback" class="fa-solid fa-user"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-lg tracking-tight text-white block">Sai Adarsh Sahoo</span>
-                    <span class="text-xs text-cyan-400 font-medium block -mt-1 ca-status-text">CA Intermediate — Group 2 Cleared | Group 1 Result Awaited</span>
-                </div>
-            </a>
-
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Main Navigation">
-                <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">About</a>
-                <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Skills</a>
-                <a href="#projects" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Projects</a>
-                <a href="#education" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Education</a>
-                <a href="#testimonials" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Testimonials</a>
-                <a href="#audit-simulation" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Audit Simulation</a>
-                <a href="#contact" class="px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 rounded-lg transition-colors">Contact</a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-b border-slate-800 px-4 pt-2 pb-6 space-y-2">
-            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">About</a>
-            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Skills</a>
-            <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Projects</a>
-            <a href="#education" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Education</a>
-            <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Testimonials</a>
-            <a href="#audit-simulation" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Audit Simulation</a>
-            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold text-cyan-400 hover:bg-slate-800">Contact</a>
-        </div>
-    </header>
-
-    <main class="flex-grow pt-20">
-        <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 px-4">
-            <canvas id="particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
-            
-            <div class="absolute top-1/4 left-1/6 w-72 h-72 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-1/4 right-1/6 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="relative z-10 max-w-5xl mx-auto text-center px-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-                    Available for CA Articleship in Statutory Audit, Internal Audit, Risk Advisory &amp; Taxation
-                </div>
-
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-                    Hi, I'm <span class="gradient-text">Sai Adarsh Sahoo</span>
-                </h1>
-
-                <!-- Typewriter Animated Text -->
-                <div class="h-10 sm:h-12 mb-4 flex items-center justify-center">
-                    <span id="typing-text" class="text-xl sm:text-2xl lg:text-3xl font-semibold text-cyan-400 border-r-2 border-cyan-400 pr-1"></span>
-                </div>
-
-                <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-                    CA Intermediate student and B.Com (Hons.) graduate with a strong foundation in accounting, audit and taxation, complemented by practical skills in Excel, VBA, Power Query, Google Apps Script and AI-assisted finance workflows.
-                    <span class="block mt-2 font-semibold text-cyan-300">Seeking CA Articleship Opportunities</span>
-                </p>
-
-                <div class="flex flex-wrap items-center justify-center gap-4">
-                    <button onclick="openResumeModal(event)" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-semibold text-sm shadow-xl shadow-blue-500/20 hover:shadow-blue-500/35 hover:scale-105 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-file-pdf"></i> View CV
-                    </button>
-                    <a href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl glass-panel text-slate-200 hover:text-white hover:border-slate-500 font-semibold text-sm transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn
-                    </a>
-                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/60 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-purple-400"></i> Contact Me
-                    </a>
-                </div>
-                <div class="mt-6">
-                    <a href="#audit-simulation" class="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-cyan-300 transition-colors">
-                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> Explore Interactive Audit Simulation →
-                    </a>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 text-left">
-                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
-                        <div class="text-cyan-400 text-sm font-bold mb-1">CA Intermediate</div>
-                        <div class="text-xs text-slate-200 font-semibold">Group 2 Cleared</div>
-                        <div class="text-[11px] text-slate-400 mt-0.5">Group 1 Result Awaited</div>
-                    </div>
-                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
-                        <div class="text-purple-400 text-sm font-bold mb-1">B.Com (Hons.)</div>
-                        <div class="text-xs text-slate-200 font-semibold">7.0 / 10 CGPA</div>
-                        <div class="text-[11px] text-slate-400 mt-0.5">SSSIHL Residential</div>
-                    </div>
-                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
-                        <div class="text-emerald-400 text-sm font-bold mb-1">Automation</div>
-                        <div class="text-xs text-slate-200 font-semibold">Excel VBA &amp; Power Query</div>
-                        <div class="text-[11px] text-slate-400 mt-0.5">Google Apps Script</div>
-                    </div>
-                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
-                        <div class="text-blue-400 text-sm font-bold mb-1">AI Workflows</div>
-                        <div class="text-xs text-slate-200 font-semibold">ChatGPT &amp; Claude</div>
-                        <div class="text-[11px] text-slate-400 mt-0.5">Gemini &amp; NotebookLM</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CA Status Banner -->
-        <section class="py-5 px-4 bg-slate-900/60 border-y border-slate-800">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-base flex-shrink-0">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-                    <div>
-                        <span class="text-[11px] text-slate-400 font-medium uppercase tracking-wider block">Qualification Status</span>
-                        <h3 class="text-sm sm:text-base font-bold text-white ca-status-text">CA Intermediate — Group 2 Cleared | Group 1 Result Awaited</h3>
-                    </div>
-                </div>
-                <div class="text-xs text-slate-300 bg-slate-800/80 px-3.5 py-1.5 rounded-lg border border-slate-700">
-                    <span class="text-emerald-400 font-semibold">Ready for Articleship:</span> ICITSS (ITT &amp; Orientation) Completed
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-16 px-4 max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">About Me</h2>
-                <div class="w-16 h-1 bg-gradient-to-r from-accentBlue to-accentPurple mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                <div class="md:col-span-5">
-                    <div class="glass-panel rounded-2xl p-6 relative overflow-hidden group">
-                        <div class="absolute -top-12 -right-12 w-40 h-40 bg-accentBlue/15 rounded-full blur-2xl group-hover:bg-accentPurple/25 transition-all"></div>
-                        
-                        <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-cyan-500 to-indigo-600 p-1 mb-6 mx-auto md:mx-0 shadow-lg">
-                            <div class="w-full h-full bg-slate-900 rounded-[14px] overflow-hidden flex items-center justify-center text-3xl font-extrabold text-cyan-400">
-                                <img id="about-avatar-img" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover">
-                                <span id="about-avatar-fallback">SAS</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-1 text-center md:text-left">Sai Adarsh Sahoo</h3>
-                        <p class="text-cyan-400 text-xs font-semibold mb-6 text-center md:text-left ca-status-text">CA Intermediate — Group 2 Cleared | Group 1 Result Awaited</p>
-
-                        <div class="space-y-3.5 text-xs text-slate-300">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-location-dot text-cyan-400 w-4 text-center"></i>
-                                <span>Odisha &middot; Open to Relocation (Bengaluru, Hyderabad, Mumbai)</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-graduation-cap text-purple-400 w-4 text-center"></i>
-                                <span>Sri Sathya Sai Institute of Higher Learning (B.Com Hons.)</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-envelope text-blue-400 w-4 text-center"></i>
-                                <a href="mailto:saiadarshsahoo1@gmail.com" class="hover:text-cyan-400 transition-colors break-all">saiadarshsahoo1@gmail.com</a>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-phone text-cyan-400 w-4 text-center"></i>
-                                <a href="tel:+917608886682" class="hover:text-cyan-400 transition-colors">+91 76088 86682</a>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-briefcase text-emerald-400 w-4 text-center"></i>
-                                <span>Target Roles: Statutory Audit, Internal Audit, Risk Advisory, Taxation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-7 space-y-6">
-                    <div class="glass-panel rounded-2xl p-6 sm:p-7">
-                        <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-bullseye text-cyan-400"></i> Articleship Objective
-                        </h3>
-                        <p class="text-sm text-slate-300 leading-relaxed">
-                            Seeking a CA Articleship opportunity in Statutory Audit, Internal Audit, Risk Advisory or Taxation. I aim to build practical professional capability through real client engagements while contributing through strong accounting fundamentals, analytical thinking and technology-enabled workflows.
-                        </p>
-                    </div>
-
-                    <div class="glass-panel rounded-2xl p-6 sm:p-7">
-                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-list-check text-purple-400"></i> What I Bring
-                        </h3>
-                        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>Accounting, audit and taxation foundation:</strong> Strong academic baseline in Ind AS, Auditing Standards (SAs), Direct Tax, and GST provisions.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>Excel, VBA and Power Query capability:</strong> Ability to clean financial data, automate repetitive reports, and construct analytical schedules.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>Google Sheets / Apps Script automation:</strong> Experience building custom tools for tracking, email follow-ups, and structured databases.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>AI-assisted research and documentation:</strong> Practical utilization of Claude, ChatGPT, Gemini, NotebookLM, and Perplexity for technical research and memo drafting.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>Analytical and process-oriented approach:</strong> Disciplined work ethic developed through residential education at SSSIHL.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- What I Can Contribute Section -->
-        <section id="contribute" class="py-12 px-4 max-w-7xl mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">What I Can Contribute</h2>
-                <p class="text-xs sm:text-sm text-slate-400">Practical working knowledge and support capabilities ready to deploy during articleship engagements.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-4">
-                        <i class="fa-solid fa-magnifying-glass-dollar"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">Audit Support</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Voucher checking, bank and ledger reconciliations, audit trail verification, supporting document indexing, analytical review, and working-paper preparation support under standard auditing procedures.
-                    </p>
-                </div>
-
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-4">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">Tax Support</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Assisting with total income computations, TDS applicability research under Sec 194C/194J, GSTR-2B vs. purchase register Input Tax Credit (ITC) reconciliations, and tax documentation preparation.
-                    </p>
-                </div>
-
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">Finance Automation</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Designing custom Excel VBA macros, Power Query data transformation scripts, Google Apps Script email triggers, and AI-assisted prompts to accelerate working paper generation and research.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills & Technology Stack Section -->
-        <section id="skills" class="py-16 px-4 bg-slate-950/50">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Skills &amp; Technology</h2>
-                    <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Categorized by technical domain and depth of capability.</p>
-                </div>
-
-                <div class="flex justify-start md:justify-center mb-8 gap-2 overflow-x-auto no-scrollbar pb-2 px-1">
-                    <button onclick="filterSkills('all')" class="skill-tab active whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-accentBlue text-white shadow-lg transition-all" data-category="all">
-                        All Skills
-                    </button>
-                    <button onclick="filterSkills('audit')" class="skill-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="audit">
-                        <i class="fa-solid fa-file-invoice-dollar mr-1 text-cyan-400"></i> Accounting &amp; Audit
-                    </button>
-                    <button onclick="filterSkills('tax')" class="skill-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="tax">
-                        <i class="fa-solid fa-scale-balanced mr-1 text-purple-400"></i> Taxation
-                    </button>
-                    <button onclick="filterSkills('automation')" class="skill-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="automation">
-                        <i class="fa-solid fa-code mr-1 text-emerald-400"></i> Technology &amp; Automation
-                    </button>
-                    <button onclick="filterSkills('ai')" class="skill-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="ai">
-                        <i class="fa-solid fa-robot mr-1 text-blue-400"></i> AI &amp; Research
-                    </button>
-                    <button onclick="filterSkills('professional')" class="skill-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="professional">
-                        <i class="fa-solid fa-user-check mr-1 text-amber-400"></i> Professional Skills
-                    </button>
-                </div>
-
-                <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Financial Accounting</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Academic</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Schedule III statements, company accounts &amp; ledger reconciliations.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Ind AS Accounting Standards</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Academic</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Core understanding of key Indian Accounting Standards framework.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Auditing Standards (SAs)</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Academic</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Academic application of auditing standards, audit evidence &amp; procedures.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Voucher Verification &amp; Testing</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Voucher auditing, authorization checks, supporting documentation review.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Financial Ratio Analysis</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Liquidity, solvency, turnover, and profitability ratio computations.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-cyan-300 font-bold text-xs">Cost &amp; Management Accounting</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Exemption Marks</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Variance analysis, marginal costing, budget control (CA Inter Exemption).</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-purple-300 font-bold text-xs">Direct Taxation (Income Tax)</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Academic</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Computation of total income across five heads, deductions &amp; tax liability.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-purple-300 font-bold text-xs">TDS Provisions &amp; Compliance</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Working Knowledge</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">TDS applicability rules (Sec 194C, 194J), rates &amp; threshold checks.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-purple-300 font-bold text-xs">GST Provisions &amp; ITC</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Working Knowledge</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">GST rate structure, supply provisions, and GSTR-2B ITC reconciliation support.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-purple-300 font-bold text-xs">Tax Audit Fundamentals</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Academic</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Form 3CD clauses, threshold verification, and statutory disclosure requirements.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="automation">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-emerald-300 font-bold text-xs">Advanced MS Excel</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">XLOOKUP, INDEX-MATCH, PivotTables, nested logic, data validation.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="automation">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-emerald-300 font-bold text-xs">Excel VBA &amp; Macros</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Self-Built Projects</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Automating repetitive schedule generation and report formatting scripts.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="automation">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-emerald-300 font-bold text-xs">Power Query</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Extracting, cleaning, merging and transforming large financial datasets.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="automation">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-emerald-300 font-bold text-xs">Google Sheets &amp; Apps Script</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Self-Built Projects</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Building cloud workflows, automated email notifications &amp; custom trackers.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="automation">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-emerald-300 font-bold text-xs">Tally Prime</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Voucher posting, ledger extraction, and basic accounting setup.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="ai">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-blue-300 font-bold text-xs">ChatGPT &amp; Claude</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Prompt engineering for technical drafting, memo summaries &amp; logic checks.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="ai">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-blue-300 font-bold text-xs">Gemini &amp; NotebookLM</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Document-grounded analysis of study materials and standard regulations.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="ai">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-blue-300 font-bold text-xs">Perplexity AI</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Practical</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Real-time cited search for circulars, notifications, and tax provisions.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="professional">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-amber-300 font-bold text-xs">Structured Communication</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/60">Soft Skill</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Structured reporting, query escalation, and concise technical writing.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="professional">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-amber-300 font-bold text-xs">Analytical Reasoning</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/60">Soft Skill</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">Process optimization, logical problem solving, and detail-oriented checks.</p>
-                    </div>
-
-                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="professional">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-amber-300 font-bold text-xs">Team Coordination</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/60">Leadership</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">University cultural event coordination and studio team management at SSSIHL.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Selected Finance & Automation Projects -->
-        <section id="projects" class="py-16 px-4 max-w-7xl mx-auto">
-            <div class="text-center mb-10">
-                <span class="px-3 py-1 rounded-full bg-blue-950 text-blue-300 text-xs font-bold border border-blue-800 inline-block mb-3">
-                    <i class="fa-solid fa-code"></i> Proof of Concept &amp; Tools
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Selected Projects</h2>
-                <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Self-built automation projects demonstrating practical data handling and workflow capability.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-start justify-between gap-4 mb-3">
-                            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800">Self-Built Automation Project</span>
-                            <span class="text-[11px] font-mono text-slate-400">Google Apps Script</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">CA Articleship Outreach Automation</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <strong>Problem:</strong> Sending personalized outreach emails to target CA firms individually is time-consuming and prone to formatting errors.<br>
-                            <strong>What I Built:</strong> A structured Google Sheets email dispatcher driven by Apps Script that dynamically populates firm details and attachments.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
-                            <li>Dynamic mail-merge with customized firm names and partner details.</li>
-                            <li>Automated Google Drive CV attachment linking.</li>
-                            <li>Status tracking column updating sent timestamps and throttling limits.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-start justify-between gap-4 mb-3">
-                            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-800">Self-Built Automation Project</span>
-                            <span class="text-[11px] font-mono text-slate-400">Google Sheets + Apps Script</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Invoice Tracker &amp; Follow-up Automation</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <strong>Problem:</strong> Manual tracking of overdue receivables leads to missed follow-ups and delayed cash flows.<br>
-                            <strong>What I Built:</strong> An automated accounts receivable tracker with automated email reminder logic based on payment due dates.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
-                            <li>Real-time invoice status classification (Pending / Paid / Overdue).</li>
-                            <li>Trigger-based automated email notifications for overdue accounts.</li>
-                            <li>Calculates outstanding balances and basic aging summaries.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-start justify-between gap-4 mb-3">
-                            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800">Educational Simulation</span>
-                            <span class="text-[11px] font-mono text-slate-400">HTML / JavaScript</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Audit Voucher Detective</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <strong>Problem:</strong> Practicing voucher auditing concepts requires interactive testing scenarios.<br>
-                            <strong>What I Built:</strong> An interactive web-based audit simulation tool to test voucher compliance, math integrity, and statutory tax thresholds.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
-                            <li>Simulated audit scenarios inspecting vendor invoice samples.</li>
-                            <li>Tests detection of TDS omission, incorrect GST rates, and calculation errors.</li>
-                            <li>Provides immediate feedback linking findings to regulatory concepts.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-start justify-between gap-4 mb-3">
-                            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-800">Self-Built Workflow Project</span>
-                            <span class="text-[11px] font-mono text-slate-400">AI Prompt Engineering</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">AI for Finance &amp; Audit Workflows</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <strong>Problem:</strong> Generic AI queries often produce ungrounded or vague legal/financial answers.<br>
-                            <strong>What I Built:</strong> A suite of structured system prompts and research pipelines leveraging Claude, ChatGPT, NotebookLM, and Perplexity.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
-                            <li>NotebookLM pipelines grounded exclusively in ICAI study material.</li>
-                            <li>Structured templates for drafting audit query notes and memorandum summaries.</li>
-                            <li>Perplexity research workflows for verifying statutory tax circulars.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Credentials Section -->
-        <section id="education" class="py-16 px-4 bg-slate-950/40">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Education &amp; Credentials</h2>
-                    <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">Academic progress and university responsibilities.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Qualifications
-                        </h3>
-
-                        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 text-xs font-bold border border-cyan-800">Professional Course</span>
-                                <span class="text-xs text-slate-400">ICAI</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white">CA Intermediate Progress</h4>
-                            <p class="text-xs text-cyan-300 font-semibold mb-3 ca-status-text">CA Intermediate — Group 2 Cleared | Group 1 Result Awaited</p>
-                            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
-                                <li>Cleared Group 2 in CA Intermediate examinations.</li>
-                                <li>Appeared for Group 1; result awaited.</li>
-                                <li>Scored <strong class="text-white">Exemption Marks</strong> in Cost &amp; Management Accounting.</li>
-                                <li>Completed mandatory ICITSS (Information Technology Training &amp; Orientation Course).</li>
-                            </ul>
-                        </div>
-
-                        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800">CGPA 7.0 / 10</span>
-                                <span class="text-xs text-slate-400">Graduation</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white">Bachelor of Commerce (B.Com Hons.)</h4>
-                            <p class="text-xs text-purple-300 font-semibold mb-3">Sri Sathya Sai Institute of Higher Learning (SSSIHL)</p>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Completed a 3-year full-time residential program with coursework in Financial Accounting, Corporate Law, Direct &amp; Indirect Taxation, Cost Accounting, Financial Management, and Business Statistics.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-award text-purple-400"></i> Additional Responsibilities
-                        </h3>
-
-                        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 text-xs font-bold border border-emerald-800">Leadership</span>
-                                <span class="text-xs text-slate-400">SSSIHL</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white">Cultural &amp; Event Coordinator</h4>
-                            <p class="text-xs text-emerald-300 font-semibold mb-3">Sri Sathya Sai Institute of Higher Learning</p>
-                            <ul class="text-xs text-slate-300 space-y-2">
-                                <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                    <span>Coordinated logistics and team schedules for university-level cultural events and ceremonial programs.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
-                                    <span>Managed multi-tier student groups, ensuring timely execution under strict institutional standards.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                            <div class="flex justify-between items-start mb-2">
-                                <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 text-xs font-bold border border-blue-800">Creative Leadership</span>
-                                <span class="text-xs text-slate-400">Brindavan Studio</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white">Leader, Brindavan Studio</h4>
-                            <p class="text-xs text-blue-300 font-semibold mb-3">Brindavan Campus, SSSIHL</p>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                Managed audio production projects, musical arrangements, and background scores for university events staged before international dignitaries.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-16 px-4 max-w-7xl mx-auto">
-            <div class="text-center mb-10">
-                <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-bold border border-cyan-800 inline-block mb-3">
-                    <i class="fa-solid fa-quote-left"></i> Endorsements &amp; Recommendations
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Testimonials</h2>
-                <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Automated recommendations populated directly via Gmail and Google Sheets.</p>
-                
-                <div class="mt-3">
-                    <button onclick="toggleAdminMode()" class="text-[11px] text-slate-500 hover:text-cyan-400 transition-colors">
-                        <i class="fa-solid fa-lock text-[10px]"></i> Admin Moderation Mode
-                    </button>
-                </div>
-            </div>
-
-            <!-- Live Testimonial Cards Grid -->
-            <div id="testimonial-cards-grid" class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="col-span-full text-center py-8 text-slate-400 text-xs">
-                    <i class="fa-solid fa-circle-notch animate-spin text-cyan-400 text-lg mb-2 block"></i> Fetching live testimonials...
-                </div>
-            </div>
-
-            <!-- Website Testimonial Submission Form -->
-            <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 max-w-3xl mx-auto">
-                <div class="text-center mb-6">
-                    <h3 class="text-base sm:text-lg font-bold text-white mb-1">Leave a Recommendation for Sai Adarsh</h3>
-                    <p class="text-xs text-slate-400">Submissions are processed via secure email dispatch into our live database.</p>
-                </div>
-
-                <form id="testimonial-dispatch-form" onsubmit="dispatchTestimonialEmail(event)" class="space-y-4">
-                    <input type="hidden" name="access_key" value="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185">
-                    <input type="hidden" name="subject" value="[Testimonial Submission] New Endorsement for Sai Adarsh">
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-1">Name of the person</label>
-                            <input id="form-name" type="text" required placeholder="e.g. CA Partner / Prof. Sharma" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-1">Organization</label>
-                            <input id="form-org" type="text" required placeholder="e.g. SSSIHL / ICAI Chapter" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-medium text-slate-300 mb-1">Relation to Sai Adarsh</label>
-                        <input id="form-relation" type="text" required placeholder="e.g. Mentor / Professor / Project Lead" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-medium text-slate-300 mb-1">Testimonial</label>
-                        <textarea id="form-text" rows="4" required placeholder="Share your experience working with Sai Adarsh..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400"></textarea>
-                    </div>
-
-                    <button type="submit" id="t-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-xs hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-paper-plane"></i> Submit Testimonial
-                    </button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Interactive Audit Simulation Section -->
-        <section id="audit-simulation" class="py-16 px-4 max-w-7xl mx-auto">
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-3">
-                    <i class="fa-solid fa-shield-halved"></i> Interactive Proof of Concept
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Interactive Audit Simulation</h2>
-                <p class="text-xs text-amber-400 font-medium mb-1">
-                    <i class="fa-solid fa-circle-info mr-1"></i> Educational Simulation — Illustrative scenarios only. Not professional tax or audit advice.
-                </p>
-                <p class="text-slate-400 text-xs max-w-2xl mx-auto">
-                    Inspect sample vendor vouchers (Assumed tax period: FY 2025-26 under simplified Indian tax rules).
-                </p>
-            </div>
-
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-700/60 shadow-2xl relative overflow-hidden">
-                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-800">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center text-lg font-bold">
-                            <i class="fa-solid fa-magnifying-glass font-bold"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-slate-400 block">Simulation Role</span>
-                            <span class="text-xs font-bold text-white">Audit Article Trainee</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-6">
-                        <div class="text-center">
-                            <span class="text-xs text-slate-400 block">Score</span>
-                            <span id="game-score" class="text-lg font-extrabold text-cyan-400">0 pts</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-xs text-slate-400 block">Voucher</span>
-                            <span id="game-progress" class="text-lg font-extrabold text-purple-400">1 / 4</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="my-6 grid md:grid-cols-12 gap-6 items-start">
-                    <div class="md:col-span-7 bg-slate-900/90 rounded-2xl p-5 border border-slate-800 shadow-inner">
-                        <div class="flex justify-between items-start mb-3 border-b border-slate-800 pb-3">
-                            <div>
-                                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Inspecting Sample Voucher</span>
-                                <h4 id="voucher-title" class="text-base font-bold text-cyan-300">Loading Voucher...</h4>
-                            </div>
-                            <span id="voucher-id" class="px-2 py-0.5 rounded bg-slate-800 text-xs font-mono text-slate-300">VCH-001</span>
-                        </div>
-
-                        <div id="voucher-details" class="space-y-2.5 text-xs text-slate-300 font-mono">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-
-                        <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 italic">
-                            <i class="fa-solid fa-lightbulb text-cyan-400 mr-1"></i> Verify tax applicability, rate classification, and mathematical summation.
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-5 space-y-3">
-                        <h4 class="text-xs font-semibold text-slate-200 mb-1">Audit Finding Verdict:</h4>
-                        
-                        <button onclick="submitAuditChoice('APPROVE')" class="verdict-btn w-full p-3.5 rounded-xl glass-panel hover:bg-emerald-950/40 border border-slate-700 hover:border-emerald-500/50 text-left transition-all group flex items-center justify-between">
-                            <div>
-                                <div class="font-bold text-emerald-400 text-xs group-hover:translate-x-1 transition-transform">
-                                    <i class="fa-solid fa-circle-check mr-1.5"></i> Approve Voucher
-                                </div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">Calculations and statutory compliance appear correct.</div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-emerald-400 text-xs"></i>
-                        </button>
-
-                        <button onclick="submitAuditChoice('FLAG_TAX')" class="verdict-btn w-full p-3.5 rounded-xl glass-panel hover:bg-amber-950/40 border border-slate-700 hover:border-amber-500/50 text-left transition-all group flex items-center justify-between">
-                            <div>
-                                <div class="font-bold text-amber-400 text-xs group-hover:translate-x-1 transition-transform">
-                                    <i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Flag Tax / TDS Exception
-                                </div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">Incorrect GST rate or missing TDS deduction.</div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-amber-400 text-xs"></i>
-                        </button>
-
-                        <button onclick="submitAuditChoice('REJECT_CALC')" class="verdict-btn w-full p-3.5 rounded-xl glass-panel hover:bg-red-950/40 border border-slate-700 hover:border-red-500/50 text-left transition-all group flex items-center justify-between">
-                            <div>
-                                <div class="font-bold text-red-400 text-xs group-hover:translate-x-1 transition-transform">
-                                    <i class="fa-solid fa-ban mr-1.5"></i> Reject (Math Error / Missing Support)
-                                </div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">Summation error or missing authorization.</div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-red-400 text-xs"></i>
-                        </button>
-
-                        <div id="game-feedback" class="hidden p-3.5 rounded-xl text-xs font-medium leading-relaxed border transition-all"></div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between text-xs text-slate-400 pt-3 border-t border-slate-800">
-                    <button onclick="resetAuditGame()" class="hover:text-cyan-400 transition-colors flex items-center gap-1 font-medium">
-                        <i class="fa-solid fa-rotate-right"></i> Reset Simulation
-                    </button>
-                    <span>4 educational sample vouchers</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 px-4 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-12 gap-8 items-start">
-                <div class="md:col-span-5 space-y-6">
-                    <div>
-                        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Interested in Discussing an Articleship Opportunity?</h2>
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                            Open to CA Articleship opportunities in Statutory Audit, Internal Audit, Risk Advisory and Taxation.
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2.5">
-                            <button onclick="openResumeModal(event)" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white text-xs font-semibold flex items-center gap-2">
-                                <i class="fa-solid fa-file-pdf"></i> View CV
-                            </button>
-                            <a href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl glass-panel text-slate-200 hover:text-white text-xs font-semibold border border-slate-700 flex items-center gap-2">
-                                <i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="space-y-3">
-                        <div class="glass-panel p-3.5 rounded-xl flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-sm">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 block">Email Address</span>
-                                <a href="mailto:saiadarshsahoo1@gmail.com" class="text-xs font-semibold text-white hover:text-cyan-400 transition-colors">saiadarshsahoo1@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <div class="glass-panel p-3.5 rounded-xl flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-sm">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 block">Phone / WhatsApp</span>
-                                <a href="tel:+917608886682" class="text-xs font-semibold text-white hover:text-cyan-400 transition-colors">+91 76088 86682</a>
-                            </div>
-                        </div>
-
-                        <div class="glass-panel p-3.5 rounded-xl flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-sm">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 block">LinkedIn Profile</span>
-                                <a href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener" class="text-xs font-semibold text-white hover:text-cyan-400 transition-colors">linkedin.com/in/sai-adarsh-sahoo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="md:col-span-7">
-                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
-                        <input type="hidden" name="access_key" value="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185">
-                        <input type="checkbox" name="botcheck" id="c-hp" class="hidden" style="display:none;">
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="c-name" class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
-                                <input id="c-name" name="name" type="text" required placeholder="e.g. CA Partner / HR Manager" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
-                            </div>
-                            <div>
-                                <label for="c-email" class="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
-                                <input id="c-email" name="email" type="email" required placeholder="partner@firm.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="c-subject" class="block text-xs font-medium text-slate-300 mb-1">Subject</label>
-                            <input id="c-subject" name="subject" type="text" required placeholder="CA Articleship Opportunity / Interview Inquiry" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
-                        </div>
-
-                        <div>
-                            <label for="c-msg" class="block text-xs font-medium text-slate-300 mb-1">Message</label>
-                            <textarea id="c-msg" name="message" rows="4" required placeholder="Write your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-semibold text-xs hover:opacity-95 shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> Send Message
-                        </button>
-
-                        <div id="contact-error-box" class="hidden p-3.5 rounded-xl bg-red-950/80 border border-red-500/60 text-xs text-red-200 mt-3 space-y-2">
-                            <p id="contact-error-msg">Unable to send through Web3Forms. Please email me directly.</p>
-                            <a href="mailto:saiadarshsahoo1@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-800 hover:bg-red-700 text-white font-semibold text-[11px] transition-colors">
-                                <i class="fa-solid fa-envelope"></i> Open Email Client
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Beyond Finance Section -->
-        <section id="beyond-finance" class="py-12 px-4 max-w-7xl mx-auto border-t border-slate-800/80">
-            <div class="text-center mb-8">
-                <span class="px-3 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800 inline-block mb-2">
-                    <i class="fa-solid fa-compact-disc"></i> Beyond Finance
-                </span>
-                <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">Music, Composition &amp; Digital Audio</h2>
-                <p class="text-slate-400 text-xs max-w-xl mx-auto">
-                    A personal interest in musical arrangement and digital audio processing.
-                </p>
-            </div>
-
-            <div class="glass-panel rounded-3xl p-5 sm:p-6 border border-purple-500/20 max-w-3xl mx-auto mb-10">
-                <div class="text-center mb-4">
-                    <h3 class="text-sm font-bold text-white mb-0.5">Interactive Web Audio Synthesizer</h3>
-                    <p class="text-[11px] text-slate-400">Click pads to trigger real-time synthesized sine waves via Web Audio API.</p>
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto mb-3">
-                    <button onclick="playSynthNote(261.63, 'C4')" class="p-4 rounded-xl bg-slate-900 border border-purple-500/30 hover:border-purple-400 active:scale-95 transition-all text-center group">
-                        <div class="text-lg font-bold text-purple-400 mb-0.5 group-hover:scale-110 transition-transform">C4</div>
-                        <div class="text-[10px] text-slate-500 font-mono">261.6 Hz</div>
-                    </button>
-                    <button onclick="playSynthNote(329.63, 'E4')" class="p-4 rounded-xl bg-slate-900 border border-cyan-500/30 hover:border-cyan-400 active:scale-95 transition-all text-center group">
-                        <div class="text-lg font-bold text-cyan-400 mb-0.5 group-hover:scale-110 transition-transform">E4</div>
-                        <div class="text-[10px] text-slate-500 font-mono">329.6 Hz</div>
-                    </button>
-                    <button onclick="playSynthNote(392.00, 'G4')" class="p-4 rounded-xl bg-slate-900 border border-blue-500/30 hover:border-blue-400 active:scale-95 transition-all text-center group">
-                        <div class="text-lg font-bold text-blue-400 mb-0.5 group-hover:scale-110 transition-transform">G4</div>
-                        <div class="text-[10px] text-slate-500 font-mono">392.0 Hz</div>
-                    </button>
-                    <button onclick="playSynthNote(523.25, 'C5')" class="p-4 rounded-xl bg-slate-900 border border-emerald-500/30 hover:border-emerald-400 active:scale-95 transition-all text-center group">
-                        <div class="text-lg font-bold text-emerald-400 mb-0.5 group-hover:scale-110 transition-transform">C5</div>
-                        <div class="text-[10px] text-slate-500 font-mono">523.2 Hz</div>
-                    </button>
-                </div>
-                <div class="text-center text-[11px] text-slate-400 font-mono" id="synth-status">Audio Engine Ready</div>
-            </div>
-
-            <div id="gallery" class="max-w-4xl mx-auto">
-                <h3 class="text-sm font-bold text-slate-300 mb-3 text-center">Event &amp; Campus Gallery</h3>
-                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Resume Floating Window Modal -->
-    <div id="resume-modal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/80 backdrop-blur-[6px] transition-all duration-300 p-3 sm:p-6" role="dialog" aria-modal="true" aria-label="Resume Preview Modal">
-        <div class="glass-panel w-full max-w-5xl h-[88vh] rounded-2xl border border-slate-700/80 shadow-2xl flex flex-col overflow-hidden relative" onclick="event.stopPropagation()">
-            <div class="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-slate-900/90 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-sm font-bold">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xs sm:text-sm font-bold text-white">Curriculum Vitae — Sai Adarsh Sahoo</h3>
-                        <span class="text-[10px] text-cyan-400 font-medium hidden sm:block">CA Intermediate | Audit, Tax &amp; Finance Automation</span>
-                    </div>
-                </div>
-                <div class="flex items-center gap-2">
-                    <a href="resume.pdf" download="Sai_Adarsh_Sahoo_Resume.pdf" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-accentBlue to-accentPurple hover:opacity-90 text-white text-xs font-semibold flex items-center gap-1.5 transition-all shadow">
-                        <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Download PDF</span>
-                    </a>
-                    <button onclick="closeResumeModal()" class="w-8 h-8 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-sm transition-colors" aria-label="Close Resume Window">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="flex-grow bg-slate-950 relative">
-                <iframe id="resume-iframe" src="about:blank" class="w-full h-full border-0" title="Sai Adarsh Sahoo Resume Document"></iframe>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gallery Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Photo viewer">
-        <button id="lb-close" aria-label="Close photo viewer" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
-            <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-        <button id="lb-prev" aria-label="Previous photo" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
-            <i class="fa-solid fa-chevron-left text-lg"></i>
-        </button>
-        <button id="lb-next" aria-label="Next photo" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
-            <i class="fa-solid fa-chevron-right text-lg"></i>
-        </button>
-        <img id="lb-img" alt="" class="max-w-[92vw] max-h-[84vh] object-contain rounded-xl shadow-2xl select-none">
-        <div id="lb-count" class="absolute bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-slate-800/90 text-xs text-slate-200"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="glass-panel border-t border-slate-800/80 py-6 px-4 text-center text-xs text-slate-400">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div>
-                © 2026 Sai Adarsh Sahoo. All rights reserved.
-            </div>
-            <div class="flex items-center space-x-4 flex-wrap justify-center text-[11px]">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
-                <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
-                <a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonials</a>
-                <a href="#audit-simulation" class="hover:text-cyan-400 transition-colors">Audit Simulation</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
-                <a href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="config.js"></script>
-    <script>
-        /* =======================================================
-           1. Configuration Constants & Web App Endpoint
-           ======================================================= */
-        const APPS_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzeTOOZgTfdcpr5dlvksmSVycW6d38fmPQXkXh2x49M1IUVCiySzQlFZ3afpnKnK28p/exec";
-        const WEB3FORMS_KEY = "8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
-        const CANONICAL_CA_STATUS = "CA Intermediate — Group 2 Cleared | Group 1 Result Awaited";
-
-        let isAdmin = false;
-        let cachedKey = "";
-        
-        function updateCAStatus() {
-            const els = document.querySelectorAll('.ca-status-text');
-            els.forEach(el => {
-                el.textContent = CANONICAL_CA_STATUS;
-            });
-        }
-
-        /* =======================================================
-           2. Typewriter Animation Engine
-           ======================================================= */
-        const typingPhrases = [
-            "CA Intermediate (Group 2 Cleared)",
-            "Audit, Tax & Finance Automation",
-            "AI Tools & Finance Workflows",
-            "VBA & Google Apps Script Automator"
-        ];
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('typing-text');
-
-        function typeLoop() {
-            if (!typingElement) return;
-            const currentPhrase = typingPhrases[phraseIndex];
-            if (isDeleting) {
-                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 35 : 75;
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                typeSpeed = 2200;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % typingPhrases.length;
-                typeSpeed = 400;
-            }
-
-            setTimeout(typeLoop, typeSpeed);
-        }
-
-        /* =======================================================
-           3. Resume Floating Window Handler
-           ======================================================= */
-        function openResumeModal(e) {
-            if (e) e.preventDefault();
-            const modal = document.getElementById('resume-modal');
-            const iframe = document.getElementById('resume-iframe');
-            if (modal && iframe) {
-                if (iframe.src === 'about:blank' || !iframe.src.endsWith('resume.pdf')) {
-                    iframe.src = 'resume.pdf';
-                }
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeResumeModal() {
-            const modal = document.getElementById('resume-modal');
-            if (modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = '';
-            }
-        }
-
-        document.addEventListener('click', (e) => {
-            const modal = document.getElementById('resume-modal');
-            if (modal && !modal.classList.contains('hidden') && e.target === modal) {
-                closeResumeModal();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeResumeModal();
-            }
-        });
-
-        /* =======================================================
-           4. Live Testimonial Pipeline Engine
-           ======================================================= */
-        async function loadTestimonials() {
-            const grid = document.getElementById('testimonial-cards-grid');
-            try {
-                const res = await fetch(APPS_SCRIPT_API_URL);
-                const data = await res.json();
-
-                if (!data || data.length === 0) {
-                    grid.innerHTML = `<div class="col-span-full text-center py-6 text-slate-500 text-xs">No active testimonials found in database. Be the first to submit one below!</div>`;
-                    return;
-                }
-
-                grid.innerHTML = data.map(item => `
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between relative group">
-                        ${isAdmin ? `
-                            <button onclick="deleteCard('${item.id}')" class="absolute top-3 right-3 px-2 py-1 bg-red-900/80 hover:bg-red-700 border border-red-500 text-red-100 text-[10px] rounded font-bold transition-all">
-                                <i class="fa-solid fa-trash mr-1"></i> Delete
-                            </button>
-                        ` : ''}
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-1 text-amber-400 text-xs">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-xs text-slate-300 italic leading-relaxed">"${escapeHTML(item.testimonial)}"</p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                            <div>
-                                <h4 class="text-xs font-bold text-white">${escapeHTML(item.name)}</h4>
-                                <span class="text-[10px] text-slate-400 block">${escapeHTML(item.organization)}</span>
-                            </div>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">
-                                ${escapeHTML(item.relation)}
-                            </span>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (err) {
-                console.error("Fetch Error:", err);
-                grid.innerHTML = `<div class="col-span-full text-center py-6 text-red-400 text-xs">Failed to load live testimonials.</div>`;
-            }
-        }
-
-        async function dispatchTestimonialEmail(e) {
-            e.preventDefault();
-            const btn = document.getElementById('t-submit-btn');
-            btn.disabled = true;
-            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Dispatching Email...`;
-
-            const name = document.getElementById('form-name').value.trim();
-            const org = document.getElementById('form-org').value.trim();
-            const relation = document.getElementById('form-relation').value.trim();
-            const testimonial = document.getElementById('form-text').value.trim();
-
-            const formattedBody = `
-Name: ${name}
-Organization: ${org}
-Relation: ${relation}
-Testimonial: ${testimonial}
-            `.trim();
-
-            try {
-                const res = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        access_key: WEB3FORMS_KEY,
-                        subject: "[Testimonial Submission] New Endorsement for Sai Adarsh",
-                        from_name: name,
-                        message: formattedBody
-                    })
-                });
-
-                const result = await res.json();
-                if (result.success) {
-                    btn.innerHTML = `<i class="fa-solid fa-check"></i> Sent to Inbox! Processing...`;
-                    document.getElementById('testimonial-dispatch-form').reset();
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        btn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Testimonial`;
-                        loadTestimonials();
-                    }, 3000);
-                } else {
-                    throw new Error(result.message);
-                }
-            } catch (err) {
-                alert("Email dispatch failed: " + err.message);
-                btn.disabled = false;
-                btn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Testimonial`;
-            }
-        }
-
-        function toggleAdminMode() {
-            if (!isAdmin) {
-                const pass = prompt("Enter Admin Password:");
-                if (pass) {
-                    cachedKey = pass;
-                    isAdmin = true;
-                    alert("Admin Mode Enabled. You can now delete entries directly.");
-                    loadTestimonials();
-                }
-            } else {
-                isAdmin = false;
-                cachedKey = "";
-                alert("Admin Mode Disabled.");
-                loadTestimonials();
-            }
-        }
-
-        async function deleteCard(id) {
-            if (!confirm("Are you sure you want to delete this testimonial?")) return;
-            try {
-                const res = await fetch(APPS_SCRIPT_API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify({ action: 'delete', id: id, adminKey: cachedKey })
-                });
-                const data = await res.json();
-                if (data.success) {
-                    alert("Deleted successfully!");
-                    loadTestimonials();
-                } else {
-                    alert("Failed to delete: " + (data.message || 'Invalid passcode'));
-                }
-            } catch (e) {
-                alert("Deletion Error: " + e.message);
-            }
-        }
-
-        /* =======================================================
-           5. Contact Form Handler
-           ======================================================= */
-        async function handleContactSubmit(e) {
-            e.preventDefault();
-            const hp = document.getElementById('c-hp');
-            if (hp && hp.checked) return;
-
-            const nm = document.getElementById('c-name');
-            const em = document.getElementById('c-email');
-            const sj = document.getElementById('c-subject');
-            const ms = document.getElementById('c-msg');
-            const btn = document.getElementById('submit-btn');
-            const errorBox = document.getElementById('contact-error-box');
-
-            errorBox.classList.add('hidden');
-            const idleText = `<i class="fa-solid fa-paper-plane"></i> Send Message`;
-            btn.disabled = true;
-            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending Message...`;
-
-            try {
-                const r = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        access_key: WEB3FORMS_KEY,
-                        subject: 'Articleship Inquiry: ' + sj.value.trim(),
-                        from_name: nm.value.trim(),
-                        name: nm.value.trim(),
-                        email: em.value.trim(),
-                        message: ms.value.trim()
-                    })
-                });
-                const data = await r.json();
-                if (!data.success) throw new Error(data.message);
-
-                btn.innerHTML = `<i class="fa-solid fa-check"></i> Message Sent Successfully!`;
-                e.target.reset();
-                setTimeout(() => { btn.disabled = false; btn.innerHTML = idleText; }, 4000);
-            } catch (err) {
-                console.error("Contact Error:", err);
-                btn.disabled = false;
-                btn.innerHTML = idleText;
-                errorBox.classList.remove('hidden');
-            }
-        }
-
-        /* =======================================================
-           6. Particle Canvas Engine
-           ======================================================= */
-        const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas ? canvas.getContext('2d') : null;
-        let particles = [];
-
-        function resizeCanvas() {
-            if (!canvas) return;
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = (Math.random() - 0.5) * 0.6;
-                this.speedY = (Math.random() - 0.5) * 0.6;
-                this.color = ['#38bdf8', '#818cf8', '#c084fc'][Math.floor(Math.random() * 3)];
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            draw() {
-                if (!ctx) return;
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            if (!canvas) return;
-            particles = [];
-            const count = Math.min(Math.floor(window.innerWidth / 20), 45);
-            for (let i = 0; i < count; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animateParticles() {
-            if (!ctx || !canvas) return;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 90) {
-                        ctx.strokeStyle = `rgba(56, 189, 248, ${1 - dist / 90})`;
-                        ctx.lineWidth = 0.3;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animateParticles);
-        }
-
-        /* =======================================================
-           7. Audit Simulation Game Logic
-           ======================================================= */
-        const gameVouchers = [
-            {
-                id: "VCH-001",
-                title: "Vendor Professional Services Invoice",
-                details: `<div><span class="text-slate-500">Vendor:</span> TechConsult Advisory Ltd.</div>
-                          <div><span class="text-slate-500">Service Fee:</span> ₹1,50,000</div>
-                          <div><span class="text-slate-500">GST (18%):</span> ₹27,000</div>
-                          <div><span class="text-slate-500">TDS Deducted:</span> <span class="text-red-400 font-bold">₹0 (Omitted!)</span></div>
-                          <div><span class="text-slate-500">Net Paid:</span> ₹1,77,000</div>`,
-                correct: "FLAG_TAX",
-                explanation: "Under the assumptions defined for this simulation, professional fees exceeding prescribed thresholds require mandatory TDS deduction under Sec 194J. Omitting TDS creates a tax compliance exception."
-            },
-            {
-                id: "VCH-002",
-                title: "Office Supplies Voucher",
-                details: `<div><span class="text-slate-500">Vendor:</span> Apex Stationers</div>
-                          <div><span class="text-slate-500">Item Cost:</span> ₹12,000</div>
-                          <div><span class="text-slate-500">GST (12%):</span> ₹1,440</div>
-                          <div><span class="text-slate-500">Voucher Total Listed:</span> <span class="text-red-400 font-bold">₹15,440 (Summation Error)</span></div>
-                          <div><span class="text-slate-500">Authorization:</span> Manager Signed</div>`,
-                correct: "REJECT_CALC",
-                explanation: "Arithmetic summation error: ₹12,000 + ₹1,440 equals ₹13,440, but the voucher total is incorrectly listed as ₹15,440."
-            },
-            {
-                id: "VCH-003",
-                title: "Equipment Repair Voucher",
-                details: `<div><span class="text-slate-500">Vendor:</span> General Maintenance Corp</div>
-                          <div><span class="text-slate-500">Repair Cost:</span> ₹8,000</div>
-                          <div><span class="text-slate-500">GST (18%):</span> ₹1,440</div>
-                          <div><span class="text-slate-500">Total Paid:</span> ₹9,440</div>
-                          <div><span class="text-slate-500">Supporting Bill:</span> Verified &amp; Attached</div>`,
-                correct: "APPROVE",
-                explanation: "Voucher math is accurate, GST classification matches standard services, and supporting documentation is verified."
-            },
-            {
-                id: "VCH-004",
-                title: "Software License Invoice",
-                details: `<div><span class="text-slate-500">Vendor:</span> CloudSoft Systems</div>
-                          <div><span class="text-slate-500">Subscription:</span> ₹50,000</div>
-                          <div><span class="text-slate-500">GST Rate Applied:</span> <span class="text-amber-400 font-bold">28% (Incorrect Slab)</span></div>
-                          <div><span class="text-slate-500">GST Charged:</span> ₹14,000</div>`,
-                correct: "FLAG_TAX",
-                explanation: "Under the classification assumed for this simulation, the applicable GST rate for software licenses is 18%; the voucher has incorrectly applied 28%."
-            }
-        ];
-
-        let currentVoucherIdx = 0;
-        let auditScore = 0;
-        let isProcessingVerdict = false;
-
-        function loadVoucher(index) {
-            const feedbackEl = document.getElementById('game-feedback');
-            if (feedbackEl) feedbackEl.classList.add('hidden');
-
-            if (index >= gameVouchers.length) {
-                document.getElementById('voucher-title').textContent = "Audit Inspection Complete!";
-                document.getElementById('voucher-id').textContent = "COMPLETED";
-                document.getElementById('voucher-details').innerHTML = `
-                    <div class="text-center py-6">
-                        <div class="text-3xl text-emerald-400 mb-2"><i class="fa-solid fa-award"></i></div>
-                        <h4 class="text-base font-bold text-white mb-1">Simulation Complete</h4>
-                        <p class="text-xs text-slate-400">Final Inspection Score: <strong class="text-cyan-400">${auditScore} / 100 pts</strong></p>
-                    </div>`;
-                
-                disableVerdictButtons(true);
-                return;
-            }
-
-            const v = gameVouchers[index];
-            document.getElementById('voucher-title').textContent = v.title;
-            document.getElementById('voucher-id').textContent = v.id;
-            document.getElementById('voucher-details').innerHTML = v.details;
-            document.getElementById('game-progress').textContent = `${index + 1} / ${gameVouchers.length}`;
-            
-            disableVerdictButtons(false);
-            isProcessingVerdict = false;
-        }
-
-        function disableVerdictButtons(disabled) {
-            const btns = document.querySelectorAll('.verdict-btn');
-            btns.forEach(b => {
-                b.disabled = disabled;
-                if (disabled) {
-                    b.classList.add('opacity-50', 'cursor-not-allowed');
-                } else {
-                    b.classList.remove('opacity-50', 'cursor-not-allowed');
-                }
-            });
-        }
-
-        function submitAuditChoice(choice) {
-            if (isProcessingVerdict || currentVoucherIdx >= gameVouchers.length) return;
-
-            isProcessingVerdict = true;
-            disableVerdictButtons(true);
-
-            const v = gameVouchers[currentVoucherIdx];
-            const feedbackEl = document.getElementById('game-feedback');
-            feedbackEl.classList.remove('hidden', 'bg-emerald-950/80', 'border-emerald-500', 'text-emerald-200', 'bg-red-950/80', 'border-red-500', 'text-red-200');
-
-            if (choice === v.correct) {
-                auditScore += 25;
-                document.getElementById('game-score').textContent = `${auditScore} pts`;
-                feedbackEl.classList.add('bg-emerald-950/80', 'border-emerald-500', 'text-emerald-200');
-                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i> <strong>Correct Verdict!</strong> ${v.explanation}`;
-            } else {
-                feedbackEl.classList.add('bg-red-950/80', 'border-red-500', 'text-red-200');
-                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1.5"></i> <strong>Audit Exception Missed!</strong> ${v.explanation}`;
-            }
-
-            setTimeout(() => {
-                currentVoucherIdx++;
-                loadVoucher(currentVoucherIdx);
-            }, 2200);
-        }
-
-        function resetAuditGame() {
-            currentVoucherIdx = 0;
-            auditScore = 0;
-            isProcessingVerdict = false;
-            document.getElementById('game-score').textContent = "0 pts";
-            loadVoucher(0);
-        }
-
-        /* =======================================================
-           8. Skill Filtering Logic
-           ======================================================= */
-        function filterSkills(category) {
-            const tabs = document.querySelectorAll('.skill-tab');
-            tabs.forEach(tab => {
-                if (tab.getAttribute('data-category') === category) {
-                    tab.classList.remove('bg-slate-800', 'text-slate-300');
-                    tab.classList.add('bg-accentBlue', 'text-white', 'active');
-                } else {
-                    tab.classList.remove('bg-accentBlue', 'text-white', 'active');
-                    tab.classList.add('bg-slate-800', 'text-slate-300');
-                }
-            });
-
-            const cards = document.querySelectorAll('.skill-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        /* =======================================================
-           9. Web Audio API Synthesizer
-           ======================================================= */
-        let audioCtx = null;
-
-        function playSynthNote(freq, noteName) {
-            try {
-                if (!audioCtx) {
-                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                }
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-                gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.0);
-
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-
-                osc.start();
-                osc.stop(audioCtx.currentTime + 1.0);
-
-                document.getElementById('synth-status').textContent = `Tone Played: ${noteName} (${freq} Hz)`;
-            } catch (e) {
-                console.log("Audio API not available:", e);
-            }
-        }
-
-        /* Mobile Menu Navigation Logic */
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-                mobileMenuBtn.setAttribute('aria-expanded', !expanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                });
-            });
-        }
-
-        /* Helper Utilities */
-        function probeImage(base, cb) {
-            const exts = ['jpg', 'jpeg', 'png', 'webp']; let i = 0;
-            (function next() {
-                if (i >= exts.length) return cb(null);
-                const im = new Image();
-                im.onload = () => cb(base + '.' + exts[i]);
-                im.onerror = () => { i++; next(); };
-                im.src = base + '.' + exts[i];
-            })();
-        }
-
-        function escapeHTML(str) {
-            return str ? str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)) : '';
-        }
-
-        /* Lightbox Modal */
-        const galleryImgs = [];
-        let lbIndex = 0;
-        const lb = document.getElementById('lightbox');
-        const lbImg = document.getElementById('lb-img');
-
-        function lbShow() {
-            if (!lbImg) return;
-            lbImg.src = galleryImgs[lbIndex];
-            lbImg.alt = 'Gallery photo ' + (lbIndex + 1);
-            document.getElementById('lb-count').textContent = (lbIndex + 1) + ' / ' + galleryImgs.length;
-            const multi = galleryImgs.length > 1;
-            document.getElementById('lb-prev').style.display = multi ? '' : 'none';
-            document.getElementById('lb-next').style.display = multi ? '' : 'none';
-        }
-        function openLightbox(i) { lbIndex = i; lbShow(); lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow = 'hidden'; }
-        function closeLightbox() { lb.classList.add('hidden'); lb.classList.remove('flex'); document.body.style.overflow = ''; }
-        function lbMove(d) { lbIndex = (lbIndex + d + galleryImgs.length) % galleryImgs.length; lbShow(); }
-
-        if (lb) {
-            document.getElementById('lb-close').addEventListener('click', closeLightbox);
-            document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbMove(-1); });
-            document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbMove(1); });
-            lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
-        }
-
-        function initMedia() {
-            probeImage('images/profile', src => {
-                if (!src) return;
-                const im = document.getElementById('avatar-img');
-                if (im) { im.src = src; im.classList.remove('hidden'); }
-                const fb = document.getElementById('avatar-fallback');
-                if (fb) fb.classList.add('hidden');
-                
-                const ab = document.getElementById('about-avatar-img');
-                if (ab) { ab.src = src; ab.classList.remove('hidden'); }
-                const abFb = document.getElementById('about-avatar-fallback');
-                if (abFb) abFb.classList.add('hidden');
-            });
-
-            const g = document.getElementById('gallery-grid');
-            if (!g) return;
-            let n = 1;
-            (function next() {
-                if (n > 12) return;
-                probeImage('images/gallery/' + n, src => {
-                    if (!src) {
-                        if (n === 1) {
-                            g.innerHTML = '<div class="col-span-full text-center text-xs text-slate-500 py-4">Campus & event photos coming soon</div>';
-                        }
-                        return;
-                    }
-                    const a = document.createElement('a');
-                    const idx = galleryImgs.length; galleryImgs.push(src);
-                    a.href = '#'; a.setAttribute('aria-label', 'Open photo ' + (idx + 1));
-                    a.addEventListener('click', ev => { ev.preventDefault(); openLightbox(idx); });
-                    a.className = 'glass-panel rounded-xl overflow-hidden aspect-[4/3] block';
-                    const im = document.createElement('img');
-                    im.src = src; im.alt = 'Gallery photo ' + n; im.loading = 'lazy';
-                    im.className = 'w-full h-full object-cover hover:scale-105 transition-transform duration-500';
-                    a.appendChild(im); g.appendChild(a);
-                    n++; next();
-                });
-            })();
-        }
-
-        /* Initialization */
-        window.onload = function () {
-            updateCAStatus();
-            typeLoop();
-            
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReducedMotion) {
-                resizeCanvas();
-                initParticles();
-                animateParticles();
-            }
-
-            loadVoucher(0);
-            loadTestimonials();
-            initMedia();
-        };
-
-        window.addEventListener('resize', () => {
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReducedMotion) {
-                resizeCanvas();
-            }
-        });
-    </script>
+<body class="min-h-screen flex flex-col">
+
+<header class="fixed top-0 inset-x-0 z-50 glass border-b border-slate-800/80">
+ <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+  <a href="#hero" class="flex items-center gap-3" aria-label="Home">
+   <span class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-blue-500 to-violet-500 flex items-center justify-center ring-2 ring-blue-500/40">
+    <img id="av1" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av1f" class="fa-solid fa-user"></i></span>
+   <span><b class="text-white text-lg block leading-tight">Sai Adarsh Sahoo</b><span class="text-xs text-cyan-400 block ca-status"></span></span>
+  </a>
+  <nav id="nav-d" class="hidden lg:flex gap-1" aria-label="Main"></nav>
+  <button id="burger" class="lg:hidden p-2 text-slate-300" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
+ </div>
+ <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1"></nav>
+</header>
+
+<main class="flex-grow pt-20">
+<section id="hero" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-14 px-4">
+ <canvas id="pc" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+ <div class="relative z-10 max-w-5xl mx-auto text-center">
+  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-cyan-300 text-xs font-medium mb-6"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>Available for CA Articleship in Statutory Audit &amp; Risk Advisory</div>
+  <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4">Hi, I'm <span class="gt">Sai Adarsh Sahoo</span></h1>
+  <div class="h-10 mb-4 flex items-center justify-center"><span id="typ" class="text-xl sm:text-2xl font-semibold text-cyan-400 border-r-2 border-cyan-400 pr-1"></span></div>
+  <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mb-8">CA Intermediate student and B.Com (Hons.) graduate with a strong foundation in auditing standards, accounting, direct and indirect taxation and Schedule III reporting, supported by Excel and Tally skills.</p>
+  <div class="flex flex-wrap justify-center gap-3">
+   <button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button>
+   <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
+   <a class="btn-g" href="#contact"><i class="fa-solid fa-envelope text-violet-400"></i> Contact Me</a>
+  </div>
+  <div id="snap" class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-12 text-left"></div>
+ </div>
+</section>
+
+<section id="about" class="sec">
+ <h2 class="h2">About Me</h2><p class="sub">Articleship objective and what I bring to a firm.</p>
+ <div class="grid md:grid-cols-12 gap-6">
+  <div class="md:col-span-5 card">
+   <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-cyan-500 to-indigo-600 p-1 mb-5"><div class="w-full h-full bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center text-3xl font-extrabold text-cyan-400"><img id="av2" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><span id="av2f">SAS</span></div></div>
+   <h3 class="text-2xl font-bold text-white">Sai Adarsh Sahoo</h3>
+   <p class="text-cyan-400 text-sm font-semibold mb-5 ca-status"></p>
+   <ul class="space-y-3 text-sm text-slate-300">
+    <li><i class="fa-solid fa-location-dot text-cyan-400 w-5"></i> Jajpur, Odisha &middot; Open to relocation (Bengaluru, Hyderabad, Mumbai)</li>
+    <li><i class="fa-solid fa-graduation-cap text-violet-400 w-5"></i> B.Com (Hons.), Sri Sathya Sai Institute of Higher Learning</li>
+    <li><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400 break-all" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></li>
+    <li><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a></li>
+    <li><i class="fa-solid fa-briefcase text-emerald-400 w-5"></i> Target: Statutory Audit, Risk Advisory</li>
+   </ul>
+  </div>
+  <div class="md:col-span-7 space-y-6">
+   <div class="card"><h3 class="font-bold text-white mb-2"><i class="fa-solid fa-bullseye text-cyan-400"></i> Articleship Objective</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">Seeking a CA Articleship in Statutory Audit or Risk Advisory, where I can learn through real client engagements while contributing strong accounting fundamentals, careful verification and technology-enabled working papers. I am keen to build exposure to financial due diligence and valuation within audit and risk advisory.</p></div>
+   <div class="card"><h3 class="font-bold text-white mb-3"><i class="fa-solid fa-list-check text-violet-400"></i> What I Can Contribute</h3>
+    <div class="grid sm:grid-cols-3 gap-3 text-sm text-slate-300">
+     <div><b class="text-cyan-300">Audit support</b><p class="mt-1 text-slate-400">Voucher checking, bank and ledger reconciliations, audit trail verification, document indexing and working-paper support.</p></div>
+     <div><b class="text-cyan-300">Tax support</b><p class="mt-1 text-slate-400">Income computations, TDS applicability (Sec 194C/194J, now Sec 393 from 1 Apr 2026), GSTR-2B vs books ITC reconciliation.</p></div>
+     <div><b class="text-cyan-300">Automation</b><p class="mt-1 text-slate-400">Excel VBA, Power Query and Apps Script to speed up repetitive schedules and data cleaning.</p></div>
+    </div></div>
+  </div>
+ </div>
+</section>
+
+<section id="education" class="py-14 px-4 bg-slate-950/40"><div class="max-w-7xl mx-auto">
+ <h2 class="h2">Education &amp; Credentials</h2><p class="sub">Academic record and responsibilities.</p>
+ <div class="grid md:grid-cols-2 gap-6">
+  <div class="space-y-6">
+   <div class="card"><div class="flex justify-between mb-2"><span class="chip">ICAI</span><span class="text-xs text-slate-400">CA Intermediate</span></div>
+    <h4 class="text-lg font-bold text-white mb-2 ca-status"></h4>
+    <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>Group 2 passed with exemption in Costing (71 marks)</li><li>Group 1 appeared; result awaited</li><li>ICITSS (IT &amp; Orientation Course, ICAI) completed</li><li>AI for Finance (Level 1), CA Monk: ongoing</li></ul></div>
+   <div class="card"><div class="flex justify-between mb-2"><span class="chip">CGPA 7.0 / 10</span><span class="text-xs text-slate-400">2021 &ndash; 2024</span></div>
+    <h4 class="text-lg font-bold text-white">B.Com (Hons.)</h4><p class="text-sm text-violet-300 mb-2">Sri Sathya Sai Institute of Higher Learning, Puttaparthi</p>
+    <p class="text-sm text-slate-300">Class XII (CBSE), Mothers Public School, Bhubaneswar, 2020: <b>83.2%</b><br>Class X (ICSE), St. Mary's School, Jajpur Road, 2018: <b>79.6%</b></p></div>
+  </div>
+  <div class="space-y-6">
+   <div class="card"><div class="flex justify-between mb-2"><span class="chip">Leadership</span><span class="text-xs text-slate-400">SSSIHL</span></div>
+    <h4 class="text-lg font-bold text-white">Cultural Coordinator</h4>
+    <p class="text-sm text-slate-300 mt-1">Directed logistics and schedules across departments for large university cultural events, delivered without delays.</p></div>
+   <div class="card"><div class="flex justify-between mb-2"><span class="chip">Music &amp; Arts</span><span class="text-xs text-slate-400">Brindavan Studio</span></div>
+    <h4 class="text-lg font-bold text-white">Leader, Brindavan Studio</h4>
+    <p class="text-sm text-slate-300 mt-1">Led a 13-member team that conceptualised, composed and managed live audio for student theatre at the annual sports and cultural meet, before an international audience.</p></div>
+   <div class="card"><div class="flex justify-between mb-2"><span class="chip">Service</span><span class="text-xs text-slate-400">Volunteer</span></div>
+    <p class="text-sm text-slate-300">Volunteer with the Sri Sathya Sai Seva Organisation: logistics for large medical camps and rural development initiatives.</p></div>
+  </div>
+ </div></div></section>
+
+<section id="skills" class="py-14 px-4"><div class="max-w-7xl mx-auto">
+ <h2 class="h2">Skills &amp; Technology</h2><p class="sub">Labels show the basis: coursework, working knowledge, or things I built myself.</p>
+ <div id="tabs" class="flex gap-2 overflow-x-auto pb-2 mb-6 md:justify-center"></div>
+ <div id="sk" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</div></section>
+
+<section id="projects" class="sec">
+ <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling.</p>
+ <div id="pj" class="grid md:grid-cols-2 gap-5"></div>
+</section>
+
+<section id="testimonials" class="py-14 px-4 bg-slate-950/40"><div class="max-w-5xl mx-auto">
+ <h2 class="h2">Recommendations</h2><p class="sub">Mentors, professors and colleagues are welcome to share their experience. Entries appear after review.</p>
+ <div id="t-grid" class="hidden grid md:grid-cols-3 gap-5 mb-10"></div>
+ <form id="t-form" class="card max-w-2xl mx-auto space-y-3">
+  <div class="grid sm:grid-cols-2 gap-3">
+   <div><label class="lbl" for="t-name">Name</label><input id="t-name" class="inp" required maxlength="80"></div>
+   <div><label class="lbl" for="t-org">Organization</label><input id="t-org" class="inp" required maxlength="100"></div></div>
+  <div><label class="lbl" for="t-rel">Relation to Sai Adarsh</label><input id="t-rel" class="inp" required maxlength="80" placeholder="e.g. Professor / Mentor / Team member"></div>
+  <div><label class="lbl" for="t-txt">Recommendation</label><textarea id="t-txt" class="inp" rows="4" required maxlength="600"></textarea></div>
+  <button id="t-btn" class="btn-p w-full justify-center"><i class="fa-solid fa-paper-plane"></i> Submit for review</button>
+  <p id="t-msg" class="text-xs text-slate-400 text-center"></p>
+ </form>
+</div></section>
+
+<section id="audit-simulation" class="sec">
+ <h2 class="h2">Audit Voucher Simulation</h2>
+ <p class="text-xs text-amber-400 text-center mb-1"><i class="fa-solid fa-circle-info"></i> Educational simulation with illustrative figures. Not tax or audit advice.</p>
+ <p class="sub">Assumes invoices dated after 22 Sep 2025 (GST slabs 5% / 18%). TDS references use the 1961 Act section numbers; from 1 Apr 2026 these sit under Sec 393 of the Income-tax Act, 2025.</p>
+ <div class="card sm:p-8">
+  <div class="flex justify-between pb-4 border-b border-slate-800 text-sm"><span class="text-slate-400">Score <b id="g-s" class="text-cyan-400 text-lg ml-1">0</b></span><span class="text-slate-400">Voucher <b id="g-p" class="text-violet-400 text-lg ml-1">1 / 4</b></span></div>
+  <div class="grid md:grid-cols-12 gap-6 mt-5">
+   <div class="md:col-span-7 bg-slate-900/80 rounded-2xl p-5 border border-slate-800"><div class="flex justify-between border-b border-slate-800 pb-3 mb-3"><h4 id="v-t" class="font-bold text-cyan-300"></h4><span id="v-i" class="chip"></span></div><div id="v-d" class="space-y-2 text-sm font-mono text-slate-300"></div></div>
+   <div class="md:col-span-5 space-y-3">
+    <button class="vb card w-full text-left text-emerald-400 font-bold text-sm" data-a="APPROVE"><i class="fa-solid fa-circle-check"></i> Approve voucher</button>
+    <button class="vb card w-full text-left text-amber-400 font-bold text-sm" data-a="FLAG_TAX"><i class="fa-solid fa-triangle-exclamation"></i> Flag tax / TDS exception</button>
+    <button class="vb card w-full text-left text-red-400 font-bold text-sm" data-a="REJECT_CALC"><i class="fa-solid fa-ban"></i> Reject (math error / missing support)</button>
+    <div id="g-f" class="hidden p-3.5 rounded-xl text-sm border"></div>
+   </div></div>
+  <button onclick="resetGame()" class="mt-5 text-xs text-slate-400 hover:text-cyan-400"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+ </div>
+</section>
+
+<section id="contact" class="sec">
+ <div class="grid md:grid-cols-12 gap-8 items-start">
+  <div class="md:col-span-5 space-y-5">
+   <h2 class="text-2xl sm:text-3xl font-bold text-white">Discuss an Articleship Opportunity</h2>
+   <p class="text-slate-400 text-sm">Open to CA Articleship in Statutory Audit and Risk Advisory.</p>
+   <div class="flex flex-wrap gap-3"><button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button><a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a></div>
+   <div class="card text-sm space-y-2"><div><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></div><div><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a> (Phone / WhatsApp)</div></div>
+  </div>
+  <form id="c-form" class="md:col-span-7 card sm:p-8 space-y-4">
+   <input type="checkbox" id="c-hp" tabindex="-1" autocomplete="off" style="display:none">
+   <div class="grid sm:grid-cols-2 gap-4"><div><label class="lbl" for="c-name">Your name</label><input id="c-name" class="inp" required></div><div><label class="lbl" for="c-email">Email address</label><input id="c-email" type="email" class="inp" required></div></div>
+   <div><label class="lbl" for="c-sub">Subject</label><input id="c-sub" class="inp" required placeholder="CA Articleship opportunity / interview"></div>
+   <div><label class="lbl" for="c-msg">Message</label><textarea id="c-msg" rows="4" class="inp" required></textarea></div>
+   <button id="c-btn" class="btn-p w-full justify-center"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+   <div id="c-err" class="hidden p-3 rounded-xl bg-red-950/80 border border-red-500/60 text-sm text-red-200">Could not send right now. <a class="underline font-semibold" href="mailto:saiadarshsahoo1@gmail.com">Email me directly</a>.</div>
+  </form>
+ </div>
+</section>
+
+<section id="beyond" class="sec border-t border-slate-800/80">
+ <h2 class="text-2xl font-bold text-white text-center mb-1">Beyond Finance</h2>
+ <p class="sub">Music production and composition (Logic Pro, FL Studio), guitar and vocals.</p>
+ <div class="card max-w-xl mx-auto text-center mb-10"><p class="text-xs text-slate-400 mb-3">Tap a pad to play a synthesised tone (Web Audio API).</p>
+  <div id="pads" class="grid grid-cols-4 gap-3"></div><p id="syn" class="text-xs text-slate-400 font-mono mt-3">Audio engine ready</p></div>
+ <div id="gal" class="hidden max-w-4xl mx-auto"><h3 class="text-sm font-bold text-slate-300 mb-3 text-center">Event &amp; Campus Gallery</h3><div id="gal-g" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div></div>
+</section>
+</main>
+
+<div id="cv" class="fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-3" role="dialog" aria-modal="true" aria-label="CV">
+ <div class="glass w-full max-w-5xl h-[88vh] rounded-2xl flex flex-col overflow-hidden">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-slate-800"><b class="text-white text-sm">Curriculum Vitae &mdash; Sai Adarsh Sahoo</b>
+   <span class="flex gap-2"><a class="btn-g !py-1.5 !px-3 text-xs" href="resume.pdf" target="_blank" rel="noopener">Open in new tab</a><a class="btn-p !py-1.5 !px-3 text-xs" href="resume.pdf" download="Sai_Adarsh_Sahoo_Resume.pdf"><i class="fa-solid fa-download"></i> Download</a><button class="btn-g !py-1.5 !px-3" onclick="closeCV()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></span></div>
+  <iframe id="cv-f" class="flex-grow w-full bg-slate-950" title="CV" src="about:blank"></iframe>
+ </div></div>
+
+<div id="lb" class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Photo viewer">
+ <button id="lb-x" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+ <button id="lb-p" class="absolute left-3 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+ <button id="lb-n" class="absolute right-3 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+ <img id="lb-i" alt="" class="max-w-[92vw] max-h-[84vh] object-contain rounded-xl"><div id="lb-c" class="absolute bottom-5 px-3 py-1 rounded-full bg-slate-800 text-xs"></div>
+</div>
+
+<footer class="glass border-t border-slate-800/80 py-5 px-4 text-xs text-slate-400"><div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between gap-2"><span>&copy; 2026 Sai Adarsh Sahoo</span><span><a class="hover:text-cyan-400" href="mailto:saiadarshsahoo1@gmail.com">Email</a> &middot; <a class="hover:text-cyan-400" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener">LinkedIn</a></span></div></footer>
+
+<script>
+const API="https://script.google.com/macros/s/AKfycbzeTOOZgTfdcpr5dlvksmSVycW6d38fmPQXkXh2x49M1IUVCiySzQlFZ3afpnKnK28p/exec";
+const KEY="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
+const STATUS="CA Intermediate \u2014 Group 2 Cleared | Group 1 Result Awaited";
+const $=i=>document.getElementById(i);
+const esc=s=>String(s==null?'':s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+document.querySelectorAll('.ca-status').forEach(e=>e.textContent=STATUS);
+
+/* nav */
+const NAV=[['about','About'],['education','Education'],['skills','Skills'],['projects','Projects'],['testimonials','Recommendations'],['audit-simulation','Simulation'],['contact','Contact']];
+$('nav-d').innerHTML=NAV.map(n=>`<a class="nl" href="#${n[0]}">${n[1]}</a>`).join('');
+$('nav-m').innerHTML=NAV.map(n=>`<a class="nl block" href="#${n[0]}">${n[1]}</a>`).join('');
+$('burger').onclick=()=>{const m=$('nav-m');m.classList.toggle('hidden');$('burger').setAttribute('aria-expanded',!m.classList.contains('hidden'))};
+$('nav-m').onclick=e=>{if(e.target.tagName==='A')$('nav-m').classList.add('hidden')};
+
+/* snapshot */
+$('snap').innerHTML=[['CA Intermediate','Group 2 passed','Exemption in Costing (71)'],['CA Intermediate','Group 1','Result awaited'],['B.Com (Hons.)','CGPA 7.0 / 10','SSSIHL, 2021\u201324'],['Class XII (CBSE)','83.2%','2020'],['Class X (ICSE)','79.6%','2018']]
+.map(s=>`<div class="card !p-4"><div class="text-cyan-400 text-xs font-bold">${s[0]}</div><div class="text-white text-sm font-semibold">${s[1]}</div><div class="text-xs text-slate-400">${s[2]}</div></div>`).join('');
+
+/* skills */
+const CATS=[['all','All'],['audit','Accounting & Audit'],['tax','Taxation'],['tools','Tools & Automation'],['ai','AI & Research'],['pro','Professional']];
+const SK=[
+['audit','Financial Accounting & Schedule III','Academic','Company accounts, financial statements and ledger reconciliations.'],
+['audit','Auditing Standards (SAs) & Ind AS','Academic','Audit evidence, procedures, internal controls and the Ind AS framework.'],
+['audit','Cost & Management Accounting','Exemption \u00b7 71 marks','Variance analysis, marginal costing, budgetary control (CA Inter Group 2).'],
+['audit','Financial Ratio Analysis','Academic','Liquidity, solvency, turnover and profitability ratios.'],
+['tax','Direct Tax & TDS','Working Knowledge','Total income computation; TDS under Sec 194C/194J (now Sec 393 from 1 Apr 2026).'],
+['tax','GST & ITC','Working Knowledge','Rate structure, GSTR-1 / 3B fundamentals, GSTR-2B vs books ITC reconciliation.'],
+['tax','Companies Act, 2013','Academic','Compliance fundamentals relevant to statutory audit.'],
+['tools','MS Excel & Power Query','Self-Built','XLOOKUP, PivotTables, data cleaning and dynamic schedules.'],
+['tools','Excel VBA & Macros','Self-Built','Automating repetitive schedules and report formatting.'],
+['tools','Google Sheets & Apps Script','Self-Built','Email workflows and custom trackers.'],
+['tools','Tally Prime','Tool','Voucher posting, ledger extraction and basic company setup.'],
+['ai','ChatGPT, Claude, NotebookLM, Perplexity','Regular Use','Research and drafting aids. Client data is never entered into public AI tools.'],
+['pro','Team Leadership','Leadership','Led a 13-member team and served as Cultural Coordinator at SSSIHL.'],
+['pro','Structured Communication','Soft Skill','Clear written reporting and query escalation.']];
+function showSk(c){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.c===c));
+ $('sk').innerHTML=SK.filter(s=>c==='all'||s[0]===c).map(s=>`<div class="card"><div class="flex justify-between gap-2 mb-2"><b class="text-cyan-300 text-sm">${s[1]}</b><span class="chip">${s[2]}</span></div><p class="text-sm text-slate-400">${s[3]}</p></div>`).join('')}
+$('tabs').innerHTML=CATS.map(c=>`<button class="tab" data-c="${c[0]}">${c[1]}</button>`).join('');
+$('tabs').onclick=e=>{if(e.target.dataset.c)showSk(e.target.dataset.c)};showSk('all');
+
+/* projects */
+$('pj').innerHTML=[
+['Google Apps Script','Articleship Outreach Automation','Emailing target CA firms one by one is slow and error-prone.','A Google Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.'],
+['Sheets + Apps Script','Invoice Tracker & Follow-up','Manual tracking of overdue receivables causes missed follow-ups.','A tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails and shows basic ageing.'],
+['HTML / JavaScript','Audit Voucher Simulation','Voucher-checking concepts need interactive practice.','The simulation on this page: spot TDS omissions, wrong GST rates and calculation errors with instant feedback.'],
+['AI workflows','AI for Finance & Audit Research','Generic AI answers on tax and audit are often vague.','Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.']]
+.map(p=>`<div class="card"><div class="flex justify-between mb-2"><span class="chip">Self-built</span><span class="text-xs font-mono text-slate-400">${p[0]}</span></div><h3 class="text-lg font-bold text-white mb-2">${p[1]}</h3><p class="text-sm text-slate-400"><b class="text-slate-300">Problem:</b> ${p[2]}<br><b class="text-slate-300">Built:</b> ${p[3]}</p></div>`).join('');
+
+/* typing */
+const PH=["CA Intermediate (Group 2 Cleared)","Statutory Audit & Risk Advisory","Excel \u00b7 VBA \u00b7 Apps Script"];let pi=0,ci=0,del=false;
+(function type(){const p=PH[pi];$('typ').textContent=p.slice(0,del?--ci:++ci);let d=del?35:75;
+ if(!del&&ci===p.length){d=2000;del=true}else if(del&&ci===0){del=false;pi=(pi+1)%PH.length;d=400}setTimeout(type,d)})();
+
+/* CV modal */
+function openCV(){const f=$('cv-f');if(f.src.indexOf('resume.pdf')<0)f.src='resume.pdf';$('cv').classList.replace('hidden','flex');document.body.style.overflow='hidden'}
+function closeCV(){$('cv').classList.replace('flex','hidden');document.body.style.overflow=''}
+$('cv').onclick=e=>{if(e.target.id==='cv')closeCV()};
+
+/* web3forms */
+async function send(f){const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:KEY},f))});const j=await r.json();if(!j.success)throw new Error(j.message)}
+$('c-form').onsubmit=async e=>{e.preventDefault();if($('c-hp').checked)return;const b=$('c-btn'),idle=b.innerHTML;$('c-err').classList.add('hidden');b.disabled=true;b.innerHTML='<i class="fa-solid fa-spinner animate-spin"></i> Sending...';
+ try{await send({subject:'Articleship Inquiry: '+$('c-sub').value.trim(),from_name:$('c-name').value.trim(),name:$('c-name').value.trim(),email:$('c-email').value.trim(),message:$('c-msg').value.trim()});b.innerHTML='<i class="fa-solid fa-check"></i> Message sent';e.target.reset();setTimeout(()=>{b.innerHTML=idle;b.disabled=false},4000)}
+ catch(x){$('c-err').classList.remove('hidden');b.innerHTML=idle;b.disabled=false}};
+
+/* testimonials (Apps Script sheet; only ALLOWED rows are returned) */
+let admin=false,akey='';
+async function loadT(){const g=$('t-grid');try{const d=await(await fetch(API)).json();if(!Array.isArray(d)||!d.length){g.classList.add('hidden');return}
+ g.classList.remove('hidden');g.innerHTML=d.map(t=>`<div class="card relative">${admin?`<button data-del="${esc(t.id)}" class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-red-900 text-red-100">Delete</button>`:''}<p class="text-sm text-slate-300 italic">&ldquo;${esc(t.testimonial)}&rdquo;</p><div class="mt-4 pt-3 border-t border-slate-800"><b class="text-sm text-white">${esc(t.name)}</b><div class="text-xs text-slate-400">${esc(t.organization)}</div><span class="chip mt-2 inline-block">${esc(t.relation)}</span></div></div>`).join('')}catch(e){g.classList.add('hidden')}}
+$('t-grid').onclick=async e=>{const id=e.target.dataset.del;if(!id||!confirm('Hide this testimonial?'))return;
+ try{const j=await(await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'delete',id,adminKey:akey})})).json();alert(j.success?'Done':(j.message||'Failed'));loadT()}catch(x){alert('Request failed')}};
+function toggleAdmin(){if(admin){admin=false;akey=''}else{const p=prompt('Admin passcode');if(!p)return;admin=true;akey=p}loadT()}
+addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key==='A')toggleAdmin()});
+if(/[?&]admin/.test(location.search))setTimeout(toggleAdmin,800);
+$('t-form').onsubmit=async e=>{e.preventDefault();const b=$('t-btn'),m=$('t-msg');b.disabled=true;m.textContent='Sending...';
+ const v=i=>$(i).value.trim();
+ try{await send({subject:'[Testimonial Submission] New Endorsement for Sai Adarsh',from_name:v('t-name'),message:`Name: ${v('t-name')}\nOrganization: ${v('t-org')}\nRelation: ${v('t-rel')}\nTestimonial: ${v('t-txt')}`});e.target.reset();m.textContent='Thank you. Your recommendation will appear after review.'}
+ catch(x){m.textContent='Could not send right now. Please try again later.'}b.disabled=false};
+loadT();
+
+/* simulation */
+const V=[
+{i:'VCH-001',t:'Professional Services Invoice',d:['Vendor: TechConsult Advisory Ltd.','Fee: \u20b91,50,000','GST (18%): \u20b927,000','TDS deducted: <b class="text-red-400">\u20b90 (omitted)</b>','Net paid: \u20b91,77,000'],a:'FLAG_TAX',x:'Professional fees above the \u20b950,000 threshold attract 10% TDS (Sec 194J; Sec 393 from 1 Apr 2026). No TDS was deducted.'},
+{i:'VCH-002',t:'Office Equipment Purchase',d:['Vendor: Apex Office Supplies','Cost: \u20b912,000','GST (18%): \u20b92,160','Total listed: <b class="text-red-400">\u20b915,160</b>','Authorisation: manager signed'],a:'REJECT_CALC',x:'\u20b912,000 + \u20b92,160 = \u20b914,160, but the voucher lists \u20b915,160. Summation error.'},
+{i:'VCH-003',t:'Equipment Repair Voucher',d:['Vendor: General Maintenance Corp','Cost: \u20b98,000','GST (18%): \u20b91,440','Total: \u20b99,440','Bill: verified and attached'],a:'APPROVE',x:'Arithmetic is correct, the rate fits the service and support is attached.'},
+{i:'VCH-004',t:'Software Licence Invoice',d:['Vendor: CloudSoft Systems','Subscription: \u20b950,000','GST rate applied: <b class="text-amber-400">5%</b>','GST charged: \u20b92,500'],a:'FLAG_TAX',x:'Software licences are taxed at 18% (\u20b99,000). Charging 5% understates GST by \u20b96,500.'}];
+let vi=0,sc=0,busy=false;
+function lv(){const f=$('g-f');f.className='hidden p-3.5 rounded-xl text-sm border';busy=false;document.querySelectorAll('.vb').forEach(b=>b.disabled=vi>=V.length);
+ if(vi>=V.length){$('v-t').textContent='Simulation complete';$('v-i').textContent='DONE';$('v-d').innerHTML=`<div class="text-center py-6">Final score: <b class="text-cyan-400">${sc} / 100</b></div>`;return}
+ const v=V[vi];$('v-t').textContent=v.t;$('v-i').textContent=v.i;$('v-d').innerHTML=v.d.map(x=>`<div>${x}</div>`).join('');$('g-p').textContent=`${vi+1} / ${V.length}`}
+document.querySelectorAll('.vb').forEach(b=>b.onclick=()=>{if(busy||vi>=V.length)return;busy=true;const v=V[vi],ok=b.dataset.a===v.a,f=$('g-f');if(ok){sc+=25;$('g-s').textContent=sc}
+ f.className='p-3.5 rounded-xl text-sm border '+(ok?'bg-emerald-950/80 border-emerald-500 text-emerald-200':'bg-red-950/80 border-red-500 text-red-200');f.innerHTML=`<b>${ok?'Correct.':'Missed.'}</b> ${v.x}`;setTimeout(()=>{vi++;lv()},2600)});
+function resetGame(){vi=0;sc=0;$('g-s').textContent=0;lv()}lv();
+
+/* synth */
+$('pads').innerHTML=[['C4',261.63],['E4',329.63],['G4',392],['C5',523.25]].map(n=>`<button class="p-4 rounded-xl bg-slate-900 border border-violet-500/30 hover:border-violet-400 active:scale-95 font-bold text-violet-300" data-f="${n[1]}" data-n="${n[0]}">${n[0]}</button>`).join('');
+let ac;$('pads').onclick=e=>{const f=+e.target.dataset.f;if(!f)return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(.25,ac.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+1);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+1);$('syn').textContent='Playing '+e.target.dataset.n}catch(x){}};
+
+/* photos + lightbox */
+function probe(b,cb){const x=['jpg','jpeg','png','webp'];let i=0;(function n(){if(i>=x.length)return cb(null);const m=new Image();m.onload=()=>cb(b+'.'+x[i]);m.onerror=()=>{i++;n()};m.src=b+'.'+x[i]})()}
+const G=[];let li=0;
+function showLb(){$('lb-i').src=G[li];$('lb-c').textContent=`${li+1} / ${G.length}`;$('lb-p').style.display=$('lb-n').style.display=G.length>1?'':'none'}
+function openLb(i){li=i;showLb();$('lb').classList.replace('hidden','flex');document.body.style.overflow='hidden'}
+function closeLb(){$('lb').classList.replace('flex','hidden');document.body.style.overflow=''}
+function mv(d){li=(li+d+G.length)%G.length;showLb()}
+$('lb-x').onclick=closeLb;$('lb-p').onclick=e=>{e.stopPropagation();mv(-1)};$('lb-n').onclick=e=>{e.stopPropagation();mv(1)};$('lb').onclick=e=>{if(e.target.id==='lb')closeLb()};
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeCV();closeLb()}if(!$('lb').classList.contains('hidden')){if(e.key==='ArrowLeft')mv(-1);if(e.key==='ArrowRight')mv(1)}});
+let tx=null;$('lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('lb').addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)mv(d<0?1:-1)});
+probe('images/profile',s=>{if(!s)return;['av1','av2'].forEach(i=>{$(i).src=s;$(i).classList.remove('hidden');$(i+'f').classList.add('hidden')})});
+(function g(n){if(n>60)return;probe('images/gallery/'+n,s=>{if(!s)return;$('gal').classList.remove('hidden');const idx=G.push(s)-1,a=document.createElement('a');a.href='#';a.setAttribute('aria-label','Open photo '+(idx+1));a.className='card !p-0 overflow-hidden aspect-[4/3] block';a.onclick=e=>{e.preventDefault();openLb(idx)};a.innerHTML=`<img src="${s}" alt="Gallery photo ${idx+1}" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">`;$('gal-g').appendChild(a);g(n+1)})})(1);
+
+/* particles */
+(function(){const c=$('pc'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let P=[];
+ function rs(){c.width=innerWidth;c.height=Math.max(c.parentElement.offsetHeight,400);P=Array.from({length:Math.min(innerWidth/20|0,45)},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6}))}
+ addEventListener('resize',rs);rs();(function f(){x.clearRect(0,0,c.width,c.height);P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.fillStyle='#38bdf8';x.beginPath();x.arc(p.x,p.y,1.8,0,6.3);x.fill();for(let j=i+1;j<P.length;j++){const d=Math.hypot(p.x-P[j].x,p.y-P[j].y);if(d<90){x.strokeStyle=`rgba(56,189,248,${1-d/90})`;x.lineWidth=.3;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(P[j].x,P[j].y);x.stroke()}}});requestAnimationFrame(f)})()})();
+</script>
 </body>
 </html>
