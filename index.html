@@ -37,6 +37,14 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .tab{@apply whitespace-nowrap px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 transition duration-200}
 .tab:hover{@apply text-white -translate-y-[1.2px];box-shadow:0 0 8px rgb(59 130 246/.3);background:#1e3a8a33}
 .tab.on{@apply bg-blue-500 text-white;box-shadow:0 0 10px rgb(59 130 246/.33)}
+.vb{@apply transition duration-200;border:1px solid rgb(var(--c)/.28)}
+.vb:hover:not(:disabled){transform:translateY(-1.2px);background:rgb(var(--c)/.09);border-color:rgb(var(--c)/.6);box-shadow:0 0 10px rgb(var(--c)/.3)}
+.vb:disabled{opacity:.5;cursor:not-allowed}
+.pad{@apply p-4 rounded-xl bg-slate-900 font-bold transition duration-200 active:scale-95;color:rgb(var(--c));border:1px solid rgb(var(--c)/.35)}
+.pad:hover,.pad.hit{transform:translateY(-1.2px);background:rgb(var(--c)/.1);border-color:rgb(var(--c)/.7);box-shadow:0 0 10px rgb(var(--c)/.3)}
+.pad.hit{background:rgb(var(--c)/.2);box-shadow:0 0 14px rgb(var(--c)/.5)}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
+.pop{animation:pop .4s}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
 </style>
 </head>
@@ -157,9 +165,9 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   <div class="grid md:grid-cols-12 gap-6 mt-5">
    <div class="md:col-span-7 bg-slate-900/80 rounded-2xl p-5 border border-slate-800"><div class="flex justify-between border-b border-slate-800 pb-3 mb-3"><h4 id="v-t" class="font-bold text-cyan-300"></h4><span id="v-i" class="chip"></span></div><div id="v-d" class="space-y-2 text-sm font-mono text-slate-300"></div></div>
    <div class="md:col-span-5 space-y-3">
-    <button class="vb card w-full text-left text-emerald-400 font-bold text-sm" data-a="APPROVE"><i class="fa-solid fa-circle-check"></i> Approve voucher</button>
-    <button class="vb card w-full text-left text-amber-400 font-bold text-sm" data-a="FLAG_TAX"><i class="fa-solid fa-triangle-exclamation"></i> Flag tax / TDS exception</button>
-    <button class="vb card w-full text-left text-red-400 font-bold text-sm" data-a="REJECT_CALC"><i class="fa-solid fa-ban"></i> Reject (math error / missing support)</button>
+    <button class="vb card w-full text-left text-emerald-400 font-bold text-sm" style="--c:52 211 153" data-a="APPROVE"><i class="fa-solid fa-circle-check"></i> Approve voucher</button>
+    <button class="vb card w-full text-left text-amber-400 font-bold text-sm" style="--c:251 191 36" data-a="FLAG_TAX"><i class="fa-solid fa-triangle-exclamation"></i> Flag tax / TDS exception</button>
+    <button class="vb card w-full text-left text-red-400 font-bold text-sm" style="--c:248 113 113" data-a="REJECT_CALC"><i class="fa-solid fa-ban"></i> Reject (math error / missing support)</button>
     <div id="g-f" class="hidden p-3.5 rounded-xl text-sm border"></div>
    </div></div>
   <button onclick="resetGame()" class="mt-5 text-xs text-slate-400 hover:text-cyan-400"><i class="fa-solid fa-rotate-right"></i> Reset</button>
@@ -300,16 +308,16 @@ const V=[
 {i:'VCH-003',t:'Equipment Repair Voucher',d:['Vendor: General Maintenance Corp','Cost: \u20b98,000','GST (18%): \u20b91,440','Total: \u20b99,440','Bill: verified and attached'],a:'APPROVE',x:'Arithmetic is correct, the rate fits the service and support is attached.'},
 {i:'VCH-004',t:'Software Licence Invoice',d:['Vendor: CloudSoft Systems','Subscription: \u20b950,000','GST rate applied: <b class="text-amber-400">5%</b>','GST charged: \u20b92,500'],a:'FLAG_TAX',x:'Software licences are taxed at 18% (\u20b99,000). Charging 5% understates GST by \u20b96,500.'}];
 let vi=0,sc=0,busy=false;
-function lv(){const f=$('g-f');f.className='hidden p-3.5 rounded-xl text-sm border';busy=false;document.querySelectorAll('.vb').forEach(b=>b.disabled=vi>=V.length);
+function lv(){const f=$('g-f');f.className='hidden p-3.5 rounded-xl text-sm border';f.style.boxShadow='';busy=false;document.querySelectorAll('.vb').forEach(b=>b.disabled=vi>=V.length);
  if(vi>=V.length){$('v-t').textContent='Simulation complete';$('v-i').textContent='DONE';$('v-d').innerHTML=`<div class="text-center py-6">Final score: <b class="text-cyan-400">${sc} / 100</b></div>`;return}
  const v=V[vi];$('v-t').textContent=v.t;$('v-i').textContent=v.i;$('v-d').innerHTML=v.d.map(x=>`<div>${x}</div>`).join('');$('g-p').textContent=`${vi+1} / ${V.length}`}
-document.querySelectorAll('.vb').forEach(b=>b.onclick=()=>{if(busy||vi>=V.length)return;busy=true;const v=V[vi],ok=b.dataset.a===v.a,f=$('g-f');if(ok){sc+=25;$('g-s').textContent=sc}
- f.className='p-3.5 rounded-xl text-sm border '+(ok?'bg-emerald-950/80 border-emerald-500 text-emerald-200':'bg-red-950/80 border-red-500 text-red-200');f.innerHTML=`<b>${ok?'Correct.':'Missed.'}</b> ${v.x}`;setTimeout(()=>{vi++;lv()},2600)});
+document.querySelectorAll('.vb').forEach(b=>b.onclick=()=>{if(busy||vi>=V.length)return;busy=true;const v=V[vi],ok=b.dataset.a===v.a,f=$('g-f');if(ok){sc+=25;const e2=$('g-s');e2.textContent=sc;e2.classList.remove('pop');void e2.offsetWidth;e2.classList.add('pop')}
+ f.className='p-3.5 rounded-xl text-sm border '+(ok?'bg-emerald-950/80 border-emerald-500 text-emerald-200':'bg-red-950/80 border-red-500 text-red-200');f.style.boxShadow=ok?'0 0 10px rgba(16,185,129,.3)':'0 0 10px rgba(239,68,68,.3)';f.innerHTML=`<b>${ok?'Correct.':'Missed.'}</b> ${v.x}`;setTimeout(()=>{vi++;lv()},2600)});
 function resetGame(){vi=0;sc=0;$('g-s').textContent=0;lv()}lv();
 
 /* synth */
-$('pads').innerHTML=[['C4',261.63],['E4',329.63],['G4',392],['C5',523.25]].map(n=>`<button class="p-4 rounded-xl bg-slate-900 border border-violet-500/30 hover:border-violet-400 active:scale-95 font-bold text-violet-300" data-f="${n[1]}" data-n="${n[0]}">${n[0]}</button>`).join('');
-let ac;$('pads').onclick=e=>{const f=+e.target.dataset.f;if(!f)return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(.25,ac.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+1);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+1);$('syn').textContent='Playing '+e.target.dataset.n}catch(x){}};
+$('pads').innerHTML=[['C4',261.63,'167 139 250'],['E4',329.63,'34 211 238'],['G4',392,'96 165 250'],['C5',523.25,'52 211 153']].map(n=>`<button class="pad" style="--c:${n[2]}" data-f="${n[1]}" data-n="${n[0]}" data-c="${n[2].replace(/ /g,',')}"><span class="block text-lg">${n[0]}</span><span class="block text-xs font-mono opacity-70">${Math.round(n[1])} Hz</span></button>`).join('');
+let ac;$('pads').onclick=e=>{const b=e.target.closest('button'),f=b&&+b.dataset.f;if(!f)return;b.classList.add('hit');setTimeout(()=>b.classList.remove('hit'),350);try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(.25,ac.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+1);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+1);$('syn').textContent='Playing '+b.dataset.n;$('syn').style.color='rgb('+b.dataset.c+')'}catch(x){}};
 
 /* photos + lightbox */
 function probe(b,cb){const x=['jpg','jpeg','png','webp'];let i=0;(function n(){if(i>=x.length)return cb(null);const m=new Image();m.onload=()=>cb(b+'.'+x[i]);m.onerror=()=>{i++;n()};m.src=b+'.'+x[i]})()}
