@@ -692,22 +692,22 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
-                                <input type="text" required placeholder="e.g. John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                                <input id="c-name" type="text" required placeholder="e.g. John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
                             </div>
                             <div>
                                 <label class="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
-                                <input type="email" required placeholder="john@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                                <input id="c-email" type="email" required placeholder="john@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-medium text-slate-300 mb-1">Inquiry / Subject</label>
-                            <input type="text" required placeholder="Articleship Opportunity / Interview Discussion" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                            <input id="c-subject" type="text" required placeholder="Articleship Opportunity / Interview Discussion" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
                         </div>
 
                         <div>
                             <label class="block text-xs font-medium text-slate-300 mb-1">Message</label>
-                            <textarea rows="4" required placeholder="Write your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
+                            <textarea id="c-msg" rows="4" required placeholder="Write your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
                         </div>
 
                         <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-semibold text-sm hover:opacity-95 shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
@@ -1088,7 +1088,7 @@
             e.preventDefault();
             const f = e.target;
             if (document.getElementById('c-hp').value) return; // spam trap
-            const [nm, em, sj, ms] = f.querySelectorAll('input[type=text], input[type=email], textarea');
+            const nm = document.getElementById('c-name'), em = document.getElementById('c-email'), sj = document.getElementById('c-subject'), ms = document.getElementById('c-msg');
             const btn = document.getElementById('submit-btn');
             const idle = `<i class="fa-solid fa-paper-plane"></i> Send Message`;
             btn.disabled = true;
