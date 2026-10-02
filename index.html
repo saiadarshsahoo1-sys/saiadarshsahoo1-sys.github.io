@@ -325,7 +325,7 @@
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Skills &amp; Technology Stack</h2>
-                    <p class="text-slate-400 text-sm max-w-2xl mx-auto">All skills and tools arranged side-by-side according to their domain categories.</p>
+                    <p class="text-slate-400 text-sm max-w-2xl mx-auto">All skills and tools listed side-by-side. Use the tabs below to dynamically filter by category.</p>
                 </div>
 
                 <!-- Skill Filter Tabs -->
@@ -347,143 +347,163 @@
                     </button>
                 </div>
 
-                <!-- Side-By-Side Category Grid Matrix -->
-                <div id="skills-matrix-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+                <!-- Flat Grid of All Skills (Uncategorized layout under All Skills) -->
+                <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-                    <!-- Column 1: Audit & Assurance -->
-                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="audit">
-                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
-                            <div class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center text-sm font-bold">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-white">Audit &amp; Assurance</h3>
-                                <span class="text-[11px] text-cyan-400 font-medium">Core Financial Controls</span>
-                            </div>
+                    <!-- Audit & Assurance Cards -->
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-cyan-300 font-bold text-sm">Auditing Standards (SA)</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Audit</span>
                         </div>
-
-                        <div class="space-y-3">
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-cyan-300 font-bold text-xs block">Auditing Standards (SA)</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Voucher verification, sampling, &amp; audit trails</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-cyan-300 font-bold text-xs block">Financial Accounting (Ind AS)</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Schedule III statements &amp; ledger reconciliations</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-cyan-300 font-bold text-xs block">Cost &amp; Management Accounting</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Variance analysis &amp; costing (Exemption in Inter)</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-cyan-300 font-bold text-xs block">Financial Ratio Analysis</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Liquidity, turnover, &amp; profitability evaluation</span>
-                            </div>
-                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Voucher verification, sampling, audit trails &amp; SA compliance checks.</p>
                     </div>
 
-                    <!-- Column 2: Direct & Indirect Taxation -->
-                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="tax">
-                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
-                            <div class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-sm font-bold">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-white">Direct &amp; Indirect Tax</h3>
-                                <span class="text-[11px] text-purple-400 font-medium">Statutory Compliance</span>
-                            </div>
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-cyan-300 font-bold text-sm">Financial Accounting (Ind AS)</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Audit</span>
                         </div>
-
-                        <div class="space-y-3">
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-purple-300 font-bold text-xs block">Direct Taxation &amp; TDS</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Tax computations &amp; Sec 194C/194J compliance</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-purple-300 font-bold text-xs block">GST &amp; Indirect Taxation</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">GST return provisions &amp; ITC GSTR-2B verification</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-purple-300 font-bold text-xs block">Tax Return Documentation</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Computation sheets &amp; challan reconciliations</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-purple-300 font-bold text-xs block">Statutory Audit Compliance</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Tax audit disclosures &amp; compliance testing</span>
-                            </div>
-                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Schedule III financial statements &amp; ledger reconciliations.</p>
                     </div>
 
-                    <!-- Column 3: Technology & Automation Stack -->
-                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="technology">
-                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
-                            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-sm font-bold">
-                                <i class="fa-solid fa-laptop-code"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-white">Technology Stack</h3>
-                                <span class="text-[11px] text-emerald-400 font-medium">Automation &amp; AI Tools</span>
-                            </div>
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-cyan-300 font-bold text-sm">Cost &amp; Management Accounting</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Audit</span>
                         </div>
-
-                        <div class="space-y-3">
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">MS Excel &amp; Power Query</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Advanced financial models &amp; data cleaning</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">Excel VBA &amp; Macros</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Process automation &amp; repetitive macro scripts</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">Google Apps Script</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Business process automation &amp; Gmail triggers</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">Claude &amp; ChatGPT</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">AI-assisted reasoning, drafting, &amp; analysis</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">NotebookLM &amp; Perplexity</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Document-grounded research &amp; tax search</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-emerald-300 font-bold text-xs block">Tally Prime</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Accounting &amp; bookkeeping workflows</span>
-                            </div>
-                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Variance analysis, marginal costing &amp; budget control (CA Inter Exemption).</p>
                     </div>
 
-                    <!-- Column 4: Business & Leadership -->
-                    <div class="skill-column glass-panel p-5 rounded-2xl border border-slate-800" data-category="business">
-                        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-800">
-                            <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center text-sm font-bold">
-                                <i class="fa-solid fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-white">Business Capabilities</h3>
-                                <span class="text-[11px] text-blue-400 font-medium">Leadership &amp; Operations</span>
-                            </div>
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="audit">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-cyan-300 font-bold text-sm">Financial Ratio Analysis</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60">Audit</span>
                         </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Liquidity, turnover, leverage &amp; profitability evaluation.</p>
+                    </div>
 
-                        <div class="space-y-3">
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-blue-300 font-bold text-xs block">Professional Communication</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Structured reporting &amp; query resolution</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-blue-300 font-bold text-xs block">Team Leadership &amp; Logistics</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">University event &amp; team coordination</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-blue-300 font-bold text-xs block">Risk &amp; Analytical Reasoning</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Internal control evaluation &amp; risk checks</span>
-                            </div>
-                            <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800/80 glass-panel-hover">
-                                <span class="text-blue-300 font-bold text-xs block">Process Optimization</span>
-                                <span class="text-[11px] text-slate-400 block mt-1">Workflow mapping &amp; task streamlining</span>
-                            </div>
+                    <!-- Taxation Cards -->
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-purple-300 font-bold text-sm">Direct Taxation &amp; TDS</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Tax</span>
                         </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Tax computations &amp; Sec 194C / 194J compliance testing.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-purple-300 font-bold text-sm">GST &amp; Indirect Taxation</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Tax</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">GST return provisions, ITC reconciliation &amp; GSTR-2B verification.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-purple-300 font-bold text-sm">Tax Return Documentation</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Tax</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Computation sheets, challan verification &amp; return filings.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="tax">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-purple-300 font-bold text-sm">Statutory Tax Audits</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-950 text-purple-400 border border-purple-800/60">Tax</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Tax audit disclosures &amp; Form 3CD compliance verification.</p>
+                    </div>
+
+                    <!-- Technology & Automation Cards -->
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">MS Excel</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Advanced financial modeling, XLOOKUP, Index-Match &amp; PivotTables.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">Excel VBA &amp; Macros</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Automated financial reporting &amp; repetitive task macro scripts.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">Power Query</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Automated data transformation, cleaning &amp; repeatable workflows.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">Google Sheets &amp; Apps Script</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Cloud workflow automation, custom functions &amp; Gmail triggers.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">ChatGPT &amp; Claude</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">AI-assisted reasoning, financial drafting &amp; document analysis.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">NotebookLM &amp; Perplexity</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Document-grounded research &amp; AI-powered tax search.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="technology">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-emerald-300 font-bold text-sm">Tally Prime</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60">Tech</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Accounting software workflows, voucher posting &amp; BRS.</p>
+                    </div>
+
+                    <!-- Business & Leadership Cards -->
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="business">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-blue-300 font-bold text-sm">Professional Communication</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Business</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Structured reporting, query escalation &amp; stakeholder interaction.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="business">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-blue-300 font-bold text-sm">Team Leadership &amp; Logistics</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Business</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Event coordination, multi-tier team management &amp; execution.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="business">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-blue-300 font-bold text-sm">Risk &amp; Analytical Reasoning</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Business</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Internal control evaluation, operational risk checks &amp; problem solving.</p>
+                    </div>
+
+                    <div class="skill-card bg-slate-900/90 p-4 rounded-xl border border-slate-800 glass-panel-hover" data-category="business">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-blue-300 font-bold text-sm">Process Optimization</span>
+                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">Business</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Workflow mapping &amp; task streamlining for operational efficiency.</p>
                     </div>
 
                 </div>
@@ -1217,7 +1237,7 @@
         }
 
         /* =======================================================
-           4. Skill Category Matrix Filtering
+           4. Skill Category Grid Filtering
            ======================================================= */
         function filterSkills(category) {
             const tabs = document.querySelectorAll('.skill-tab');
@@ -1231,12 +1251,12 @@
                 }
             });
 
-            const columns = document.querySelectorAll('.skill-column');
-            columns.forEach(col => {
-                if (category === 'all' || col.getAttribute('data-category') === category) {
-                    col.style.display = 'block';
+            const cards = document.querySelectorAll('.skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
                 } else {
-                    col.style.display = 'none';
+                    card.style.display = 'none';
                 }
             });
         }
