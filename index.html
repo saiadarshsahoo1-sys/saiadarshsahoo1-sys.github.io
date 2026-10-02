@@ -50,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Lucide-Style Icons -->
+    <!-- FontAwesome Icons -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     
     <style>
@@ -334,7 +334,7 @@
                     </button>
                 </div>
 
-                <!-- Skills Grid (Progress Scales Removed) -->
+                <!-- Skills Grid -->
                 <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Finance Skills -->
                     <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="finance">
@@ -426,7 +426,7 @@
                 </p>
             </div>
 
-            <!-- Game Board Canvas Container -->
+            <!-- Game Board Container -->
             <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-700/60 shadow-2xl relative overflow-hidden">
                 <!-- Top Status Bar -->
                 <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-800">
@@ -512,7 +512,7 @@
                     </div>
                 </div>
 
-                <!-- Reset & Hint Footer -->
+                <!-- Reset Footer -->
                 <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800">
                     <button onclick="resetAuditGame()" class="hover:text-cyan-400 transition-colors flex items-center gap-1">
                         <i class="fa-solid fa-rotate-right"></i> Restart Simulation
@@ -531,13 +531,12 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Left Column: Academic & CA Qualifications -->
+                    <!-- Academic Column -->
                     <div class="space-y-6">
                         <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
                             <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Academic & Professional Credentials
                         </h3>
 
-                        <!-- Qualification Card 1 -->
                         <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
                             <div class="flex justify-between items-start mb-2">
                                 <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 text-xs font-bold border border-cyan-800">Group 2 Cleared</span>
@@ -553,7 +552,6 @@
                             </ul>
                         </div>
 
-                        <!-- Qualification Card 2 -->
                         <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
                             <div class="flex justify-between items-start mb-2">
                                 <span class="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800">CGPA 7.0 / 10</span>
@@ -567,13 +565,12 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Leadership & Co-curricular Activities -->
+                    <!-- Leadership Column -->
                     <div class="space-y-6">
                         <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
                             <i class="fa-solid fa-award text-purple-400"></i> Leadership & Positions of Responsibility
                         </h3>
 
-                        <!-- Leadership Card 1 -->
                         <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
                             <div class="flex justify-between items-start mb-2">
                                 <span class="px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 text-xs font-bold border border-emerald-800">SSSIHL Campus</span>
@@ -593,7 +590,6 @@
                             </ul>
                         </div>
 
-                        <!-- Leadership Card 2 -->
                         <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
                             <div class="flex justify-between items-start mb-2">
                                 <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 text-xs font-bold border border-blue-800">Music & Arts</span>
@@ -610,7 +606,7 @@
             </div>
         </section>
 
-        <!-- Audio Lab / Hobby Easter Egg Section -->
+        <!-- Audio Lab / Easter Egg Section -->
         <section id="easter-egg" class="py-20 px-4 max-w-7xl mx-auto">
             <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-purple-500/20 relative overflow-hidden">
                 <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -625,7 +621,6 @@
                     </p>
                 </div>
 
-                <!-- Interactive Audio Pads -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-6">
                     <button onclick="playSynthNote(261.63, 'C4')" class="audio-pad p-6 rounded-2xl bg-slate-900 border border-purple-500/30 hover:border-purple-400 active:scale-95 transition-all text-center group">
                         <div class="text-2xl font-bold text-purple-400 mb-1 group-hover:scale-110 transition-transform">C4</div>
@@ -645,7 +640,6 @@
                     </button>
                 </div>
 
-                <!-- Synth Sound Display -->
                 <div class="text-center text-xs text-slate-400 font-mono" id="synth-status">
                     Status: Audio Engine Ready. Tap any key to test harmony.
                 </div>
@@ -706,7 +700,7 @@
                     </div>
                 </div>
 
-                <!-- Interactive Contact Form -->
+                <!-- Contact Form -->
                 <div class="md:col-span-7">
                     <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
                         <input type="text" id="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
@@ -774,22 +768,23 @@
         </section>
     </main>
 
-    <!-- Floating Resume Modal Overlay -->
-    <div id="resume-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-        <div class="glass-panel w-full max-w-5xl h-[90vh] rounded-3xl border border-slate-700/80 flex flex-col overflow-hidden shadow-2xl relative">
+    <!-- Floating Resume Modal Overlay with Background Blur -->
+    <div id="resume-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl transition-all duration-300">
+        <div class="glass-panel w-full max-w-5xl h-[88vh] rounded-3xl border border-slate-700/80 flex flex-col overflow-hidden shadow-2xl relative">
             
             <!-- Modal Header -->
-            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/80">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/90">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-file-pdf text-cyan-400 text-xl"></i>
                     <div>
-                        <h3 class="text-base font-bold text-white leading-tight">Sai Adarsh Sahoo — Resume</h3>
+                        <h3 class="text-base font-bold text-white leading-tight">Sai Adarsh Sahoo — Curriculum Vitae</h3>
                         <span class="text-xs text-slate-400">CA Intermediate & Statutory Audit / Risk Advisory</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="https://drive.google.com/file/d/1Qsv5pgJqTNXwMoejRhk3RWNXkf6cHwkn/view?usp=drivesdk" target="_blank" rel="noopener" class="text-xs text-cyan-400 hover:underline flex items-center gap-1">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open External
+                    <!-- Download Button -->
+                    <a id="resume-download-btn" href="./resume.pdf" download="Sai_Adarsh_Sahoo_Resume.pdf" class="px-3.5 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-xs font-semibold text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition-all flex items-center gap-1.5">
+                        <i class="fa-solid fa-download"></i> Download PDF
                     </a>
                     <button onclick="closeResumeModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
                         <i class="fa-solid fa-xmark text-lg"></i>
@@ -797,9 +792,9 @@
                 </div>
             </div>
 
-            <!-- Modal Body / Embedded Google Drive Viewer -->
+            <!-- Modal Body: PDF Embedded Reader -->
             <div class="flex-grow bg-slate-950 relative">
-                <iframe id="resume-iframe" src="" class="w-full h-full border-0" allow="autoplay"></iframe>
+                <iframe id="resume-iframe" src="" class="w-full h-full border-0" title="Resume Viewer"></iframe>
             </div>
         </div>
     </div>
@@ -883,7 +878,6 @@
                 particles[i].update();
                 particles[i].draw();
 
-                // Draw distance lines between nearby particles
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
@@ -929,7 +923,7 @@
             let typeSpeed = isDeleting ? 40 : 80;
 
             if (!isDeleting && charIndex === currentPhrase.length) {
-                typeSpeed = 2000; // Pause at end of text
+                typeSpeed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
@@ -1002,7 +996,6 @@
 
         function loadVoucher(index) {
             if (index >= gameVouchers.length) {
-                // Game Completed State
                 document.getElementById('voucher-title').textContent = "Audit Inspection Complete!";
                 document.getElementById('voucher-id').textContent = "STATUS: PASSED";
                 document.getElementById('voucher-details').innerHTML = `
@@ -1119,13 +1112,13 @@
         /* =======================================================
            6. Floating Resume Modal Control Logic
            ======================================================= */
-        const GOOGLE_DRIVE_PREVIEW_URL = "https://drive.google.com/file/d/1Qsv5pgJqTNXwMoejRhk3RWNXkf6cHwkn/preview";
+        const RESUME_FILE_PATH = "./resume.pdf";
 
         function openResumeModal() {
             const modal = document.getElementById('resume-modal');
             const iframe = document.getElementById('resume-iframe');
             
-            iframe.src = GOOGLE_DRIVE_PREVIEW_URL;
+            iframe.src = RESUME_FILE_PATH;
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
@@ -1277,7 +1270,7 @@
             document.getElementById('t-form').addEventListener('submit', async e => {
                 e.preventDefault();
                 const f = e.target;
-                if (document.getElementById('t-hp').value) return; // spam trap
+                if (document.getElementById('t-hp').value) return;
                 const t = {
                     name: document.getElementById('t-name').value.trim(),
                     role: document.getElementById('t-role').value.trim(),
