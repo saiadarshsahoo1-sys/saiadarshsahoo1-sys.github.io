@@ -245,7 +245,7 @@
                         <div class="space-y-4 text-sm text-slate-300">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-location-dot text-cyan-400 w-5"></i>
-                                <span>Odisha / Bangalore / Open to Relocation</span>
+                                <span>Odisha &middot; Open to relocation: Bangalore, Hyderabad, Mumbai</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-graduation-cap text-purple-400 w-5"></i>
@@ -682,16 +682,6 @@
                                 <a href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-cyan-400 transition-colors">linkedin.com/in/sai-adarsh-sahoo</a>
                             </div>
                         </div>
-
-                        <div class="glass-panel p-4 rounded-xl flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400 block">Location Preferences</span>
-                                <span class="text-sm font-semibold text-white">Bangalore, Hyderabad, Mumbai, Odisha</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -762,6 +752,22 @@
             </div>
         </section>
     </main>
+
+
+    <!-- Gallery Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button id="lb-close" aria-label="Close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <button id="lb-prev" aria-label="Previous photo" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button id="lb-next" aria-label="Next photo" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <img id="lb-img" alt="" class="max-w-[92vw] max-h-[84vh] object-contain rounded-xl shadow-2xl select-none">
+        <div id="lb-count" class="absolute bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-slate-800/90 text-xs text-slate-200"></div>
+    </div>
 
     <!-- Footer -->
     <footer class="glass-panel border-t border-slate-800/80 py-8 px-4 text-center text-xs text-slate-400">
@@ -1141,6 +1147,40 @@
             })();
         }
 
+                /* ===== Gallery lightbox ===== */
+        const galleryImgs = [];
+        let lbIndex = 0;
+        const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img');
+        function lbShow() {
+            lbImg.src = galleryImgs[lbIndex];
+            lbImg.alt = 'Gallery photo ' + (lbIndex + 1);
+            document.getElementById('lb-count').textContent = (lbIndex + 1) + ' / ' + galleryImgs.length;
+            const multi = galleryImgs.length > 1;
+            document.getElementById('lb-prev').style.display = multi ? '' : 'none';
+            document.getElementById('lb-next').style.display = multi ? '' : 'none';
+            [1, -1].forEach(d => { new Image().src = galleryImgs[(lbIndex + d + galleryImgs.length) % galleryImgs.length]; });
+        }
+        function openLightbox(i) { lbIndex = i; lbShow(); lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+        function closeLightbox() { lb.classList.add('hidden'); lb.classList.remove('flex'); document.body.style.overflow = ''; }
+        function lbMove(d) { lbIndex = (lbIndex + d + galleryImgs.length) % galleryImgs.length; lbShow(); }
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbMove(-1); });
+        document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbMove(1); });
+        lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+        window.addEventListener('keydown', e => {
+            if (lb.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') lbMove(-1);
+            else if (e.key === 'ArrowRight') lbMove(1);
+        });
+        let lbX = null;
+        lb.addEventListener('touchstart', e => { lbX = e.touches[0].clientX; }, { passive: true });
+        lb.addEventListener('touchend', e => {
+            if (lbX === null) return;
+            const dx = e.changedTouches[0].clientX - lbX; lbX = null;
+            if (Math.abs(dx) > 50) lbMove(dx < 0 ? 1 : -1);
+        });
+
         (function initMedia() {
             // Header photo: images/profile.(jpg|png|webp)
             probeImage('images/profile', src => {
@@ -1170,7 +1210,9 @@
                         return;
                     }
                     const a = document.createElement('a');
-                    a.href = src; a.target = '_blank'; a.rel = 'noopener';
+                    const idx = galleryImgs.length; galleryImgs.push(src);
+                    a.href = '#'; a.setAttribute('aria-label', 'Open photo ' + (idx + 1));
+                    a.addEventListener('click', ev => { ev.preventDefault(); openLightbox(idx); });
                     a.className = 'glass-panel rounded-2xl overflow-hidden aspect-[4/3] block';
                     const im = document.createElement('img');
                     im.src = src; im.alt = 'Gallery photo ' + n; im.loading = 'lazy';
