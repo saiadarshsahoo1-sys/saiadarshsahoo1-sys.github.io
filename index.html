@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Sai Adarsh Sahoo | CA Inter & Finance Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        darkCard: '#131b2e',
+                        accentBlue: '#3b82f6',
+                        accentCyan: '#06b6d4',
+                        accentPurple: '#8b5cf6',
+                        accentEmerald: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { boxShadow: '0 0 15px rgba(59, 130, 246, 0.4)' },
+                            '100%': { boxShadow: '0 0 30px rgba(139, 92, 246, 0.8)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Lucide-Style Icons -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover {
+            transition: all 0.3s ease;
+        }
+        .glass-panel-hover:hover {
+            background: rgba(26, 36, 61, 0.8);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.25);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #3b82f6, #8b5cf6) 1;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+        .neon-glow-blue {
+            filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.6));
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-accentBlue selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-accentBlue to-accentPurple flex items-center justify-center text-white shadow-lg ring-2 ring-accentBlue/40 group-hover:scale-105 transition-transform">
+                    <img id="avatar-img" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover">
+                    <i id="avatar-fallback" class="fa-solid fa-user"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white block">Sai Adarsh Sahoo</span>
+                    <span class="text-xs text-cyan-400 font-medium block -mt-1">CA Inter | B.Com (Hons.)</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <a href="#hero" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Home</a>
+                <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">About</a>
+                <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Skills & Expertise</a>
+                <a href="#audit-game" class="px-3 py-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:bg-cyan-950/30 rounded-lg transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-gamepad"></i> Audit Game
+                </a>
+                <a href="#resume" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Education & Career</a>
+                <a href="#easter-egg" class="px-3 py-2 text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-950/30 rounded-lg transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-music"></i> Audio Lab
+                </a>
+                <a href="#gallery" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Gallery</a>
+                <a href="#testimonials" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors">Testimonials</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">About</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Skills Matrix</a>
+            <a href="#audit-game" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-cyan-400 hover:bg-slate-800">Audit Mini-Game</a>
+            <a href="#resume" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Qualifications</a>
+            <a href="#easter-egg" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Audio Lab Easter Egg</a>
+            <a href="#gallery" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Gallery</a>
+            <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Testimonials</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 px-4">
+            <!-- Canvas Particle Effect -->
+            <canvas id="particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+            
+            <!-- Glowing Background Orbs -->
+            <div class="absolute top-1/4 left-1/6 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-1/4 right-1/6 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto text-center px-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-cyan-300 text-xs font-medium mb-6 animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                    Available for CA Articleship & Financial Analyst Roles
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Hi, I'm <span class="gradient-text">Sai Adarsh Sahoo</span>
+                </h1>
+
+                <div class="h-12 sm:h-14 mb-6 flex items-center justify-center">
+                    <span id="typing-text" class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-300 border-r-2 border-cyan-400 pr-1"></span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Bridging high-precision <strong class="text-slate-200">Financial Auditing, Statutory Compliance & Taxation</strong> with modern <strong class="text-slate-200">VBA Automation, Analytics, & AI Workflows</strong>. Graduated from <span class="text-cyan-300 font-medium">Sri Sathya Sai Institute of Higher Learning</span> with a B.Com (Hons.) and Group 2 CA Intermediate cleared.
+                </p>
+
+                <!-- Hero CTA Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="#audit-game" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-semibold text-sm shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition-all flex items-center gap-2 group">
+                        <i class="fa-solid fa-calculator group-hover:rotate-12 transition-transform"></i> Play Audit Mini-Game
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Qsv5pgJqTNXwMoejRhk3RWNXkf6cHwkn/view?usp=drivesdk" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl glass-panel text-slate-200 hover:text-white hover:border-slate-500 font-semibold text-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-eye text-cyan-400"></i> Interactive Resume
+                    </a>
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 font-semibold text-sm border border-slate-700/60 transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Highlight Cards Strip -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-left">
+                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
+                        <div class="text-cyan-400 text-xl font-bold mb-1">CA Inter</div>
+                        <div class="text-xs text-slate-400">Group 2 Cleared | Exemptions in Accounts & Costing</div>
+                    </div>
+                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
+                        <div class="text-purple-400 text-xl font-bold mb-1">7.0 CGPA</div>
+                        <div class="text-xs text-slate-400">B.Com (Hons.), SSSIHL</div>
+                    </div>
+                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
+                        <div class="text-emerald-400 text-xl font-bold mb-1">VBA / Scripting</div>
+                        <div class="text-xs text-slate-400">Excel Automation & Tally Prime</div>
+                    </div>
+                    <div class="glass-panel p-4 rounded-xl border border-slate-800">
+                        <div class="text-blue-400 text-xl font-bold mb-1">Leadership</div>
+                        <div class="text-xs text-slate-400">SSSIHL Cultural Coordinator</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Career Objective Section -->
+        <section id="about" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Professional Bio</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accentBlue to-accentPurple mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Profile & Key Info Card -->
+                <div class="md:col-span-5">
+                    <div class="glass-panel rounded-2xl p-6 sm:p-8 relative overflow-hidden group">
+                        <div class="absolute -top-12 -right-12 w-40 h-40 bg-accentBlue/20 rounded-full blur-2xl group-hover:bg-accentPurple/30 transition-all"></div>
+                        
+                        <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-cyan-500 to-indigo-600 p-1 mb-6 mx-auto md:mx-0 shadow-lg">
+                            <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center text-3xl font-extrabold text-cyan-400">
+                                SAS
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-1 text-center md:text-left">Sai Adarsh Sahoo</h3>
+                        <p class="text-cyan-400 text-sm font-medium mb-6 text-center md:text-left">Finance, Audit & Tech Automation Aspirant</p>
+
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-cyan-400 w-5"></i>
+                                <span>Odisha / Bangalore / Open to Relocation</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-graduation-cap text-purple-400 w-5"></i>
+                                <span>Sri Sathya Sai Institute of Higher Learning</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-blue-400 w-5"></i>
+                                <span class="break-all">saiadarshasahoo@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-briefcase text-emerald-400 w-5"></i>
+                                <span>Targeting Statutory Audit, Internal Audit, FP&A</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">Audit Standards (SA)</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">Ind AS</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">Direct Tax</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-xs text-slate-300 border border-slate-700">GST / Indirect Tax</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Objective & Core Values -->
+                <div class="md:col-span-7 space-y-6">
+                    <div class="glass-panel rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-cyan-400"></i> Career Objective & Vision
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            Driven <strong class="text-white">CA Intermediate aspirant</strong> and <strong class="text-white">B.Com (Hons.) graduate</strong> equipped with a disciplined academic grounding from Sri Sathya Sai Institute of Higher Learning. Combining rigorous analytical capabilities in financial reporting, costing, and taxation with a passion for leveraging modern technology (Excel Macros/VBA, Google Apps Script, and AI tools) to eliminate manual errors and streamline financial workflows.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed">
+                            Seeking a demanding <strong class="text-cyan-300">CA Articleship / Financial Analyst position</strong> in Statutory Audit, Internal Audit, Risk Advisory, or Financial Planning & Analysis (FP&A) where I can add measurable value from day one.
+                        </p>
+                    </div>
+
+                    <!-- Key Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-1">Analytical Precision</h4>
+                            <p class="text-xs text-slate-400">Deep scrutiny in ledger reconciliation, voucher verification, and financial ratio evaluation.</p>
+                        </div>
+                        <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="font-semibold text-white mb-1">Tech & Automation</h4>
+                            <p class="text-xs text-slate-400">Crafting VBA macros, automated reporting sheets, and prompt-engineered AI assistants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section id="skills" class="py-20 px-4 bg-slate-950/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Skills & Technical Competencies</h2>
+                    <p class="text-slate-400 text-sm max-w-xl mx-auto">Filter skills across finance, automated tools, and leadership domains.</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="flex justify-center mb-10 flex-wrap gap-2">
+                    <button onclick="filterSkills('all')" class="skill-tab active px-5 py-2.5 rounded-xl text-xs font-semibold bg-accentBlue text-white shadow-lg transition-all" data-category="all">
+                        All Expertise
+                    </button>
+                    <button onclick="filterSkills('finance')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="finance">
+                        <i class="fa-solid fa-file-invoice-dollar mr-1"></i> Finance & Audit
+                    </button>
+                    <button onclick="filterSkills('tech')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="tech">
+                        <i class="fa-solid fa-laptop-code mr-1"></i> Tools & Automation
+                    </button>
+                    <button onclick="filterSkills('soft')" class="skill-tab px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="soft">
+                        <i class="fa-solid fa-users mr-1"></i> Soft Skills & Leadership
+                    </button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Finance Skills -->
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="finance">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Auditing Standards (SA / Ind AS)</span>
+                            <span class="text-xs text-cyan-400 font-mono">Advanced</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-2 rounded-full w-[88%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Voucher audit trails, compliance testing, and internal check evaluation.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="finance">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Financial Accounting & Costing</span>
+                            <span class="text-xs text-cyan-400 font-mono">Exemption Distinction</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-2 rounded-full w-[92%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Cost variance analysis, process costing, final account preparation.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="finance">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Direct & Indirect Taxation</span>
+                            <span class="text-xs text-cyan-400 font-mono">Proficient</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-2 rounded-full w-[82%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Income Tax computations, GST returns, TDS compliance.</p>
+                    </div>
+
+                    <!-- Tech Skills -->
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="tech">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">MS Excel (VBA & Macros)</span>
+                            <span class="text-xs text-purple-400 font-mono">Expert</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[90%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Dynamic dashboards, Power Query, automated financial reporting scripts.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="tech">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Tally Prime & Accounting SW</span>
+                            <span class="text-xs text-purple-400 font-mono">Advanced</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[85%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Voucher entries, inventory management, bank reconciliation statements.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="tech">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Google Apps Script & AI Tools</span>
+                            <span class="text-xs text-purple-400 font-mono">Proficient</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[80%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Automated Google Sheets, ChatGPT/Perplexity prompt engineering for analysis.</p>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="soft">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Cultural & Event Management</span>
+                            <span class="text-xs text-emerald-400 font-mono">Lead Coordinator</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-2 rounded-full w-[95%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Spearheaded university-wide events at SSSIHL and led Brindavan Studio, composing background scores and songs for student theatre.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="soft">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Team Leadership & Operations</span>
+                            <span class="text-xs text-emerald-400 font-mono">High</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-2 rounded-full w-[88%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Collaborative problem solving, operational scheduling, conflict resolution.</p>
+                    </div>
+
+                    <div class="skill-card glass-panel glass-panel-hover p-6 rounded-2xl" data-category="soft">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-white">Communication & Presentation</span>
+                            <span class="text-xs text-emerald-400 font-mono">Proficient</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-2 rounded-full w-[86%] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Structured reporting, stakeholder interaction, technical presentation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audit Mini-Game Section -->
+        <section id="audit-game" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-3">
+                    <i class="fa-solid fa-gamepad"></i> Interactive Simulation
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Audit Trail & Voucher Detective Game</h2>
+                <p class="text-slate-400 text-sm max-w-2xl mx-auto">
+                    Test your audit instincts! Inspect real-world simulated vouchers for compliance errors, TDS omissions, or calculation discrepancies.
+                </p>
+            </div>
+
+            <!-- Game Board Canvas Container -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-700/60 shadow-2xl relative overflow-hidden">
+                <!-- Top Status Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Current Role</span>
+                            <span class="text-sm font-bold text-white">Senior Article Auditor</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <div class="text-center">
+                            <span class="text-xs text-slate-400 block">Audit Score</span>
+                            <span id="game-score" class="text-xl font-extrabold text-cyan-400">0 pts</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-xs text-slate-400 block">Voucher</span>
+                            <span id="game-progress" class="text-xl font-extrabold text-purple-400">1 / 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Voucher Display Area -->
+                <div class="my-8 grid md:grid-cols-12 gap-8 items-start">
+                    <!-- Voucher Card Visual -->
+                    <div class="md:col-span-7 bg-slate-900/90 rounded-2xl p-6 border border-slate-800 shadow-inner relative">
+                        <div class="flex justify-between items-start mb-4 border-b border-slate-800 pb-3">
+                            <div>
+                                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Voucher Type</span>
+                                <h4 id="voucher-title" class="text-lg font-bold text-cyan-300">Loading Voucher...</h4>
+                            </div>
+                            <span id="voucher-id" class="px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-slate-300">VCH-001</span>
+                        </div>
+
+                        <div id="voucher-details" class="space-y-3 text-sm text-slate-300 font-mono">
+                            <!-- Dynamic content populated via JS -->
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 italic">
+                            <i class="fa-solid fa-circle-info text-cyan-400 mr-1"></i> Check carefully: GST calculation, TDS compliance, signature authorization, and ledger posting!
+                        </div>
+                    </div>
+
+                    <!-- Detective Decision Panel -->
+                    <div class="md:col-span-5 space-y-4">
+                        <h4 class="text-sm font-semibold text-slate-200 mb-2">Audit Action Required:</h4>
+                        
+                        <button onclick="submitAuditChoice('APPROVE')" class="w-full p-4 rounded-xl glass-panel hover:bg-emerald-950/40 border border-slate-700 hover:border-emerald-500/50 text-left transition-all group flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-emerald-400 text-sm group-hover:translate-x-1 transition-transform">
+                                    <i class="fa-solid fa-circle-check mr-2"></i> Approve Voucher
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">No compliance errors, calculations & TDS are accurate.</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-emerald-400"></i>
+                        </button>
+
+                        <button onclick="submitAuditChoice('FLAG_TAX')" class="w-full p-4 rounded-xl glass-panel hover:bg-amber-950/40 border border-slate-700 hover:border-amber-500/50 text-left transition-all group flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-amber-400 text-sm group-hover:translate-x-1 transition-transform">
+                                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> Flag TDS / GST Error
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">Tax rate mismatch or missing mandatory TDS deduction.</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-amber-400"></i>
+                        </button>
+
+                        <button onclick="submitAuditChoice('REJECT_CALC')" class="w-full p-4 rounded-xl glass-panel hover:bg-red-950/40 border border-slate-700 hover:border-red-500/50 text-left transition-all group flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-red-400 text-sm group-hover:translate-x-1 transition-transform">
+                                    <i class="fa-solid fa-ban mr-2"></i> Reject (Math Error / Unauthorized)
+                                </div>
+                                <div class="text-xs text-slate-400 mt-1">Total sum error, missing approval signature, or false invoice.</div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-red-400"></i>
+                        </button>
+
+                        <!-- Live Feedback Box -->
+                        <div id="game-feedback" class="hidden p-4 rounded-xl text-xs font-medium leading-relaxed border transition-all"></div>
+                    </div>
+                </div>
+
+                <!-- Reset & Hint Footer -->
+                <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800">
+                    <button onclick="resetAuditGame()" class="hover:text-cyan-400 transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-rotate-right"></i> Restart Simulation
+                    </button>
+                    <span>Inspect all 4 vouchers to earn the "Master Auditor" badge!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications & Experience Timeline Section -->
+        <section id="resume" class="py-20 px-4 bg-slate-950/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Education & Track Record</h2>
+                    <p class="text-slate-400 text-sm max-w-xl mx-auto">Academic history, CA progress, and leadership responsibilities.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left Column: Academic & CA Qualifications -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Academic & Professional Credentials
+                        </h3>
+
+                        <!-- Qualification Card 1 -->
+                        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 text-xs font-bold border border-cyan-800">Inter Cleared (Group 2)</span>
+                                <span class="text-xs text-slate-400">ICAI</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">CA Intermediate Progress</h4>
+                            <p class="text-sm text-cyan-300 font-medium mb-3">Institute of Chartered Accountants of India</p>
+                            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                                <li>Cleared Group 2 in CA Intermediate examinations.</li>
+                                <li>Scored <strong class="text-white">Exemption Marks</strong> in Cost & Management Accounting and Accounts.</li>
+                                <li>Completed mandatory ITT & Orientation Training modules.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Qualification Card 2 -->
+                        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800">CGPA 7.0 / 10</span>
+                                <span class="text-xs text-slate-400">Graduation</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">Bachelor of Commerce (B.Com Hons.)</h4>
+                            <p class="text-sm text-purple-300 font-medium mb-3">Sri Sathya Sai Institute of Higher Learning (SSSIHL)</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                Underwent a rigorous residential value-based education system with focused coursework in Advanced Accounting, Corporate Law, Direct Taxation, Financial Management, and Business Statistics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Leadership & Co-curricular Activities -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-purple-400"></i> Leadership & Positions of Responsibility
+                        </h3>
+
+                        <!-- Leadership Card 1 -->
+                        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 text-xs font-bold border border-emerald-800">SSSIHL Campus</span>
+                                <span class="text-xs text-slate-400">Leadership</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">Cultural & Event Coordinator</h4>
+                            <p class="text-sm text-emerald-300 font-medium mb-3">Sri Sathya Sai Institute of Higher Learning</p>
+                            <ul class="text-xs text-slate-300 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span>Planned and coordinated large-scale university cultural programs and formal ceremonial events.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                    <span>Managed logistics, schedule allocation, and group rehearsal protocols for multi-tier student teams.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Leadership Card 2 -->
+                        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 text-xs font-bold border border-blue-800">Music & Arts</span>
+                                <span class="text-xs text-slate-400">Co-Curricular</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">Leader, Brindavan Studio</h4>
+                            <p class="text-sm text-blue-300 font-medium mb-3">Brindavan Studio, SSSIHL</p>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Led Brindavan Studio, composing background scores and songs for theatre productions staged by students at the annual sports and cultural meet, before an international audience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Lab / Hobby Easter Egg Section -->
+        <section id="easter-egg" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-purple-500/20 relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-8">
+                    <span class="px-3 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800 inline-block mb-3">
+                        <i class="fa-solid fa-compact-disc animate-spin"></i> Hobbies & Creativity Easter Egg
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Interactive Financial Beat Synthesizer</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+                        Beyond balance sheets, I enjoy digital sound crafting! Click or tap the pads below to trigger real-time synthesized audio tones using Web Audio API.
+                    </p>
+                </div>
+
+                <!-- Interactive Audio Pads -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-6">
+                    <button onclick="playSynthNote(261.63, 'C4')" class="audio-pad p-6 rounded-2xl bg-slate-900 border border-purple-500/30 hover:border-purple-400 active:scale-95 transition-all text-center group">
+                        <div class="text-2xl font-bold text-purple-400 mb-1 group-hover:scale-110 transition-transform">C4</div>
+                        <div class="text-[10px] text-slate-500 font-mono">261.6 Hz (Base)</div>
+                    </button>
+                    <button onclick="playSynthNote(329.63, 'E4')" class="audio-pad p-6 rounded-2xl bg-slate-900 border border-cyan-500/30 hover:border-cyan-400 active:scale-95 transition-all text-center group">
+                        <div class="text-2xl font-bold text-cyan-400 mb-1 group-hover:scale-110 transition-transform">E4</div>
+                        <div class="text-[10px] text-slate-500 font-mono">329.6 Hz (Third)</div>
+                    </button>
+                    <button onclick="playSynthNote(392.00, 'G4')" class="audio-pad p-6 rounded-2xl bg-slate-900 border border-blue-500/30 hover:border-blue-400 active:scale-95 transition-all text-center group">
+                        <div class="text-2xl font-bold text-blue-400 mb-1 group-hover:scale-110 transition-transform">G4</div>
+                        <div class="text-[10px] text-slate-500 font-mono">392.0 Hz (Fifth)</div>
+                    </button>
+                    <button onclick="playSynthNote(523.25, 'C5')" class="audio-pad p-6 rounded-2xl bg-slate-900 border border-emerald-500/30 hover:border-emerald-400 active:scale-95 transition-all text-center group">
+                        <div class="text-2xl font-bold text-emerald-400 mb-1 group-hover:scale-110 transition-transform">C5</div>
+                        <div class="text-[10px] text-slate-500 font-mono">523.2 Hz (High)</div>
+                    </button>
+                </div>
+
+                <!-- Synth Sound Display -->
+                <div class="text-center text-xs text-slate-400 font-mono" id="synth-status">
+                    Status: Audio Engine Ready. Tap any key to test harmony.
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Let's Connect</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Interested in hiring me for a CA Articleship or Finance role? Send a message or connect directly via social handles.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Email Address</span>
+                                <a href="mailto:saiadarshasahoo@gmail.com" class="text-sm font-semibold text-white hover:text-cyan-400 transition-colors">saiadarshasahoo@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">LinkedIn Profile</span>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-cyan-400 transition-colors">linkedin.com/in/saiadarsha</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Location Preferences</span>
+                                <span class="text-sm font-semibold text-white">Bangalore, Hyderabad, Mumbai, Odisha</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="md:col-span-7">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
+                        <input type="text" id="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+                                <input type="text" required placeholder="e.g. John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
+                                <input type="email" required placeholder="john@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Inquiry / Subject</label>
+                            <input type="text" required placeholder="Articleship Opportunity / Interview Discussion" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Message</label>
+                            <textarea rows="4" required placeholder="Write your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-white font-semibold text-sm hover:opacity-95 shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-bold border border-cyan-800 inline-block mb-3"><i class="fa-solid fa-images"></i> Gallery</span>
+                <h2 class="text-3xl font-bold text-white">Moments & Memories</h2>
+            </div>
+            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20 px-4 bg-slate-950/40">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-10">
+                    <span class="px-3 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold border border-purple-800 inline-block mb-3"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+                    <h2 class="text-3xl font-bold text-white mb-2">Worked With Me?</h2>
+                    <p class="text-slate-400 text-sm">Share your experience working with me or using my services.</p>
+                </div>
+                <div class="grid lg:grid-cols-5 gap-8">
+                    <form id="t-form" class="lg:col-span-2 glass-panel rounded-2xl p-6 space-y-3 self-start">
+                        <input type="text" id="t-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+                        <input id="t-name" required maxlength="60" placeholder="Your name" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-accentBlue">
+                        <input id="t-role" maxlength="80" placeholder="Your role / relationship to me (optional)" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-accentBlue">
+                        <select id="t-rating" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white">
+                            <option value="5">★★★★★ Excellent</option><option value="4">★★★★ Very good</option><option value="3">★★★ Good</option><option value="2">★★ Fair</option><option value="1">★ Poor</option>
+                        </select>
+                        <textarea id="t-msg" required maxlength="500" rows="4" placeholder="Your experience..." class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-accentBlue"></textarea>
+                        <button type="submit" class="w-full py-2.5 rounded-lg bg-gradient-to-r from-accentBlue to-accentPurple text-white text-sm font-semibold hover:opacity-90"><i class="fa-solid fa-paper-plane"></i> Submit Testimonial</button>
+                        <p id="t-note" class="text-[11px] text-slate-500"></p>
+                    </form>
+                    <div id="t-list" class="lg:col-span-3 space-y-4"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Resume Modal Container -->
+    <div id="resume-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 transition-opacity">
+        <div class="glass-panel w-full max-w-3xl max-h-[90vh] rounded-3xl border border-slate-700 flex flex-col overflow-hidden shadow-2xl">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/80">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-white">Sai_Adarsh_Sahoo_Resume.pdf</h3>
+                        <p class="text-xs text-slate-400">CA Intermediate & B.Com (Hons.)</p>
+                    </div>
+                </div>
+                <button onclick="closeResumeModal()" class="text-slate-400 hover:text-white p-2 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 overflow-y-auto space-y-6 text-slate-300 text-sm font-sans">
+                <!-- Header Info -->
+                <div class="text-center pb-4 border-b border-slate-800">
+                    <h2 class="text-2xl font-bold text-white">SAI ADARSH SAHOO</h2>
+                    <p class="text-xs text-cyan-400 font-medium">CA Intermediate (Group 2 Cleared) | B.Com (Hons.)</p>
+                    <p class="text-xs text-slate-400 mt-1">Email: saiadarshasahoo@gmail.com | Phone: +91 XXXXX XXXXX</p>
+                </div>
+
+                <!-- Section: Summary -->
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-800 pb-1">Professional Profile</h4>
+                    <p class="text-xs leading-relaxed text-slate-300">
+                        Methodical and tech-savvy Finance graduate with Group 2 CA Intermediate qualification. Demonstrated aptitude in accounting standards, statutory/internal auditing concepts, direct taxation, and costing. Accomplished at deploying MS Excel VBA macros and Google Apps Script to automate recurring data processing tasks.
+                    </p>
+                </div>
+
+                <!-- Section: Education -->
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-800 pb-1">Education</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between font-bold text-white text-xs">
+                                <span>CA Intermediate (Group 2 Cleared)</span>
+                                <span>ICAI</span>
+                            </div>
+                            <p class="text-xs text-cyan-400">Exemptions in Accounts & Costing</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold text-white text-xs">
+                                <span>Bachelor of Commerce (B.Com Hons.)</span>
+                                <span>CGPA: 7.0 / 10.0</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Sri Sathya Sai Institute of Higher Learning (SSSIHL)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Key Technical & Audit Skills -->
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-800 pb-1">Core Competencies</h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div>• Auditing Standards (SA / Ind AS)</div>
+                        <div>• Direct Tax & GST Basics</div>
+                        <div>• MS Excel (Macros, VBA, Power Query)</div>
+                        <div>• Tally Prime & Ledger Posting</div>
+                        <div>• Google Apps Script Automation</div>
+                        <div>• AI Prompting (ChatGPT, Perplexity)</div>
+                    </div>
+                </div>
+
+                <!-- Section: Leadership -->
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-800 pb-1">Leadership & Co-Curriculars</h4>
+                    <p class="text-xs leading-relaxed">
+                        • <strong>Cultural Coordinator (SSSIHL):</strong> Directed logistics and event management for university events.<br>
+                        • <strong>Leader, Brindavan Studio:</strong> Composed background scores and songs for student theatre at the annual sports and cultural meet, before an international audience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer Controls -->
+            <div class="p-4 border-t border-slate-800 bg-slate-900/80 flex items-center justify-between">
+                <span class="text-xs text-slate-400">Opens my full resume on Google Drive.</span>
+                <div class="flex items-center gap-3">
+                    <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white border border-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i> Print
+                    </button>
+                    <a href="https://drive.google.com/file/d/1Qsv5pgJqTNXwMoejRhk3RWNXkf6cHwkn/view?usp=drivesdk" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-gradient-to-r from-accentBlue to-accentPurple text-xs font-semibold text-white hover:opacity-90 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-panel border-t border-slate-800/80 py-8 px-4 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Sai Adarsh Sahoo. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#hero" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#audit-game" class="hover:text-cyan-400 transition-colors">Audit Game</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* =======================================================
+           1. Particle Canvas Engine for Hero Background
+           ======================================================= */
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 120 };
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        window.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.speedY = (Math.random() - 0.5) * 0.8;
+                this.color = ['#38bdf8', '#818cf8', '#c084fc'][Math.floor(Math.random() * 3)];
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(Math.floor(window.innerWidth / 15), 80);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                // Draw distance lines between nearby particles
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 100) {
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${1 - dist / 100})`;
+                        ctx.lineWidth = 0.4;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        /* =======================================================
+           2. Typing Text Effect
+           ======================================================= */
+        const typingPhrases = [
+            "CA Intermediate Aspirant",
+            "B.Com (Hons.) Graduate - SSSIHL",
+            "Finance & Statutory Audit Enthusiast",
+            "Excel VBA & Google Apps Script Automator"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+
+        function typeLoop() {
+            const currentPhrase = typingPhrases[phraseIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2000; // Pause at end of text
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeLoop, typeSpeed);
+        }
+
+        /* =======================================================
+           3. Audit & Finance Mini-Game Logic
+           ======================================================= */
+        const gameVouchers = [
+            {
+                id: "VCH-001",
+                title: "Vendor Consulting Invoice",
+                details: `
+                    <div><span class="text-slate-500">Vendor:</span> TechConsult Private Ltd.</div>
+                    <div><span class="text-slate-500">Service Fee:</span> ₹1,50,000</div>
+                    <div><span class="text-slate-500">GST (18%):</span> ₹27,000</div>
+                    <div><span class="text-slate-500">TDS Deducted:</span> <span class="text-red-400 font-bold">₹0 (Omitted!)</span></div>
+                    <div><span class="text-slate-500">Net Paid:</span> ₹1,77,000</div>
+                `,
+                correct: "FLAG_TAX",
+                explanation: "Correct! Section 194J requires TDS deduction on professional fees exceeding thresholds. Omitting TDS leads to tax non-compliance!"
+            },
+            {
+                id: "VCH-002",
+                title: "Office Stationary Purchase",
+                details: `
+                    <div><span class="text-slate-500">Vendor:</span> Royal Stationers</div>
+                    <div><span class="text-slate-500">Item Cost:</span> ₹12,000</div>
+                    <div><span class="text-slate-500">GST (12%):</span> ₹1,440</div>
+                    <div><span class="text-slate-500">Invoice Total Listed:</span> <span class="text-red-400 font-bold">₹15,440 (Sum Error)</span></div>
+                    <div><span class="text-slate-500">Authorized Signature:</span> Valid</div>
+                `,
+                correct: "REJECT_CALC",
+                explanation: "Spot on! ₹12,000 + ₹1,440 equals ₹13,440. The voucher contains an incorrect total calculation of ₹15,440."
+            },
+            {
+                id: "VCH-003",
+                title: "Equipment Repair Voucher",
+                details: `
+                    <div><span class="text-slate-500">Vendor:</span> Delta Maintenance</div>
+                    <div><span class="text-slate-500">Cost:</span> ₹8,000</div>
+                    <div><span class="text-slate-500">GST (18%):</span> ₹1,440</div>
+                    <div><span class="text-slate-500">Total:</span> ₹9,440</div>
+                    <div><span class="text-slate-500">Supporting Bill & Sign:</span> Verified</div>
+                `,
+                correct: "APPROVE",
+                explanation: "Great job! Math is correct, threshold is below mandatory TDS limits, and supporting bills are attached."
+            },
+            {
+                id: "VCH-004",
+                title: "Software License Subscription",
+                details: `
+                    <div><span class="text-slate-500">Vendor:</span> CloudSoft Inc.</div>
+                    <div><span class="text-slate-500">Subscription:</span> ₹50,000</div>
+                    <div><span class="text-slate-500">GST Rate Applied:</span> <span class="text-amber-400 font-bold">28% (Invalid Rate)</span></div>
+                    <div><span class="text-slate-500">GST Charged:</span> ₹14,000</div>
+                `,
+                correct: "FLAG_TAX",
+                explanation: "Correct! Software SaaS licenses fall under the 18% GST slab, not the 28% slab."
+            }
+        ];
+
+        let currentVoucherIdx = 0;
+        let auditScore = 0;
+
+        function loadVoucher(index) {
+            if (index >= gameVouchers.length) {
+                // Game Completed State
+                document.getElementById('voucher-title').textContent = "Audit Inspection Complete!";
+                document.getElementById('voucher-id').textContent = "STATUS: PASSED";
+                document.getElementById('voucher-details').innerHTML = `
+                    <div class="text-center py-6">
+                        <div class="text-3xl text-emerald-400 mb-2"><i class="fa-solid fa-award"></i></div>
+                        <h4 class="text-lg font-bold text-white mb-1">Master Auditor Rank Earned!</h4>
+                        <p class="text-xs text-slate-400">Final Audit Score: <strong class="text-cyan-400">${auditScore} pts</strong></p>
+                    </div>
+                `;
+                return;
+            }
+
+            const v = gameVouchers[index];
+            document.getElementById('voucher-title').textContent = v.title;
+            document.getElementById('voucher-id').textContent = v.id;
+            document.getElementById('voucher-details').innerHTML = v.details;
+            document.getElementById('game-progress').textContent = `${index + 1} / ${gameVouchers.length}`;
+            
+            const feedbackEl = document.getElementById('game-feedback');
+            feedbackEl.classList.add('hidden');
+        }
+
+        function submitAuditChoice(choice) {
+            if (currentVoucherIdx >= gameVouchers.length) return;
+
+            const v = gameVouchers[currentVoucherIdx];
+            const feedbackEl = document.getElementById('game-feedback');
+            feedbackEl.classList.remove('hidden', 'bg-emerald-950/80', 'border-emerald-500', 'text-emerald-200', 'bg-red-950/80', 'border-red-500', 'text-red-200');
+
+            if (choice === v.correct) {
+                auditScore += 25;
+                document.getElementById('game-score').textContent = `${auditScore} pts`;
+                feedbackEl.classList.add('bg-emerald-950/80', 'border-emerald-500', 'text-emerald-200');
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i> <strong>Audit Verdict Correct!</strong> ${v.explanation}`;
+            } else {
+                feedbackEl.classList.add('bg-red-950/80', 'border-red-500', 'text-red-200');
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1.5"></i> <strong>Audit Error!</strong> ${v.explanation}`;
+            }
+
+            setTimeout(() => {
+                currentVoucherIdx++;
+                loadVoucher(currentVoucherIdx);
+            }, 2500);
+        }
+
+        function resetAuditGame() {
+            currentVoucherIdx = 0;
+            auditScore = 0;
+            document.getElementById('game-score').textContent = "0 pts";
+            loadVoucher(0);
+        }
+
+        /* =======================================================
+           4. Skill Category Filtering
+           ======================================================= */
+        function filterSkills(category) {
+            const tabs = document.querySelectorAll('.skill-tab');
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-category') === category) {
+                    tab.classList.remove('bg-slate-800', 'text-slate-300');
+                    tab.classList.add('bg-accentBlue', 'text-white');
+                } else {
+                    tab.classList.remove('bg-accentBlue', 'text-white');
+                    tab.classList.add('bg-slate-800', 'text-slate-300');
+                }
+            });
+
+            const cards = document.querySelectorAll('.skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        /* =======================================================
+           5. Web Audio API Mini Synthesizer
+           ======================================================= */
+        let audioCtx = null;
+
+        function playSynthNote(freq, noteName) {
+            try {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.2);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 1.2);
+
+                document.getElementById('synth-status').textContent = `Playing Note: ${noteName} (${freq} Hz)`;
+            } catch (e) {
+                console.log("Audio play error:", e);
+            }
+        }
+
+        /* =======================================================
+           6. Contact Form & Resume Modal Actions
+           ======================================================= */
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            const f = e.target;
+            if (document.getElementById('c-hp').value) return; // spam trap
+            const [nm, em, sj, ms] = f.querySelectorAll('input[type=text], input[type=email], textarea');
+            const btn = document.getElementById('submit-btn');
+            const idle = `<i class="fa-solid fa-paper-plane"></i> Send Message`;
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending...`;
+            try {
+                await sendToInbox({
+                    subject: 'Portfolio inquiry: ' + sj.value.trim(),
+                    from_name: nm.value.trim(), name: nm.value.trim(), email: em.value.trim(), message: ms.value.trim()
+                });
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> Message Sent Successfully!`;
+                f.reset();
+            } catch (err) {
+                btn.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Could not send. Please email me directly.`;
+            }
+            setTimeout(() => { btn.disabled = false; btn.innerHTML = idle; }, 3500);
+        }
+
+        function openResumeModal() {
+            document.getElementById('resume-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resume-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function downloadResumeSim() {
+            const content = "Sai Adarsh Sahoo - CA Intermediate & B.Com (Hons.) Portfolio Resume";
+            const blob = new Blob([content], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Sai_Adarsh_Sahoo_Resume.txt";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        /* Mobile Menu Toggle */
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+
+        /* ===== Photos, Gallery & Testimonials (static-hosting version) ===== */
+        // 1) Get a free access key at web3forms.com (enter your email) and paste it below.
+        const WEB3FORMS_KEY = "8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
+
+        async function sendToInbox(fields) {
+            const r = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.assign({ access_key: WEB3FORMS_KEY }, fields))
+            });
+            const j = await r.json();
+            if (!j.success) throw new Error(j.message || 'Send failed');
+        }
+
+        // Tries images/<name>.jpg, .jpeg, .png, .webp and calls back with the first that exists (or null)
+        function probeImage(base, cb) {
+            const exts = ['jpg', 'jpeg', 'png', 'webp']; let i = 0;
+            (function next() {
+                if (i >= exts.length) return cb(null);
+                const im = new Image();
+                im.onload = () => cb(base + '.' + exts[i]);
+                im.onerror = () => { i++; next(); };
+                im.src = base + '.' + exts[i];
+            })();
+        }
+
+        (function initMedia() {
+            // Header photo: images/profile.(jpg|png|webp)
+            probeImage('images/profile', src => {
+                if (!src) return;
+                const im = document.getElementById('avatar-img');
+                im.src = src; im.classList.remove('hidden');
+                document.getElementById('avatar-fallback').classList.add('hidden');
+            });
+            // Gallery: images/gallery/1.jpg, 2.jpg, 3.jpg ... (stops at the first missing number)
+            const g = document.getElementById('gallery-grid');
+            let n = 1;
+            (function next() {
+                if (n > 60) return;
+                probeImage('images/gallery/' + n, src => {
+                    if (!src) {
+                        if (n === 1) {
+                            for (let k = 0; k < 6; k++) {
+                                const d = document.createElement('div');
+                                d.className = 'glass-panel rounded-2xl aspect-[4/3] flex items-center justify-center text-center text-slate-500 text-xs';
+                                d.innerHTML = '<div><i class="fa-solid fa-image text-3xl mb-2 block"></i>Photo coming soon</div>';
+                                g.appendChild(d);
+                            }
+                        }
+                        return;
+                    }
+                    const a = document.createElement('a');
+                    a.href = src; a.target = '_blank'; a.rel = 'noopener';
+                    a.className = 'glass-panel rounded-2xl overflow-hidden aspect-[4/3] block';
+                    const im = document.createElement('img');
+                    im.src = src; im.alt = 'Gallery photo ' + n; im.loading = 'lazy';
+                    im.className = 'w-full h-full object-cover hover:scale-105 transition-transform duration-500';
+                    a.appendChild(im); g.appendChild(a);
+                    n++; next();
+                });
+            })();
+        })();
+
+        (function initTestimonials() {
+            const list = document.getElementById('t-list'), note = document.getElementById('t-note');
+            note.textContent = 'Testimonials appear on this page after I review them.';
+            function render(items) {
+                list.innerHTML = '';
+                if (!items.length) {
+                    list.innerHTML = '<div class="glass-panel rounded-2xl p-6 text-sm text-slate-400 text-center">No testimonials yet. Be the first to share your experience!</div>';
+                    return;
+                }
+                items.forEach(t => {
+                    const c = document.createElement('div'); c.className = 'glass-panel rounded-2xl p-5';
+                    const r = Math.max(1, Math.min(5, parseInt(t.rating, 10) || 5));
+                    const stars = document.createElement('div'); stars.className = 'text-amber-400 text-sm mb-2'; stars.textContent = '★'.repeat(r) + '☆'.repeat(5 - r);
+                    const m = document.createElement('p'); m.className = 'text-sm text-slate-200 leading-relaxed'; m.textContent = t.msg || '';
+                    const n = document.createElement('p'); n.className = 'text-xs text-cyan-400 font-semibold mt-3'; n.textContent = (t.name || '') + (t.role ? ' · ' + t.role : '');
+                    c.append(stars, m, n); list.appendChild(c);
+                });
+            }
+            render([]);
+            // Approved testimonials live in testimonials.json next to index.html
+            fetch('testimonials.json', { cache: 'no-store' }).then(r => r.json()).then(d => Array.isArray(d) && render(d)).catch(() => {});
+
+            document.getElementById('t-form').addEventListener('submit', async e => {
+                e.preventDefault();
+                const f = e.target;
+                if (document.getElementById('t-hp').value) return; // spam trap
+                const t = {
+                    name: document.getElementById('t-name').value.trim(),
+                    role: document.getElementById('t-role').value.trim(),
+                    rating: parseInt(document.getElementById('t-rating').value, 10) || 5,
+                    msg: document.getElementById('t-msg').value.trim()
+                };
+                if (!t.name || !t.msg) return;
+                const btn = f.querySelector('button[type=submit]'); btn.disabled = true;
+                try {
+                    await sendToInbox({
+                        subject: 'New testimonial to review - ' + t.name,
+                        from_name: t.name,
+                        name: t.name, role: t.role, rating: t.rating, message: t.msg,
+                        paste_into_testimonials_json: JSON.stringify(t)
+                    });
+                    f.reset();
+                    note.textContent = 'Thank you! Your testimonial was sent and will appear after review.';
+                } catch (err) { note.textContent = 'Could not send right now. Please try again later.'; }
+                btn.disabled = false;
+            });
+        })();
+
+        /* =======================================================
+           7. Onload Initialization
+           ====================================================== */
+        window.onload = function () {
+            animateParticles();
+            typeLoop();
+            loadVoucher(0);
+        };
+    </script>
+</body>
+</html>
