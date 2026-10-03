@@ -149,6 +149,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   <div class="grid sm:grid-cols-2 gap-3">
    <div><label class="lbl" for="t-name">Name</label><input id="t-name" class="inp" required maxlength="80"></div>
    <div><label class="lbl" for="t-org">Organization</label><input id="t-org" class="inp" required maxlength="100"></div></div>
+  <div><label class="lbl" for="t-email">Email <span class="text-slate-500">(optional, only for verification, never shown)</span></label><input id="t-email" type="email" class="inp" maxlength="120"></div>
   <div><label class="lbl" for="t-rel">Relation to Sai Adarsh</label><input id="t-rel" class="inp" required maxlength="80" placeholder="e.g. Professor / Mentor / Team member"></div>
   <div><label class="lbl" for="t-txt">Recommendation</label><textarea id="t-txt" class="inp" rows="4" required maxlength="600"></textarea></div>
   <button id="t-btn" class="btn-p w-full justify-center"><i class="fa-solid fa-paper-plane"></i> Submit for review</button>
@@ -297,7 +298,7 @@ addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key==='A')toggleAdmin
 if(/[?&]admin/.test(location.search))setTimeout(toggleAdmin,800);
 $('t-form').onsubmit=async e=>{e.preventDefault();const b=$('t-btn'),m=$('t-msg');b.disabled=true;m.textContent='Sending...';
  const v=i=>$(i).value.trim();
- try{await send({subject:'[Testimonial Submission] New Endorsement for Sai Adarsh',from_name:v('t-name'),message:`Name: ${v('t-name')}\nOrganization: ${v('t-org')}\nRelation: ${v('t-rel')}\nTestimonial: ${v('t-txt')}`});e.target.reset();m.textContent='Thank you. Your recommendation will appear after review.'}
+ try{const p={subject:'[Testimonial Submission] '+v('t-name'),from_name:v('t-name'),name:v('t-name')};if(v('t-email'))p.email=v('t-email');p.message=`Name: ${v('t-name')}\nOrganization: ${v('t-org')}\nRelation: ${v('t-rel')}\nTestimonial: ${v('t-txt')}\n###END###`;await send(p);e.target.reset();m.textContent='Thank you. Your recommendation will appear after review.'}
  catch(x){m.textContent='Could not send right now. Please try again later.'}b.disabled=false};
 loadT();
 
