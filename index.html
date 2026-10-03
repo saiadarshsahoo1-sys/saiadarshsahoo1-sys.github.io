@@ -174,8 +174,8 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 <div class="s-div"></div>
 
 <section id="projects" class="py-14 px-4 bg-slate-900/30"><div class="max-w-7xl mx-auto">
- <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling.</p>
- <div id="pj" class="grid md:grid-cols-3 gap-5"></div>
+ <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling and technical initiative.</p>
+ <div id="pj" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 </div></section>
 
 <div class="s-div"></div>
@@ -302,10 +302,12 @@ $('sk').innerHTML=SG.map(g=>`<div class="card relative overflow-hidden"><div cla
 /* projects */
 const PJ=[
 ['Google Sheets \u00b7 Apps Script \u00b7 Gmail','Invoice Tracker & Follow-up Automation','Manual tracking of overdue receivables leads to missed follow-ups.','An accounts-receivable tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails on due dates and shows basic ageing.',['Google Sheets','Apps Script','Gmail']],
+['HTML \u00b7 JS \u00b7 Apps Script \u00b7 GitHub','Interactive Portfolio & Feedback Engine','Static resumes lack interactive demonstration of audit skills and live project evidence.','Designed and deployed an interactive portfolio featuring audit simulations, Claude AI-assisted workflows, Apps Script feedback logging, and GitHub Pages hosting.',['HTML/CSS','JavaScript','Apps Script','Claude AI','GitHub Pages']],
 ['Google Apps Script','Articleship Outreach Automation','Emailing target CA firms one by one is slow and error-prone.','A Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.',['Sheets','Apps Script','Drive']],
 ['HTML \u00b7 JavaScript','Audit Voucher Simulation','Voucher-checking concepts need interactive practice.','The Audit Lab on this page: spot TDS omissions, wrong GST rates and calculation errors with instant feedback.',['HTML','JavaScript']],
 ['AI workflows','AI for Finance & Audit Research','Generic AI answers on tax and audit are often vague.','Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.',['Claude','ChatGPT','NotebookLM','Perplexity']]];
-$('pj').innerHTML=PJ.map((p,i)=>`<div class="card g relative overflow-hidden ${i?'':'md:col-span-3'}"><div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-80"></div><div class="flex justify-between gap-2 mb-2"><span class="chip">${i?'Self-built':'Featured \u00b7 Self-built'}</span><span class="text-xs font-mono text-slate-400 text-right">${p[0]}</span></div><h3 class="${i?'text-lg':'text-2xl'} font-bold text-white mb-3">${p[1]}</h3><div class="${i?'':'md:grid md:grid-cols-2 md:gap-6'} text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> ${p[2]}</p><p class="${i?'mt-2':'mt-2 md:mt-0'}"><b class="text-slate-200">Built:</b> ${p[3]}</p></div><div class="flex flex-wrap gap-2 mt-4">${p[4].map(t=>`<span class="sk" style="--c:56 189 248"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>${t}</span>`).join('')}</div></div>`).join('');
+
+$('pj').innerHTML=PJ.map((p,i)=>`<div class="card g relative overflow-hidden ${i===0?'md:col-span-2 lg:col-span-3':''}"><div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-80"></div><div class="flex justify-between gap-2 mb-2"><span class="chip">${i===0?'Featured \u00b7 Self-built':'Self-built'}</span><span class="text-xs font-mono text-slate-400 text-right">${p[0]}</span></div><h3 class="${i===0?'text-2xl':'text-lg'} font-bold text-white mb-3">${p[1]}</h3><div class="${i===0?'md:grid md:grid-cols-2 md:gap-6':''} text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> ${p[2]}</p><p class="${i===0?'mt-2 md:mt-0':'mt-2'}"><b class="text-slate-200">Built:</b> ${p[3]}</p></div><div class="flex flex-wrap gap-2 mt-4">${p[4].map(t=>`<span class="sk" style="--c:56 189 248"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>${t}</span>`).join('')}</div></div>`).join('');
 
 /* typing */
 const PH=["CA Intermediate (Group 2 Cleared)","Statutory Audit & Risk Advisory","Excel \u00b7 VBA \u00b7 Apps Script"];let pi=0,ci=0,del=false;
