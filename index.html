@@ -20,23 +20,21 @@ html{scroll-padding-top:5.5rem}
 body{font-family:'Inter',sans-serif;background:#0b0f19;color:#e2e8f0;overflow-x:hidden}
 h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .glass{@apply bg-[#131b2e]/70 backdrop-blur-xl border border-white/10}
-.card{@apply bg-slate-900/80 border border-slate-800/80 rounded-2xl p-5 transition-all duration-300;box-shadow:0 4px 20px -2px rgba(0,0,0,0.5)}
-.card:hover{@apply border-cyan-500/30 -translate-y-1;box-shadow:0 12px 28px -4px rgba(0,0,0,0.6),0 0 15px rgba(56,189,248,0.1)}
+.card{@apply bg-slate-900/70 border border-slate-800 rounded-2xl p-5}
 .card.g{@apply glass}
-.fchip{@apply glass rounded-xl px-3.5 py-1.5 text-sm font-semibold whitespace-nowrap transition-transform duration-300;color:rgb(var(--c));border-color:rgb(var(--c)/.4);box-shadow:0 4px 12px rgba(0,0,0,0.3)}
-.fchip:hover{transform:scale(1.05);box-shadow:0 0 12px rgb(var(--c)/.4)}
-.sk{@apply text-sm px-3 py-1 rounded-lg border transition duration-200 inline-flex items-center gap-1.5;color:rgb(var(--c));border-color:rgb(var(--c)/.35);background:rgb(var(--c)/.08)}
-.sk:hover{transform:translateY(-1.2px);box-shadow:0 0 10px rgb(var(--c)/.35);border-color:rgb(var(--c)/.6)}
+.fchip{@apply glass rounded-xl px-3 py-1.5 text-sm font-semibold whitespace-nowrap;color:rgb(var(--c));border-color:rgb(var(--c)/.4)}
+.sk{@apply text-sm px-3 py-1 rounded-lg border transition duration-200;color:rgb(var(--c));border-color:rgb(var(--c)/.35);background:rgb(var(--c)/.08)}
+.sk:hover{transform:translateY(-1.2px);box-shadow:0 0 8px rgb(var(--c)/.3)}
 .cta{@apply ml-2 px-4 py-2 text-sm font-semibold rounded-lg border border-cyan-400/60 text-cyan-300 transition duration-200}
-.cta:hover{background:rgb(34 211 238/.15);box-shadow:0 0 12px rgb(34 211 238/.4);transform:translateY(-1.2px)}
+.cta:hover{background:rgb(34 211 238/.1);box-shadow:0 0 10px rgb(34 211 238/.3);transform:translateY(-1.2px)}
 .sec{@apply py-14 px-4 max-w-7xl mx-auto}
 .h2{@apply text-3xl sm:text-4xl font-bold text-white text-center mb-2}
 .sub{@apply text-slate-400 text-base text-center max-w-2xl mx-auto mb-8}
-.chip{@apply text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-800/80 whitespace-nowrap shadow-sm}
-.btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition duration-200 hover:-translate-y-[1.2px] hover:shadow-lg hover:shadow-cyan-500/20 active:translate-y-0}
-.btn-p{@apply btn text-white bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:opacity-95 shadow-md shadow-blue-500/20}
-.btn-g{@apply btn glass text-slate-200 hover:text-white hover:border-cyan-500/40}
-.inp{@apply w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all}
+.chip{@apply text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 whitespace-nowrap}
+.btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition duration-200 hover:-translate-y-[1.2px] hover:shadow-md hover:shadow-blue-500/20}
+.btn-p{@apply btn text-white bg-gradient-to-r from-blue-500 to-violet-500 hover:opacity-90}
+.btn-g{@apply btn glass text-slate-200 hover:text-white}
+.inp{@apply w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
 .lbl{@apply block text-sm font-medium text-slate-300 mb-1}
 .nl{@apply px-3 py-2 text-sm font-medium text-slate-300 rounded-lg transition duration-200;--c:56 189 248}
 .nl:hover,.nl.on{color:#fff;transform:translateY(-1.2px);background:rgb(var(--c)/.09);box-shadow:0 0 10px rgb(var(--c)/.3),inset 0 -2px 0 rgb(var(--c))}
@@ -46,74 +44,64 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .tab:hover{@apply text-white -translate-y-[1.2px];box-shadow:0 0 8px rgb(59 130 246/.3);background:#1e3a8a33}
 .tab.on{@apply bg-blue-500 text-white;box-shadow:0 0 10px rgb(59 130 246/.33)}
 .vb{@apply transition duration-200;border:1px solid rgb(var(--c)/.28)}
-.vb:hover:not(:disabled){transform:translateY(-1.2px);background:rgb(var(--c)/.12);border-color:rgb(var(--c)/.6);box-shadow:0 0 12px rgb(var(--c)/.35)}
+.vb:hover:not(:disabled){transform:translateY(-1.2px);background:rgb(var(--c)/.09);border-color:rgb(var(--c)/.6);box-shadow:0 0 10px rgb(var(--c)/.3)}
 .vb:disabled{opacity:.5;cursor:not-allowed}
-.pad{@apply p-4 rounded-xl bg-slate-900/90 font-bold transition duration-200 active:scale-95 flex flex-col items-center justify-center;color:rgb(var(--c));border:1px solid rgb(var(--c)/.35)}
-.pad:hover,.pad.hit{transform:translateY(-1.2px);background:rgb(var(--c)/.15);border-color:rgb(var(--c)/.7);box-shadow:0 0 12px rgb(var(--c)/.4)}
-.pad.hit{background:rgb(var(--c)/.25);box-shadow:0 0 16px rgb(var(--c)/.6)}
-.s-div{height:1px;background:linear-gradient(90deg,transparent,rgba(56,189,248,0.25),transparent)}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.animate-float{animation:float 4s ease-in-out infinite}
+.pad{@apply p-4 rounded-xl bg-slate-900 font-bold transition duration-200 active:scale-95;color:rgb(var(--c));border:1px solid rgb(var(--c)/.35)}
+.pad:hover,.pad.hit{transform:translateY(-1.2px);background:rgb(var(--c)/.1);border-color:rgb(var(--c)/.7);box-shadow:0 0 10px rgb(var(--c)/.3)}
+.pad.hit{background:rgb(var(--c)/.2);box-shadow:0 0 14px rgb(var(--c)/.5)}
 @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
 .pop{animation:pop .4s}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}.animate-float{animation:none!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
 </style>
 </head>
-<body class="min-h-screen flex flex-col bg-[#0b0f19]">
+<body class="min-h-screen flex flex-col">
 
 <header class="fixed top-0 inset-x-0 z-50 glass border-b border-slate-800/80">
  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-  <a href="#hero" class="flex items-center gap-3 group" aria-label="Home">
-   <span class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-blue-500 to-violet-500 flex items-center justify-center ring-2 ring-blue-500/40 group-hover:ring-cyan-400 transition-all duration-300">
+  <a href="#hero" class="flex items-center gap-3" aria-label="Home">
+   <span class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-blue-500 to-violet-500 flex items-center justify-center ring-2 ring-blue-500/40">
     <img id="av1" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av1f" class="fa-solid fa-user"></i></span>
-   <span><b class="text-white text-lg block leading-tight group-hover:text-cyan-300 transition-colors">Sai Adarsh Sahoo</b><span class="text-xs text-cyan-400 block ca-status"></span></span>
+   <span><b class="text-white text-lg block leading-tight">Sai Adarsh Sahoo</b><span class="text-xs text-cyan-400 block ca-status"></span></span>
   </a>
   <nav id="nav-d" class="hidden lg:flex gap-1" aria-label="Main"></nav>
-  <button id="burger" class="lg:hidden p-2 text-slate-300 hover:text-white" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
+  <button id="burger" class="lg:hidden p-2 text-slate-300" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
  </div>
- <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1 border-b border-slate-800"></nav>
+ <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1"></nav>
 </header>
 
 <main class="flex-grow pt-20">
-<section id="hero" class="relative overflow-hidden py-16 px-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/30 via-slate-950/80 to-[#0b0f19]">
- <canvas id="pc" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+<section id="hero" class="relative overflow-hidden py-14 px-4">
+ <canvas id="pc" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
  <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
   <div class="text-center lg:text-left">
-   <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold tracking-wide mb-6 border-cyan-500/30 shadow-lg shadow-cyan-500/10"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span><span class="text-emerald-300">AVAILABLE FOR ARTICLESHIP</span><span class="text-slate-500">&middot;</span><span class="text-slate-300 font-medium">Statutory Audit &middot; Risk Advisory</span></div>
-   <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-3 tracking-tight">Sai Adarsh <span class="gt">Sahoo</span></h1>
+   <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold tracking-wide mb-6"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span><span class="text-emerald-300">AVAILABLE FOR ARTICLESHIP</span><span class="text-slate-500">&middot;</span><span class="text-slate-300 font-medium">Statutory Audit &middot; Risk Advisory</span></div>
+   <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-3">Sai Adarsh <span class="gt">Sahoo</span></h1>
    <div class="h-10 mb-4 flex items-center justify-center lg:justify-start"><span id="typ" class="text-xl sm:text-2xl font-semibold text-cyan-400 border-r-2 border-cyan-400 pr-1"></span></div>
-   <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">CA Intermediate student and B.Com (Hons.) graduate with a strong foundation in auditing standards, taxation and Schedule III reporting, backed by Excel and Tally skills.</p>
-   <div class="flex flex-wrap justify-center lg:justify-start gap-3.5">
+   <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">CA Intermediate student and B.Com (Hons.) graduate with a strong foundation in auditing standards, taxation and Schedule III reporting, backed by Excel and Tally skills.</p>
+   <div class="flex flex-wrap justify-center lg:justify-start gap-3">
     <button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button>
     <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
     <a class="btn-g" href="#contact"><i class="fa-solid fa-envelope text-violet-400"></i> Contact Me</a>
    </div>
   </div>
   <div class="relative mx-auto w-64 sm:w-72">
-   <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-25 blur-xl animate-pulse"></div>
-   <div class="relative rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 shadow-[0_0_50px_rgba(56,189,248,.25)]"><div class="aspect-square rounded-full overflow-hidden bg-slate-900 flex items-center justify-center"><img id="av3" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av3f" class="fa-solid fa-user text-6xl text-slate-600"></i></div></div>
+   <div class="rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 shadow-[0_0_40px_rgba(56,189,248,.2)]"><div class="aspect-square rounded-full overflow-hidden bg-slate-900 flex items-center justify-center"><img id="av3" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av3f" class="fa-solid fa-user text-6xl text-slate-600"></i></div></div>
    <div class="flex flex-wrap justify-center gap-2 mt-5 lg:mt-0">
-    <span class="fchip animate-float lg:absolute lg:-left-12 lg:top-4" style="--c:56 189 248">CA Inter &mdash; Group 2 Cleared</span>
-    <span class="fchip animate-float lg:absolute lg:-right-14 lg:top-20" style="--c:167 139 250; animation-delay: 1s;">Audit &amp; Risk Advisory</span>
-    <span class="fchip animate-float lg:absolute lg:-left-16 lg:bottom-20" style="--c:52 211 153; animation-delay: 2s;">Excel &bull; VBA &bull; Apps Script</span>
-    <span class="fchip animate-float lg:absolute lg:-right-10 lg:bottom-4" style="--c:251 191 36; animation-delay: 3s;">AI for Finance</span>
+    <span class="fchip lg:absolute lg:-left-12 lg:top-4" style="--c:56 189 248">CA Inter &mdash; Group 2 Cleared</span>
+    <span class="fchip lg:absolute lg:-right-14 lg:top-20" style="--c:167 139 250">Audit &amp; Risk Advisory</span>
+    <span class="fchip lg:absolute lg:-left-16 lg:bottom-20" style="--c:52 211 153">Excel &bull; VBA &bull; Apps Script</span>
+    <span class="fchip lg:absolute lg:-right-10 lg:bottom-4" style="--c:251 191 36">AI for Finance</span>
    </div>
   </div>
  </div>
 </section>
-
-<div class="s-div"></div>
-
-<section class="px-4 max-w-7xl mx-auto my-8"><div id="snap" class="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-slate-800/80 border border-slate-800 shadow-xl"></div></section>
-
-<div class="s-div"></div>
+<section class="px-4 max-w-7xl mx-auto mb-4"><div id="snap" class="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-slate-800 border border-slate-800"></div></section>
 
 <section id="about" class="sec">
  <h2 class="h2">About Me</h2><p class="sub">Articleship objective and what I bring to a firm.</p>
  <div class="grid md:grid-cols-12 gap-6">
-  <div class="md:col-span-5 card g text-center relative overflow-hidden group">
-   <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500"></div>
-   <div class="w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-violet-500 my-2 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300"><div class="w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center text-3xl font-extrabold text-cyan-400"><img id="av2" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><span id="av2f">SAS</span></div></div>
+  <div class="md:col-span-5 card g text-center">
+   <div class="w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-violet-500 mb-4"><div class="w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center text-3xl font-extrabold text-cyan-400"><img id="av2" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><span id="av2f">SAS</span></div></div>
    <h3 class="text-2xl font-bold text-white">Sai Adarsh Sahoo</h3>
    <p class="text-cyan-400 text-sm font-semibold mt-1 ca-status"></p>
    <div class="border-t border-slate-800 my-5"></div>
@@ -121,64 +109,55 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
     <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i>Jajpur, Odisha &middot; Open to relocation</li>
     <li><i class="fa-solid fa-graduation-cap text-violet-400 mr-2"></i>B.Com (Hons.), SSSIHL</li>
     <li><i class="fa-solid fa-briefcase text-emerald-400 mr-2"></i>Statutory Audit &middot; Risk Advisory</li>
-    <li><i class="fa-solid fa-envelope text-blue-400 mr-2"></i><a class="hover:text-cyan-400 transition-colors break-all" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></li>
-    <li><i class="fa-solid fa-phone text-cyan-400 mr-2"></i><a class="hover:text-cyan-400 transition-colors" href="tel:+917608886682">+91 76088 86682</a></li>
+    <li><i class="fa-solid fa-envelope text-blue-400 mr-2"></i><a class="hover:text-cyan-400 break-all" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></li>
+    <li><i class="fa-solid fa-phone text-cyan-400 mr-2"></i><a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a></li>
    </ul>
   </div>
   <div class="md:col-span-7 space-y-6">
-   <div class="card g relative overflow-hidden">
-    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-bullseye text-cyan-400"></i> Articleship Objective</h3>
+   <div class="card g"><h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-bullseye text-cyan-400"></i> Articleship Objective</h3>
     <p class="text-base text-slate-300 leading-relaxed">Seeking a CA Articleship in Statutory Audit or Risk Advisory, where I can learn through real client engagements while contributing strong accounting fundamentals, careful verification and technology-enabled working papers. I am keen to build exposure to financial due diligence and valuation within audit and risk advisory.</p></div>
    <div class="grid sm:grid-cols-3 gap-4">
-    <div class="card border-t-2 border-t-cyan-400"><div class="text-3xl font-extrabold gt">01</div><h4 class="font-bold text-white mt-1">Audit</h4><p class="text-sm text-slate-400 mt-1">Voucher checking, bank and ledger reconciliations, audit trails, working-paper support.</p></div>
-    <div class="card border-t-2 border-t-violet-400"><div class="text-3xl font-extrabold gt">02</div><h4 class="font-bold text-white mt-1">Tax</h4><p class="text-sm text-slate-400 mt-1">Income computation, TDS applicability (Sec 194C/194J, now Sec 393), GSTR-2B vs books ITC.</p></div>
-    <div class="card border-t-2 border-t-emerald-400"><div class="text-3xl font-extrabold gt">03</div><h4 class="font-bold text-white mt-1">Technology</h4><p class="text-sm text-slate-400 mt-1">Excel VBA, Power Query and Apps Script to speed up repetitive schedules.</p></div>
+    <div class="card"><div class="text-3xl font-extrabold gt">01</div><h4 class="font-bold text-white mt-1">Audit</h4><p class="text-sm text-slate-400 mt-1">Voucher checking, bank and ledger reconciliations, audit trails, working-paper support.</p></div>
+    <div class="card"><div class="text-3xl font-extrabold gt">02</div><h4 class="font-bold text-white mt-1">Tax</h4><p class="text-sm text-slate-400 mt-1">Income computation, TDS applicability (Sec 194C/194J, now Sec 393), GSTR-2B vs books ITC.</p></div>
+    <div class="card"><div class="text-3xl font-extrabold gt">03</div><h4 class="font-bold text-white mt-1">Technology</h4><p class="text-sm text-slate-400 mt-1">Excel VBA, Power Query and Apps Script to speed up repetitive schedules.</p></div>
    </div>
   </div>
  </div>
 </section>
 
-<div class="s-div"></div>
-
-<section id="education" class="py-14 px-4 bg-slate-950/60"><div class="max-w-7xl mx-auto">
+<section id="education" class="py-14 px-4 bg-slate-950/40"><div class="max-w-7xl mx-auto">
  <h2 class="h2">Education &amp; Credentials</h2><p class="sub">Academic record and responsibilities.</p>
  <div class="grid md:grid-cols-2 gap-6">
   <div class="space-y-6">
-   <div class="card g relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1 bg-cyan-400"></div><div class="flex justify-between mb-2"><span class="chip">ICAI</span><span class="text-xs text-slate-400">CA Intermediate</span></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">ICAI</span><span class="text-xs text-slate-400">CA Intermediate</span></div>
     <h4 class="text-lg font-bold text-white mb-2 ca-status"></h4>
-    <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>Group 2 passed with exemption in Costing (71 marks)</li><li>Group 1 appeared; result awaited</li><li>ICITSS (IT &amp; Orientation Course, ICAI) completed</li><li>AI for Finance (Level 1), CA Monk: ongoing</li></ul></div>
-   <div class="card g relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1 bg-violet-400"></div><div class="flex justify-between mb-2"><span class="chip">CGPA 7.0 / 10</span><span class="text-xs text-slate-400">2021 &ndash; 2024</span></div>
+    <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>Group 2 passed with exemption in Costing</li><li>Group 1 appeared; result awaited</li><li>ICITSS (IT &amp; Orientation Course, ICAI) completed</li><li>AI for Finance (Level 1), CA Monk: ongoing</li></ul></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">CGPA 7.0 / 10</span><span class="text-xs text-slate-400">2021 &ndash; 2024</span></div>
     <h4 class="text-lg font-bold text-white">B.Com (Hons.)</h4><p class="text-sm text-violet-300 mb-2">Sri Sathya Sai Institute of Higher Learning, Puttaparthi</p>
-    <p class="text-sm text-slate-300">Class XII (CBSE), Mothers Public School, Bhubaneswar, 2020: <b>83.2%</b><br>Class X (ICSE), St. Mary's School, Jajpur Road, 2018: <b>79.6%</b></p></div>
+    <p class="text-sm text-slate-300 mt-3 pt-3 border-t border-slate-800">Class XII (CBSE), Mothers Public School, Bhubaneswar, Odisha &middot; 2020<br>Class X (ICSE), St. Mary's School, Jajpur Road, Odisha &middot; 2018</p>
+    </div>
   </div>
   <div class="space-y-6">
-   <div class="card g relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1 bg-blue-400"></div><div class="flex justify-between mb-2"><span class="chip">Leadership</span><span class="text-xs text-slate-400">SSSIHL</span></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">Leadership</span><span class="text-xs text-slate-400">SSSIHL</span></div>
     <h4 class="text-lg font-bold text-white">Cultural Coordinator</h4>
     <p class="text-sm text-slate-300 mt-1">Directed logistics and schedules across departments for large university cultural events, delivered without delays.</p></div>
-   <div class="card g relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1 bg-amber-400"></div><div class="flex justify-between mb-2"><span class="chip">Music &amp; Arts</span><span class="text-xs text-slate-400">Brindavan Studio</span></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">Music &amp; Arts</span><span class="text-xs text-slate-400">Brindavan Studio</span></div>
     <h4 class="text-lg font-bold text-white">Leader, Brindavan Studio</h4>
     <p class="text-sm text-slate-300 mt-1">Led a 13-member team that conceptualised, composed and managed live audio for student theatre at the annual sports and cultural meet, before an international audience.</p></div>
-   <div class="card g relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1 bg-emerald-400"></div><div class="flex justify-between mb-2"><span class="chip">Service</span><span class="text-xs text-slate-400">Volunteer</span></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">Service</span><span class="text-xs text-slate-400">Volunteer</span></div>
     <p class="text-sm text-slate-300">Volunteer with the Sri Sathya Sai Seva Organisation: logistics for large medical camps and rural development initiatives.</p></div>
   </div>
  </div></div></section>
-
-<div class="s-div"></div>
 
 <section id="skills" class="py-14 px-4"><div class="max-w-7xl mx-auto">
  <h2 class="h2">Skills &amp; Technology</h2><p class="sub">Grouped by domain. Each group shows its basis: coursework, working knowledge, or tools I built with.</p>
  <div id="sk" class="grid md:grid-cols-2 gap-5"></div>
 </div></section>
 
-<div class="s-div"></div>
-
-<section id="projects" class="py-14 px-4 bg-slate-900/30"><div class="max-w-7xl mx-auto">
- <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling and technical initiative.</p>
- <div id="pj" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+<section id="projects" class="py-14 px-4 bg-slate-900/40"><div class="max-w-7xl mx-auto">
+ <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling.</p>
+ <div id="pj" class="grid md:grid-cols-3 gap-5"></div>
 </div></section>
-
-<div class="s-div"></div>
 
 <section id="testimonials" class="py-14 px-4"><div class="max-w-5xl mx-auto">
  <h2 class="h2">Endorsements &amp; Testimonials</h2><p class="sub">What mentors, professors and colleagues say about working with me. Entries appear after review.</p>
@@ -196,28 +175,24 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </form>
 </div></section>
 
-<div class="s-div"></div>
-
-<section id="audit-simulation" class="sec bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900/90 via-slate-950 to-[#0b0f19] rounded-3xl my-8 border border-slate-800/80">
- <div class="text-center mb-3"><span class="chip bg-cyan-900/60 text-cyan-300 border-cyan-500/40">INTERACTIVE AUDIT LAB</span></div>
+<section id="audit-simulation" class="sec">
+ <div class="text-center mb-3"><span class="chip">INTERACTIVE AUDIT LAB</span></div>
  <h2 class="h2">Test Your Audit Instincts</h2>
  <p class="text-xs text-amber-400 text-center mb-1"><i class="fa-solid fa-circle-info"></i> Educational simulation with illustrative figures. Not tax or audit advice.</p>
  <p class="sub">Assumes invoices dated after 22 Sep 2025 (GST slabs 5% / 18%). TDS references use the 1961 Act section numbers; from 1 Apr 2026 these sit under Sec 393 of the Income-tax Act, 2025.</p>
- <div class="card sm:p-8 border-cyan-500/20 bg-slate-900/90 shadow-2xl">
+ <div class="card sm:p-8">
   <div class="flex justify-between pb-4 border-b border-slate-800 text-sm"><span class="text-slate-400">Score <b id="g-s" class="text-cyan-400 text-lg ml-1">0</b></span><span class="text-slate-400">Voucher <b id="g-p" class="text-violet-400 text-lg ml-1">1 / 4</b></span></div>
   <div class="grid md:grid-cols-12 gap-6 mt-5">
-   <div class="md:col-span-7 bg-slate-950/90 rounded-2xl p-5 border border-slate-800/90 shadow-inner bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]"><div class="flex justify-between border-b border-slate-800 pb-3 mb-3"><h4 id="v-t" class="font-bold text-cyan-300 flex items-center gap-2"><i class="fa-solid fa-file-invoice text-slate-400"></i> <span></span></h4><span id="v-i" class="chip"></span></div><div id="v-d" class="space-y-2 text-sm font-mono text-slate-300"></div></div>
+   <div class="md:col-span-7 bg-slate-900/80 rounded-2xl p-5 border border-slate-800"><div class="flex justify-between border-b border-slate-800 pb-3 mb-3"><h4 id="v-t" class="font-bold text-cyan-300"></h4><span id="v-i" class="chip"></span></div><div id="v-d" class="space-y-2 text-sm font-mono text-slate-300"></div></div>
    <div class="md:col-span-5 space-y-3">
     <button class="vb card w-full text-left text-emerald-400 font-bold text-sm" style="--c:52 211 153" data-a="APPROVE"><i class="fa-solid fa-circle-check"></i> Approve voucher</button>
     <button class="vb card w-full text-left text-amber-400 font-bold text-sm" style="--c:251 191 36" data-a="FLAG_TAX"><i class="fa-solid fa-triangle-exclamation"></i> Flag tax / TDS exception</button>
     <button class="vb card w-full text-left text-red-400 font-bold text-sm" style="--c:248 113 113" data-a="REJECT_CALC"><i class="fa-solid fa-ban"></i> Reject (math error / missing support)</button>
-    <div id="g-f" class="hidden p-3.5 rounded-xl text-sm border shadow-lg"></div>
+    <div id="g-f" class="hidden p-3.5 rounded-xl text-sm border"></div>
    </div></div>
-  <button onclick="resetGame()" class="mt-5 text-xs text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+  <button onclick="resetGame()" class="mt-5 text-xs text-slate-400 hover:text-cyan-400"><i class="fa-solid fa-rotate-right"></i> Reset</button>
  </div>
 </section>
-
-<div class="s-div"></div>
 
 <section id="contact" class="sec">
  <div class="grid md:grid-cols-12 gap-8 items-start">
@@ -225,7 +200,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
    <h2 class="text-2xl sm:text-3xl font-bold text-white">Discuss an Articleship Opportunity</h2>
    <p class="text-slate-400 text-sm">Open to CA Articleship in Statutory Audit and Risk Advisory.</p>
    <div class="flex flex-wrap gap-3"><button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button><a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a></div>
-   <div class="card text-sm space-y-2.5"><div><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400 transition-colors" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></div><div><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400 transition-colors" href="tel:+917608886682">+91 76088 86682</a> (Phone / WhatsApp)</div></div>
+   <div class="card text-sm space-y-2"><div><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></div><div><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a> (Phone / WhatsApp)</div></div>
   </div>
   <form id="c-form" class="md:col-span-7 card sm:p-8 space-y-4">
    <input type="checkbox" id="c-hp" tabindex="-1" autocomplete="off" style="display:none">
@@ -238,9 +213,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
-<div class="s-div"></div>
-
-<section id="beyond" class="sec">
+<section id="beyond" class="sec border-t border-slate-800/80">
  <h2 class="text-2xl font-bold text-white text-center mb-1">Beyond Finance</h2>
  <p class="sub">Music production and composition (Logic Pro, FL Studio), guitar and vocals.</p>
  <div class="card max-w-xl mx-auto text-center mb-10"><p class="text-xs text-slate-400 mb-3">Tap a pad to play a synthesised tone (Web Audio API).</p>
@@ -250,23 +223,23 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 </main>
 
 <div id="cv" class="fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-3" role="dialog" aria-modal="true" aria-label="CV">
- <div class="glass w-full max-w-5xl h-[88vh] rounded-2xl flex flex-col overflow-hidden shadow-2xl border border-white/10">
+ <div class="glass w-full max-w-5xl h-[88vh] rounded-2xl flex flex-col overflow-hidden">
   <div class="flex items-center justify-between px-4 py-3 border-b border-slate-800"><b class="text-white text-sm">Curriculum Vitae &mdash; Sai Adarsh Sahoo</b>
    <span class="flex gap-2"><a class="btn-g !py-1.5 !px-3 text-xs" href="resume.pdf" target="_blank" rel="noopener">Open in new tab</a><a class="btn-p !py-1.5 !px-3 text-xs" href="resume.pdf" download="Sai_Adarsh_Sahoo_Resume.pdf"><i class="fa-solid fa-download"></i> Download</a><button class="btn-g !py-1.5 !px-3" onclick="closeCV()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></span></div>
   <iframe id="cv-f" class="flex-grow w-full bg-slate-950" title="CV" src="about:blank"></iframe>
  </div></div>
 
 <div id="lb" class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Photo viewer">
- <button id="lb-x" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white transition-colors" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
- <button id="lb-p" class="absolute left-3 top-1/2 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white transition-colors" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
- <button id="lb-n" class="absolute right-3 top-1/2 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white transition-colors" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
- <img id="lb-i" alt="" class="max-w-[92vw] max-h-[84vh] object-contain rounded-xl shadow-2xl"><div id="lb-c" class="absolute bottom-5 px-3 py-1 rounded-full bg-slate-800/90 text-xs border border-slate-700"></div>
+ <button id="lb-x" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+ <button id="lb-p" class="absolute left-3 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+ <button id="lb-n" class="absolute right-3 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-white" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+ <img id="lb-i" alt="" class="max-w-[92vw] max-h-[84vh] object-contain rounded-xl"><div id="lb-c" class="absolute bottom-5 px-3 py-1 rounded-full bg-slate-800 text-xs"></div>
 </div>
 
-<footer class="border-t border-slate-800/80 bg-slate-950/80 py-8 px-4 text-center"><div class="max-w-7xl mx-auto">
+<footer class="border-t border-slate-800/80 bg-slate-950/60 py-8 px-4 text-center"><div class="max-w-7xl mx-auto">
  <b class="text-white text-lg font-['Poppins']">Sai Adarsh Sahoo</b>
  <p class="text-sm text-slate-400 mt-1">CA Intermediate &middot; Audit &middot; Finance &middot; Technology</p>
- <p class="text-sm mt-3 space-x-4"><a class="text-slate-300 hover:text-cyan-400 transition-colors" href="mailto:saiadarshsahoo1@gmail.com">Email</a><a class="text-slate-300 hover:text-cyan-400 transition-colors" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener">LinkedIn</a><a class="text-slate-300 hover:text-cyan-400 transition-colors" href="resume.pdf" target="_blank" rel="noopener">Resume</a></p>
+ <p class="text-sm mt-3 space-x-4"><a class="text-slate-300 hover:text-cyan-400" href="mailto:saiadarshsahoo1@gmail.com">Email</a><a class="text-slate-300 hover:text-cyan-400" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener">LinkedIn</a><a class="text-slate-300 hover:text-cyan-400" href="resume.pdf" target="_blank" rel="noopener">Resume</a></p>
  <p class="text-xs text-slate-500 mt-4">&copy; 2026 Sai Adarsh Sahoo</p></div></footer>
 
 <script>
@@ -288,26 +261,24 @@ $('nav-m').onclick=e=>{if(e.target.tagName==='A')$('nav-m').classList.add('hidde
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});NAV.forEach(n=>{const el=$(n[0]);if(el)io.observe(el)})}
 
 /* stats strip */
-$('snap').innerHTML=[['Group 2 Cleared','CA Intermediate &middot; Costing exemption (71)'],['83.2%','Class XII (CBSE), 2020'],['7.0 / 10','B.Com (Hons.) CGPA, SSSIHL'],['13-member team','Led at Brindavan Studio']]
-.map(x=>`<div class="bg-slate-900/90 p-5 text-center hover:bg-slate-800/80 transition-colors duration-200"><div class="text-xl sm:text-2xl font-extrabold gt">${x[0]}</div><div class="text-sm text-slate-400 mt-1">${x[1]}</div></div>`).join('');
+$('snap').innerHTML=[['Group 2 Cleared','CA Intermediate &middot; Costing exemption'],['Group 1','Appeared &middot; result awaited'],['7.0 / 10','B.Com (Hons.) CGPA, SSSIHL'],['13-member team','Led at Brindavan Studio']]
+.map(x=>`<div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">${x[0]}</div><div class="text-sm text-slate-400 mt-1">${x[1]}</div></div>`).join('');
 
 /* skills */
-const SG=[['Audit & Accounting','56 189 248','Coursework',['Financial Accounting','Schedule III','Auditing Standards (SAs)','Ind AS','Cost & Management Accounting (exemption, 71)','Financial Ratio Analysis']],
+const SG=[['Audit & Accounting','56 189 248','Coursework',['Financial Accounting','Schedule III','Auditing Standards (SAs)','Ind AS','Cost & Management Accounting (exemption)','Financial Ratio Analysis']],
 ['Taxation','167 139 250','Working knowledge',['Direct Tax','TDS (Sec 194C/194J, now 393)','GST & GSTR-2B ITC reconciliation','Companies Act, 2013']],
 ['Tools & Automation','52 211 153','Self-built',['MS Excel','Power Query','Excel VBA','Google Sheets & Apps Script','Tally Prime']],
 ['AI & Research','96 165 250','Regular use',['ChatGPT','Claude','NotebookLM','Perplexity']],
 ['Professional','251 191 36','Leadership & soft skills',['Team leadership (13-member team)','Cultural coordination','Structured communication','Query escalation']]];
-$('sk').innerHTML=SG.map(g=>`<div class="card relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-1" style="background:rgb(${g[1]})"></div><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold text-white" style="color:rgb(${g[1]})">${g[0]}</h3><span class="chip">${g[2]}</span></div><div class="flex flex-wrap gap-2" style="--c:${g[1]}">${g[3].map(x=>`<span class="sk"><span class="w-1.5 h-1.5 rounded-full" style="background:rgb(${g[1]})"></span>${x}</span>`).join('')}</div>${g[0]==='AI & Research'?'<p class="text-sm text-slate-400 mt-3">Client data is never entered into public AI tools.</p>':''}</div>`).join('');
+$('sk').innerHTML=SG.map(g=>`<div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold text-white" style="color:rgb(${g[1]})">${g[0]}</h3><span class="chip">${g[2]}</span></div><div class="flex flex-wrap gap-2" style="--c:${g[1]}">${g[3].map(x=>`<span class="sk">${x}</span>`).join('')}</div>${g[0]==='AI & Research'?'<p class="text-sm text-slate-400 mt-3">Client data is never entered into public AI tools.</p>':''}</div>`).join('');
 
 /* projects */
 const PJ=[
 ['Google Sheets \u00b7 Apps Script \u00b7 Gmail','Invoice Tracker & Follow-up Automation','Manual tracking of overdue receivables leads to missed follow-ups.','An accounts-receivable tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails on due dates and shows basic ageing.',['Google Sheets','Apps Script','Gmail']],
-['HTML \u00b7 JS \u00b7 Apps Script \u00b7 GitHub','Interactive Portfolio & Feedback Engine','Static resumes lack interactive demonstration of audit skills and live project evidence.','Designed and deployed an interactive portfolio featuring audit simulations, Claude AI-assisted workflows, Apps Script feedback logging, and GitHub Pages hosting.',['HTML/CSS','JavaScript','Apps Script','Claude AI','GitHub Pages']],
 ['Google Apps Script','Articleship Outreach Automation','Emailing target CA firms one by one is slow and error-prone.','A Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.',['Sheets','Apps Script','Drive']],
 ['HTML \u00b7 JavaScript','Audit Voucher Simulation','Voucher-checking concepts need interactive practice.','The Audit Lab on this page: spot TDS omissions, wrong GST rates and calculation errors with instant feedback.',['HTML','JavaScript']],
 ['AI workflows','AI for Finance & Audit Research','Generic AI answers on tax and audit are often vague.','Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.',['Claude','ChatGPT','NotebookLM','Perplexity']]];
-
-$('pj').innerHTML=PJ.map((p,i)=>`<div class="card g relative overflow-hidden ${i===0?'md:col-span-2 lg:col-span-3':''}"><div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 opacity-80"></div><div class="flex justify-between gap-2 mb-2"><span class="chip">${i===0?'Featured \u00b7 Self-built':'Self-built'}</span><span class="text-xs font-mono text-slate-400 text-right">${p[0]}</span></div><h3 class="${i===0?'text-2xl':'text-lg'} font-bold text-white mb-3">${p[1]}</h3><div class="${i===0?'md:grid md:grid-cols-2 md:gap-6':''} text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> ${p[2]}</p><p class="${i===0?'mt-2 md:mt-0':'mt-2'}"><b class="text-slate-200">Built:</b> ${p[3]}</p></div><div class="flex flex-wrap gap-2 mt-4">${p[4].map(t=>`<span class="sk" style="--c:56 189 248"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>${t}</span>`).join('')}</div></div>`).join('');
+$('pj').innerHTML=PJ.map((p,i)=>`<div class="card g ${i?'':'md:col-span-3'}"><div class="flex justify-between gap-2 mb-2"><span class="chip">${i?'Self-built':'Featured \u00b7 Self-built'}</span><span class="text-xs font-mono text-slate-400 text-right">${p[0]}</span></div><h3 class="${i?'text-lg':'text-2xl'} font-bold text-white mb-3">${p[1]}</h3><div class="${i?'':'md:grid md:grid-cols-2 md:gap-6'} text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> ${p[2]}</p><p class="${i?'mt-2':'mt-2 md:mt-0'}"><b class="text-slate-200">Built:</b> ${p[3]}</p></div><div class="flex flex-wrap gap-2 mt-4">${p[4].map(t=>`<span class="sk" style="--c:56 189 248">${t}</span>`).join('')}</div></div>`).join('');
 
 /* typing */
 const PH=["CA Intermediate (Group 2 Cleared)","Statutory Audit & Risk Advisory","Excel \u00b7 VBA \u00b7 Apps Script"];let pi=0,ci=0,del=false;
@@ -316,7 +287,8 @@ const PH=["CA Intermediate (Group 2 Cleared)","Statutory Audit & Risk Advisory",
 
 /* CV modal */
 function openCV(){const f=$('cv-f');if(f.src.indexOf('resume.pdf')<0)f.src='resume.pdf';$('cv').classList.replace('hidden','flex');document.body.style.overflow='hidden'}
-function closeCV(){$('cv').classList.replace('flex','hidden');document.body.style.overflow=''}$('cv').onclick=e=>{if(e.target.id==='cv')closeCV()};
+function closeCV(){$('cv').classList.replace('flex','hidden');document.body.style.overflow=''}
+$('cv').onclick=e=>{if(e.target.id==='cv')closeCV()};
 
 /* web3forms */
 async function send(f){const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:KEY},f))});const j=await r.json();if(!j.success)throw new Error(j.message)}
@@ -327,7 +299,7 @@ $('c-form').onsubmit=async e=>{e.preventDefault();if($('c-hp').checked)return;co
 /* testimonials (Apps Script sheet; only ALLOWED rows are returned) */
 let admin=false,akey='';
 async function loadT(){const g=$('t-grid');try{const d=await(await fetch(API)).json();if(!Array.isArray(d)||!d.length){g.classList.add('hidden');return}
- g.classList.remove('hidden');g.innerHTML=d.map(t=>`<div class="card relative overflow-hidden">${admin?`<button data-del="${esc(t.id)}" class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-red-900 text-red-100">Delete</button>`:''}<p class="text-sm text-slate-300 italic">&ldquo;${esc(t.testimonial)}&rdquo;</p><div class="mt-4 pt-3 border-t border-slate-800"><b class="text-sm text-white">${esc(t.name)}</b><div class="text-xs text-slate-400">${esc(t.organization)}</div><span class="chip mt-2 inline-block">${esc(t.relation)}</span></div></div>`).join('')}catch(e){g.classList.add('hidden')}}
+ g.classList.remove('hidden');g.innerHTML=d.map(t=>`<div class="card relative">${admin?`<button data-del="${esc(t.id)}" class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-red-900 text-red-100">Delete</button>`:''}<p class="text-sm text-slate-300 italic">&ldquo;${esc(t.testimonial)}&rdquo;</p><div class="mt-4 pt-3 border-t border-slate-800"><b class="text-sm text-white">${esc(t.name)}</b><div class="text-xs text-slate-400">${esc(t.organization)}</div><span class="chip mt-2 inline-block">${esc(t.relation)}</span></div></div>`).join('')}catch(e){g.classList.add('hidden')}}
 $('t-grid').onclick=async e=>{const id=e.target.dataset.del;if(!id||!confirm('Hide this testimonial?'))return;
  try{const j=await(await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'delete',id,adminKey:akey})})).json();alert(j.success?'Done':(j.message||'Failed'));loadT()}catch(x){alert('Request failed')}};
 function toggleAdmin(){if(admin){admin=false;akey=''}else{const p=prompt('Admin passcode');if(!p)return;admin=true;akey=p}loadT()}
@@ -348,8 +320,8 @@ const V=[
 {i:'VCH-004',t:'Software Licence Invoice',d:['Vendor: CloudSoft Systems','Subscription: \u20b950,000','GST rate applied: <b class="text-amber-400">5%</b>','GST charged: \u20b92,500'],a:'FLAG_TAX',x:'Software licences are taxed at 18% (\u20b99,000). Charging 5% understates GST by \u20b96,500.'}];
 let vi=0,sc=0,busy=false;
 function lv(){const f=$('g-f');f.className='hidden p-3.5 rounded-xl text-sm border';f.style.boxShadow='';busy=false;document.querySelectorAll('.vb').forEach(b=>b.disabled=vi>=V.length);
- if(vi>=V.length){$('v-t').querySelector('span').textContent='Simulation complete';$('v-i').textContent='DONE';$('v-d').innerHTML=`<div class="text-center py-6">Final score: <b class="text-cyan-400 text-xl">${sc} / 100</b></div>`;return}
- const v=V[vi];$('v-t').querySelector('span').textContent=v.t;$('v-i').textContent=v.i;$('v-d').innerHTML=v.d.map(x=>`<div>${x}</div>`).join('');$('g-p').textContent=`${vi+1} / ${V.length}`}
+ if(vi>=V.length){$('v-t').textContent='Simulation complete';$('v-i').textContent='DONE';$('v-d').innerHTML=`<div class="text-center py-6">Final score: <b class="text-cyan-400">${sc} / 100</b></div>`;return}
+ const v=V[vi];$('v-t').textContent=v.t;$('v-i').textContent=v.i;$('v-d').innerHTML=v.d.map(x=>`<div>${x}</div>`).join('');$('g-p').textContent=`${vi+1} / ${V.length}`}
 document.querySelectorAll('.vb').forEach(b=>b.onclick=()=>{if(busy||vi>=V.length)return;busy=true;const v=V[vi],ok=b.dataset.a===v.a,f=$('g-f');if(ok){sc+=25;const e2=$('g-s');e2.textContent=sc;e2.classList.remove('pop');void e2.offsetWidth;e2.classList.add('pop')}
  f.className='p-3.5 rounded-xl text-sm border '+(ok?'bg-emerald-950/80 border-emerald-500 text-emerald-200':'bg-red-950/80 border-red-500 text-red-200');f.style.boxShadow=ok?'0 0 10px rgba(16,185,129,.3)':'0 0 10px rgba(239,68,68,.3)';f.innerHTML=`<b>${ok?'Correct.':'Missed.'}</b> ${v.x}`;setTimeout(()=>{vi++;lv()},2600)});
 function resetGame(){vi=0;sc=0;$('g-s').textContent=0;lv()}lv();
@@ -369,7 +341,7 @@ $('lb-x').onclick=closeLb;$('lb-p').onclick=e=>{e.stopPropagation();mv(-1)};$('l
 addEventListener('keydown',e=>{if(e.key==='Escape'){closeCV();closeLb()}if(!$('lb').classList.contains('hidden')){if(e.key==='ArrowLeft')mv(-1);if(e.key==='ArrowRight')mv(1)}});
 let tx=null;$('lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('lb').addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)mv(d<0?1:-1)});
 probe('images/profile',s=>{if(!s)return;['av1','av2','av3'].forEach(i=>{$(i).src=s;$(i).classList.remove('hidden');$(i+'f').classList.add('hidden')})});
-(function g(n){if(n>60)return;probe('images/gallery/'+n,s=>{if(!s)return;$('gal').classList.remove('hidden');const idx=G.push(s)-1,a=document.createElement('a');a.href='#';a.setAttribute('aria-label','Open photo '+(idx+1));a.className='card !p-0 overflow-hidden aspect-[4/3] block group';a.onclick=e=>{e.preventDefault();openLb(idx)};a.innerHTML=`<img src="${s}" alt="Gallery photo ${idx+1}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">`;$('gal-g').appendChild(a);g(n+1)})})(1);
+(function g(n){if(n>60)return;probe('images/gallery/'+n,s=>{if(!s)return;$('gal').classList.remove('hidden');const idx=G.push(s)-1,a=document.createElement('a');a.href='#';a.setAttribute('aria-label','Open photo '+(idx+1));a.className='card !p-0 overflow-hidden aspect-[4/3] block';a.onclick=e=>{e.preventDefault();openLb(idx)};a.innerHTML=`<img src="${s}" alt="Gallery photo ${idx+1}" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">`;$('gal-g').appendChild(a);g(n+1)})})(1);
 
 /* particles */
 (function(){const c=$('pc'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let P=[];
