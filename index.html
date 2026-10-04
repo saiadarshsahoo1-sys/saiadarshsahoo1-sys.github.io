@@ -51,6 +51,11 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .pad.hit{background:rgb(var(--c)/.2);box-shadow:0 0 14px rgb(var(--c)/.5)}
 @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
 .pop{animation:pop .4s}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.fchip{animation:fl 5s ease-in-out infinite}
+.fchip:nth-child(2){animation-delay:-1.3s}
+.fchip:nth-child(3){animation-delay:-2.6s}
+.fchip:nth-child(4){animation-delay:-3.9s}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
 </style>
 </head>
@@ -86,11 +91,11 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   </div>
   <div class="relative mx-auto w-64 sm:w-72">
    <div class="rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 shadow-[0_0_40px_rgba(56,189,248,.2)]"><div class="aspect-square rounded-full overflow-hidden bg-slate-900 flex items-center justify-center"><img id="av3" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av3f" class="fa-solid fa-user text-6xl text-slate-600"></i></div></div>
-   <div class="flex flex-wrap justify-center gap-2 mt-5 lg:mt-0">
-    <span class="fchip lg:absolute lg:-left-12 lg:top-4" style="--c:56 189 248">CA Inter &mdash; Group 2 Cleared</span>
-    <span class="fchip lg:absolute lg:-right-14 lg:top-20" style="--c:167 139 250">Audit &amp; Risk Advisory</span>
-    <span class="fchip lg:absolute lg:-left-16 lg:bottom-20" style="--c:52 211 153">Excel &bull; VBA &bull; Apps Script</span>
-    <span class="fchip lg:absolute lg:-right-10 lg:bottom-4" style="--c:251 191 36">AI for Finance</span>
+   <div class="flex flex-wrap justify-center gap-2 mt-5 md:mt-0">
+    <span class="fchip md:absolute md:-left-12 md:top-4" style="--c:56 189 248">CA Inter &mdash; Group 2 Cleared</span>
+    <span class="fchip md:absolute md:-right-14 md:top-20" style="--c:167 139 250">Audit &amp; Risk Advisory</span>
+    <span class="fchip md:absolute md:-left-16 md:bottom-20" style="--c:52 211 153">Excel &bull; VBA &bull; Apps Script</span>
+    <span class="fchip md:absolute md:-right-10 md:bottom-4" style="--c:251 191 36">AI for Finance</span>
    </div>
   </div>
  </div>
