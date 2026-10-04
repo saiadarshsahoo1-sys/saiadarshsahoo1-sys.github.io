@@ -51,27 +51,32 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .pad.hit{background:rgb(var(--c)/.2);box-shadow:0 0 14px rgb(var(--c)/.5)}
 @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
 .pop{animation:pop .4s}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 .fchip{animation:fl 5s ease-in-out infinite}
 .fchip:nth-child(2){animation-delay:-1.3s}
 .fchip:nth-child(3){animation-delay:-2.6s}
 .fchip:nth-child(4){animation-delay:-3.9s}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}}
+.tk{overflow:hidden;border-block:1px solid #1e293b;background:rgba(15,23,42,.6);padding:.8rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tk-track{display:flex;width:max-content;animation:tk 40s linear infinite}
+.tk:hover .tk-track,.tk:active .tk-track{animation-play-state:paused}
+.tk-set{display:flex;align-items:center;gap:1.5rem;padding-right:1.5rem;white-space:nowrap}
+.tk-set span{font-weight:600;color:#cbd5e1}
+.tk-set i{color:#22d3ee;font-style:normal}
+@keyframes tk{to{transform:translateX(-50%)}}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease var(--d,0ms),transform .6s ease var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pc{display:none}.tk-track{width:auto;flex-wrap:wrap;justify-content:center}.tk-set{flex-wrap:wrap;justify-content:center;white-space:normal;padding:0 1rem}.tk-set+.tk-set{display:none}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
 <header class="fixed top-0 inset-x-0 z-50 glass border-b border-slate-800/80">
  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-  <a href="#hero" class="flex items-center gap-3" aria-label="Home">
-   <span class="w-11 h-11 rounded-full overflow-hidden bg-gradient-to-tr from-blue-500 to-violet-500 flex items-center justify-center ring-2 ring-blue-500/40">
-    <img id="av1" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><i id="av1f" class="fa-solid fa-user"></i></span>
-   <span><b class="text-white text-lg block leading-tight">Sai Adarsh Sahoo</b><span class="text-xs text-cyan-400 block ca-status"></span></span>
-  </a>
-  <nav id="nav-d" class="hidden lg:flex gap-1" aria-label="Main"></nav>
+  <a href="#hero" class="flex items-center gap-3" aria-label="Home"><b class="text-white text-xl font-bold tracking-tight">Sai Adarsh Sahoo</b></a>
+  <nav id="nav-d" class="hidden lg:flex gap-1" aria-label="Main"><a class="nl" style="--c:251 191 36" href="#why-me">Why Me</a><a class="nl" style="--c:167 139 250" href="#education">Education</a><a class="nl" style="--c:96 165 250" href="#projects">Projects</a><a class="nl" style="--c:52 211 153" href="#skills">Skills</a><a class="nl" style="--c:251 191 36" href="#testimonials">Endorsements</a><a class="nl" style="--c:244 114 182" href="#audit-simulation">Simulation</a><a class="cta" href="#contact">Contact</a></nav>
   <button id="burger" class="lg:hidden p-2 text-slate-300" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
  </div>
- <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1"></nav>
+ <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1"><a class="nl block" style="--c:251 191 36" href="#why-me">Why Me</a><a class="nl block" style="--c:167 139 250" href="#education">Education</a><a class="nl block" style="--c:96 165 250" href="#projects">Projects</a><a class="nl block" style="--c:52 211 153" href="#skills">Skills</a><a class="nl block" style="--c:251 191 36" href="#testimonials">Endorsements</a><a class="nl block" style="--c:244 114 182" href="#audit-simulation">Simulation</a><a class="nl block" style="--c:45 212 191" href="#contact">Contact</a></nav>
 </header>
 
 <main class="flex-grow pt-20">
@@ -81,8 +86,8 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   <div class="text-center lg:text-left">
    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold tracking-wide mb-6"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span><span class="text-emerald-300">AVAILABLE FOR ARTICLESHIP</span><span class="text-slate-500">&middot;</span><span class="text-slate-300 font-medium">Statutory Audit &middot; Risk Advisory</span></div>
    <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-3">Sai Adarsh <span class="gt">Sahoo</span></h1>
-   <div class="h-10 mb-4 flex items-center justify-center lg:justify-start"><span id="typ" class="text-xl sm:text-2xl font-semibold text-cyan-400 border-r-2 border-cyan-400 pr-1"></span></div>
-   <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">CA Intermediate student and B.Com (Hons.) graduate with a strong foundation in auditing standards, taxation and Schedule III reporting, backed by Excel and Tally skills.</p>
+   <p class="text-lg sm:text-xl font-semibold text-cyan-300 mb-4">CA Intermediate &mdash; Group 2 Cleared | Group 1 Result Awaited</p>
+   <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">CA Intermediate student and B.Com (Hons.) graduate seeking a CA Articleship in Statutory Audit or Risk Advisory. Bringing strong accounting fundamentals, careful audit verification, and technology-driven efficiency.</p>
    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
     <button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button>
     <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
@@ -100,32 +105,20 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   </div>
  </div>
 </section>
-<section class="px-4 max-w-7xl mx-auto mb-4"><div id="snap" class="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-slate-800 border border-slate-800"></div></section>
+<div class="tk" aria-label="Highlights"><div class="tk-track"><div class="tk-set"><span>CA Intermediate (Group 2 Cleared)</span><i>&bull;</i><span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i><span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i><span>Group 1 Result Awaited</span><i>&bull;</i><span>CA Intermediate (Group 2 Cleared)</span><i>&bull;</i><span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i><span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i><span>Group 1 Result Awaited</span><i>&bull;</i></div><div class="tk-set" aria-hidden="true"><span>CA Intermediate (Group 2 Cleared)</span><i>&bull;</i><span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i><span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i><span>Group 1 Result Awaited</span><i>&bull;</i><span>CA Intermediate (Group 2 Cleared)</span><i>&bull;</i><span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i><span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i><span>Group 1 Result Awaited</span><i>&bull;</i></div></div></div>
 
-<section id="about" class="sec">
- <h2 class="h2">About Me</h2><p class="sub">Articleship objective and what I bring to a firm.</p>
- <div class="grid md:grid-cols-12 gap-6">
-  <div class="md:col-span-5 card g text-center">
-   <div class="w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-violet-500 mb-4"><div class="w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center text-3xl font-extrabold text-cyan-400"><img id="av2" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover"><span id="av2f">SAS</span></div></div>
-   <h3 class="text-2xl font-bold text-white">Sai Adarsh Sahoo</h3>
-   <p class="text-cyan-400 text-sm font-semibold mt-1 ca-status"></p>
-   <div class="border-t border-slate-800 my-5"></div>
-   <ul class="space-y-3 text-base text-slate-300">
-    <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i>Jajpur, Odisha &middot; Open to relocation</li>
-    <li><i class="fa-solid fa-graduation-cap text-violet-400 mr-2"></i>B.Com (Hons.), SSSIHL</li>
-    <li><i class="fa-solid fa-briefcase text-emerald-400 mr-2"></i>Statutory Audit &middot; Risk Advisory</li>
-    <li><i class="fa-solid fa-envelope text-blue-400 mr-2"></i><a class="hover:text-cyan-400 break-all" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></li>
-    <li><i class="fa-solid fa-phone text-cyan-400 mr-2"></i><a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a></li>
-   </ul>
-  </div>
-  <div class="md:col-span-7 space-y-6">
-   <div class="card g"><h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-bullseye text-cyan-400"></i> Articleship Objective</h3>
-    <p class="text-base text-slate-300 leading-relaxed">Seeking a CA Articleship in Statutory Audit or Risk Advisory, where I can learn through real client engagements while contributing strong accounting fundamentals, careful verification and technology-enabled working papers. I am keen to build exposure to financial due diligence and valuation within audit and risk advisory.</p></div>
-   <div class="grid sm:grid-cols-3 gap-4">
-    <div class="card"><div class="text-3xl font-extrabold gt">01</div><h4 class="font-bold text-white mt-1">Audit</h4><p class="text-sm text-slate-400 mt-1">Voucher checking, bank and ledger reconciliations, audit trails, working-paper support.</p></div>
-    <div class="card"><div class="text-3xl font-extrabold gt">02</div><h4 class="font-bold text-white mt-1">Tax</h4><p class="text-sm text-slate-400 mt-1">Income computation, TDS applicability (Sec 194C/194J, now Sec 393), GSTR-2B vs books ITC.</p></div>
-    <div class="card"><div class="text-3xl font-extrabold gt">03</div><h4 class="font-bold text-white mt-1">Technology</h4><p class="text-sm text-slate-400 mt-1">Excel VBA, Power Query and Apps Script to speed up repetitive schedules.</p></div>
-   </div>
+<section class="px-4 max-w-7xl mx-auto my-4"><div id="snap" class="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-slate-800 border border-slate-800"><div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">Group 2 Cleared</div><div class="text-sm text-slate-400 mt-1">CA Intermediate &middot; Costing exemption</div></div><div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">Group 1</div><div class="text-sm text-slate-400 mt-1">Appeared &middot; result awaited</div></div><div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">7.0 / 10</div><div class="text-sm text-slate-400 mt-1">B.Com (Hons.) CGPA, SSSIHL</div></div><div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">Cultural Coordinator</div><div class="text-sm text-slate-400 mt-1">SSSIHL University Events</div></div></div></section>
+
+<section id="why-me" class="py-14 px-4 bg-slate-950/60 border-y border-slate-800/80">
+ <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-3"><span class="chip">VALUE PROPOSITION</span></div>
+  <h2 class="h2">Why Choose Me?</h2>
+  <p class="sub">Core capabilities and practical tools I would bring to audit engagements.</p>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+   <div class="card g hover:border-cyan-500/40 transition duration-300"><div class="w-10 h-10 rounded-xl bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 text-lg mb-3"><i class="fa-solid fa-file-invoice-dollar"></i></div><h3 class="text-lg font-bold text-white mb-1">Strong Audit Foundation</h3><p class="text-sm text-slate-300 leading-relaxed">Academic grounding in ICAI Auditing Standards (SAs), Schedule III, Ind AS and Costing (exemption), with practical exposure through self-built audit simulations.</p></div>
+   <div class="card g hover:border-violet-500/40 transition duration-300"><div class="w-10 h-10 rounded-xl bg-violet-950 border border-violet-800 flex items-center justify-center text-violet-400 text-lg mb-3"><i class="fa-solid fa-bolt"></i></div><h3 class="text-lg font-bold text-white mb-1">Audit Automation</h3><p class="text-sm text-slate-300 leading-relaxed">Self-built Excel VBA macros, Power Query and Google Apps Script tools that reduce manual effort on repetitive schedules and reconciliations.</p></div>
+   <div class="card g hover:border-emerald-500/40 transition duration-300"><div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 text-lg mb-3"><i class="fa-solid fa-brain"></i></div><h3 class="text-lg font-bold text-white mb-1">AI as a Research Aid</h3><p class="text-sm text-slate-300 leading-relaxed">I use NotebookLM, Claude and ChatGPT, grounded in ICAI study material, to speed up circular and standards research. Client data is never entered into public AI tools.</p></div>
+   <div class="card g hover:border-amber-500/40 transition duration-300"><div class="w-10 h-10 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 text-lg mb-3"><i class="fa-solid fa-people-group"></i></div><h3 class="text-lg font-bold text-white mb-1">Proven Leadership</h3><p class="text-sm text-slate-300 leading-relaxed">Cultural Coordinator and leader of a 13-member creative team at SSSIHL, delivering under strict deadlines with disciplined teamwork.</p></div>
   </div>
  </div>
 </section>
@@ -135,8 +128,9 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  <div class="grid md:grid-cols-2 gap-6">
   <div class="space-y-6">
    <div class="card g"><div class="flex justify-between mb-2"><span class="chip">ICAI</span><span class="text-xs text-slate-400">CA Intermediate</span></div>
-    <h4 class="text-lg font-bold text-white mb-2 ca-status"></h4>
-    <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>Group 2 passed with exemption in Costing</li><li>Group 1 appeared; result awaited</li><li>ICITSS (IT &amp; Orientation Course, ICAI) completed</li><li>AI for Finance (Level 1), CA Monk: ongoing</li></ul></div>
+    <h4 class="text-lg font-bold text-white mb-2">CA Intermediate &mdash; Group 2 Cleared | Group 1 Result Awaited</h4>
+    <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>Group 2 passed with exemption in Costing</li><li>Group 1 appeared; result awaited</li></ul></div>
+   <div class="card g"><div class="flex justify-between mb-2"><span class="chip">Certifications</span></div><ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"><li>ICITSS (IT &amp; Orientation Course, ICAI): completed</li><li>AI for Finance (Level 1), CA Monk: ongoing</li></ul></div>
    <div class="card g"><div class="flex justify-between mb-2"><span class="chip">CGPA 7.0 / 10</span><span class="text-xs text-slate-400">2021 &ndash; 2024</span></div>
     <h4 class="text-lg font-bold text-white">B.Com (Hons.)</h4><p class="text-sm text-violet-300 mb-2">Sri Sathya Sai Institute of Higher Learning, Puttaparthi</p>
     <p class="text-sm text-slate-300 mt-3 pt-3 border-t border-slate-800">Class XII (CBSE), Mothers Public School, Bhubaneswar, Odisha &middot; 2020<br>Class X (ICSE), St. Mary's School, Jajpur Road, Odisha &middot; 2018</p>
@@ -154,14 +148,14 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   </div>
  </div></div></section>
 
-<section id="skills" class="py-14 px-4"><div class="max-w-7xl mx-auto">
- <h2 class="h2">Skills &amp; Technology</h2><p class="sub">Grouped by domain. Each group shows its basis: coursework, working knowledge, or tools I built with.</p>
- <div id="sk" class="grid md:grid-cols-2 gap-5"></div>
-</div></section>
-
 <section id="projects" class="py-14 px-4 bg-slate-900/40"><div class="max-w-7xl mx-auto">
  <h2 class="h2">Selected Projects</h2><p class="sub">Self-built tools showing practical data handling.</p>
- <div id="pj" class="grid md:grid-cols-3 gap-5"></div>
+ <div id="pj" class="grid md:grid-cols-3 gap-5"><div class="card g md:col-span-3"><div class="flex justify-between gap-2 mb-2"><span class="chip">Featured · Self-built</span><span class="text-xs font-mono text-slate-400 text-right">HTML · JavaScript</span></div><h3 class="text-2xl font-bold text-white mb-3">Audit Voucher Simulation</h3><div class="md:grid md:grid-cols-2 md:gap-6 text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> Voucher-checking concepts need interactive practice.</p><p class="mt-2 md:mt-0"><b class="text-slate-200">Built:</b> The Audit Lab on this page: spot TDS omissions, wrong GST rates and calculation errors with instant feedback.</p></div><div class="flex flex-wrap gap-2 mt-4"><span class="sk" style="--c:56 189 248">HTML</span><span class="sk" style="--c:56 189 248">JavaScript</span></div><a href="#audit-simulation" class="btn-g mt-4 !py-2">Try it in the Audit Lab <i class="fa-solid fa-arrow-down"></i></a></div><div class="card g "><div class="flex justify-between gap-2 mb-2"><span class="chip">Self-built</span><span class="text-xs font-mono text-slate-400 text-right">Google Sheets · Apps Script · Gmail</span></div><h3 class="text-lg font-bold text-white mb-3">Invoice Tracker &amp; Follow-up Automation</h3><div class=" text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> Manual tracking of overdue receivables leads to missed follow-ups.</p><p class="mt-2"><b class="text-slate-200">Built:</b> An accounts-receivable tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails on due dates and shows basic ageing.</p></div><div class="flex flex-wrap gap-2 mt-4"><span class="sk" style="--c:56 189 248">Google Sheets</span><span class="sk" style="--c:56 189 248">Apps Script</span><span class="sk" style="--c:56 189 248">Gmail</span></div></div><div class="card g "><div class="flex justify-between gap-2 mb-2"><span class="chip">Self-built</span><span class="text-xs font-mono text-slate-400 text-right">Google Apps Script</span></div><h3 class="text-lg font-bold text-white mb-3">Articleship Outreach Automation</h3><div class=" text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> Emailing target CA firms one by one is slow and error-prone.</p><p class="mt-2"><b class="text-slate-200">Built:</b> A Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.</p></div><div class="flex flex-wrap gap-2 mt-4"><span class="sk" style="--c:56 189 248">Sheets</span><span class="sk" style="--c:56 189 248">Apps Script</span><span class="sk" style="--c:56 189 248">Drive</span></div></div><div class="card g "><div class="flex justify-between gap-2 mb-2"><span class="chip">Self-built</span><span class="text-xs font-mono text-slate-400 text-right">AI workflows</span></div><h3 class="text-lg font-bold text-white mb-3">AI for Finance &amp; Audit Research</h3><div class=" text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> Generic AI answers on tax and audit are often vague.</p><p class="mt-2"><b class="text-slate-200">Built:</b> Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.</p></div><div class="flex flex-wrap gap-2 mt-4"><span class="sk" style="--c:56 189 248">Claude</span><span class="sk" style="--c:56 189 248">ChatGPT</span><span class="sk" style="--c:56 189 248">NotebookLM</span><span class="sk" style="--c:56 189 248">Perplexity</span></div></div><div class="card g md:col-span-3"><div class="flex justify-between gap-2 mb-2"><span class="chip">Self-built &middot; With AI tools</span><span class="text-xs font-mono text-slate-400 text-right">HTML &middot; JavaScript &middot; Apps Script &middot; Sheets &middot; GitHub</span></div><h3 class="text-lg font-bold text-white mb-3">This Portfolio Website</h3><div class="md:grid md:grid-cols-2 md:gap-6 text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> A recruiter should see my profile, projects and contact details in under a minute, and I wanted testimonials that I review before they go live.</p><p class="mt-2 md:mt-0"><b class="text-slate-200">Built:</b> Designed and built with AI tools (Claude, ChatGPT). HTML and JavaScript front end hosted on GitHub Pages, contact form delivered to my inbox, and testimonials moderated through Google Apps Script and Google Sheets.</p></div><div class="flex flex-wrap gap-2 mt-4"><span class="sk" style="--c:56 189 248">HTML</span><span class="sk" style="--c:56 189 248">JavaScript</span><span class="sk" style="--c:56 189 248">Google Apps Script</span><span class="sk" style="--c:56 189 248">Google Sheets</span><span class="sk" style="--c:56 189 248">GitHub Pages</span><span class="sk" style="--c:56 189 248">AI tools (Claude, ChatGPT)</span></div></div></div>
+</div></section>
+
+<section id="skills" class="py-14 px-4"><div class="max-w-7xl mx-auto">
+ <h2 class="h2">Skills &amp; Technology</h2><p class="sub">Grouped by domain. Each group shows its basis: coursework, working knowledge, or hands-on use.</p>
+ <div id="sk" class="grid md:grid-cols-2 gap-5"><div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold" style="color:rgb(56 189 248)">Audit &amp; Accounting</h3><span class="chip">Coursework</span></div><div class="flex flex-wrap gap-2" style="--c:56 189 248"><span class="sk">Financial Accounting</span><span class="sk">Schedule III</span><span class="sk">Auditing Standards (SAs)</span><span class="sk">Ind AS</span><span class="sk">Cost &amp; Management Accounting (exemption)</span><span class="sk">Financial Ratio Analysis</span></div></div><div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold" style="color:rgb(167 139 250)">Taxation</h3><span class="chip">Working knowledge</span></div><div class="flex flex-wrap gap-2" style="--c:167 139 250"><span class="sk">Direct Tax</span><span class="sk">TDS (Sec 194C/194J, now 393)</span><span class="sk">GST &amp; GSTR-2B ITC reconciliation</span><span class="sk">Companies Act, 2013</span></div></div><div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold" style="color:rgb(52 211 153)">Tools &amp; Automation</h3><span class="chip">Hands-on</span></div><div class="flex flex-wrap gap-2" style="--c:52 211 153"><span class="sk">MS Excel</span><span class="sk">Power Query</span><span class="sk">Excel VBA</span><span class="sk">Google Sheets &amp; Apps Script</span><span class="sk">Tally Prime</span></div></div><div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold" style="color:rgb(96 165 250)">AI &amp; Research</h3><span class="chip">Regular use</span></div><div class="flex flex-wrap gap-2" style="--c:96 165 250"><span class="sk">ChatGPT</span><span class="sk">Claude</span><span class="sk">NotebookLM</span><span class="sk">Perplexity</span></div><p class="text-sm text-slate-400 mt-3">Client data is never entered into public AI tools.</p></div><div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold" style="color:rgb(251 191 36)">Professional</h3><span class="chip">Leadership & soft skills</span></div><div class="flex flex-wrap gap-2" style="--c:251 191 36"><span class="sk">Team leadership (13-member team)</span><span class="sk">Cultural coordination</span><span class="sk">Structured communication</span><span class="sk">Query escalation</span></div></div></div>
 </div></section>
 
 <section id="testimonials" class="py-14 px-4"><div class="max-w-5xl mx-auto">
@@ -203,9 +197,17 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  <div class="grid md:grid-cols-12 gap-8 items-start">
   <div class="md:col-span-5 space-y-5">
    <h2 class="text-2xl sm:text-3xl font-bold text-white">Discuss an Articleship Opportunity</h2>
-   <p class="text-slate-400 text-sm">Open to CA Articleship in Statutory Audit and Risk Advisory.</p>
-   <div class="flex flex-wrap gap-3"><button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button><a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a></div>
-   <div class="card text-sm space-y-2"><div><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></div><div><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a> (Phone / WhatsApp)</div></div>
+   <p class="text-slate-400 text-base">Open to CA Articleship in Statutory Audit and Risk Advisory. Open to relocation.</p>
+   <div class="card text-sm space-y-3">
+    <div><i class="fa-solid fa-envelope text-blue-400 w-5"></i> <a class="hover:text-cyan-400 break-all" href="mailto:saiadarshsahoo1@gmail.com">saiadarshsahoo1@gmail.com</a></div>
+    <div><i class="fa-solid fa-phone text-cyan-400 w-5"></i> <a class="hover:text-cyan-400" href="tel:+917608886682">+91 76088 86682</a> (Phone / WhatsApp)</div>
+    <div><i class="fa-solid fa-location-dot text-emerald-400 w-5"></i> <span class="text-slate-300">Jajpur, Odisha &middot; Open to relocation</span></div>
+    <div><i class="fa-solid fa-graduation-cap text-violet-400 w-5"></i> <span class="text-slate-300">B.Com (Hons.), SSSIHL</span></div>
+   </div>
+   <div class="flex flex-wrap gap-3 pt-2">
+    <button class="btn-p" onclick="openCV()"><i class="fa-solid fa-file-pdf"></i> View CV</button>
+    <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
+   </div>
   </div>
   <form id="c-form" class="md:col-span-7 card sm:p-8 space-y-4">
    <input type="checkbox" id="c-hp" tabindex="-1" autocomplete="off" style="display:none">
@@ -253,42 +255,12 @@ const KEY="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
 const STATUS="CA Intermediate \u2014 Group 2 Cleared | Group 1 Result Awaited";
 const $=i=>document.getElementById(i);
 const esc=s=>String(s==null?'':s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-document.querySelectorAll('.ca-status').forEach(e=>e.textContent=STATUS);
 
-/* nav */
-const NAV=[['about','About','56 189 248'],['education','Education','167 139 250'],['skills','Skills','52 211 153'],['projects','Projects','96 165 250'],['testimonials','Endorsements','251 191 36'],['audit-simulation','Simulation','244 114 182'],['contact','Contact','45 212 191']];
-$('nav-d').innerHTML=NAV.filter(n=>n[0]!=='contact').map(n=>`<a class="nl" style="--c:${n[2]}" href="#${n[0]}">${n[1]}</a>`).join('')+'<a class="cta" href="#contact">Contact</a>';
-$('nav-m').innerHTML=NAV.map(n=>`<a class="nl block" style="--c:${n[2]}" href="#${n[0]}">${n[1]}</a>`).join('');
+/* nav (links are plain HTML above) */
+const NAV=[['why-me'],['education'],['projects'],['skills'],['testimonials'],['audit-simulation'],['contact']];
 $('burger').onclick=()=>{const m=$('nav-m');m.classList.toggle('hidden');$('burger').setAttribute('aria-expanded',!m.classList.contains('hidden'))};
 $('nav-m').onclick=e=>{if(e.target.tagName==='A')$('nav-m').classList.add('hidden')};
-
-/* highlight current section in the nav */
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.nl').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});NAV.forEach(n=>{const el=$(n[0]);if(el)io.observe(el)})}
-
-/* stats strip */
-$('snap').innerHTML=[['Group 2 Cleared','CA Intermediate &middot; Costing exemption'],['Group 1','Appeared &middot; result awaited'],['7.0 / 10','B.Com (Hons.) CGPA, SSSIHL'],['13-member team','Led at Brindavan Studio']]
-.map(x=>`<div class="bg-slate-900 p-5 text-center"><div class="text-xl sm:text-2xl font-extrabold gt">${x[0]}</div><div class="text-sm text-slate-400 mt-1">${x[1]}</div></div>`).join('');
-
-/* skills */
-const SG=[['Audit & Accounting','56 189 248','Coursework',['Financial Accounting','Schedule III','Auditing Standards (SAs)','Ind AS','Cost & Management Accounting (exemption)','Financial Ratio Analysis']],
-['Taxation','167 139 250','Working knowledge',['Direct Tax','TDS (Sec 194C/194J, now 393)','GST & GSTR-2B ITC reconciliation','Companies Act, 2013']],
-['Tools & Automation','52 211 153','Self-built',['MS Excel','Power Query','Excel VBA','Google Sheets & Apps Script','Tally Prime']],
-['AI & Research','96 165 250','Regular use',['ChatGPT','Claude','NotebookLM','Perplexity']],
-['Professional','251 191 36','Leadership & soft skills',['Team leadership (13-member team)','Cultural coordination','Structured communication','Query escalation']]];
-$('sk').innerHTML=SG.map(g=>`<div class="card"><div class="flex items-center justify-between gap-2 mb-3"><h3 class="font-bold text-white" style="color:rgb(${g[1]})">${g[0]}</h3><span class="chip">${g[2]}</span></div><div class="flex flex-wrap gap-2" style="--c:${g[1]}">${g[3].map(x=>`<span class="sk">${x}</span>`).join('')}</div>${g[0]==='AI & Research'?'<p class="text-sm text-slate-400 mt-3">Client data is never entered into public AI tools.</p>':''}</div>`).join('');
-
-/* projects */
-const PJ=[
-['Google Sheets \u00b7 Apps Script \u00b7 Gmail','Invoice Tracker & Follow-up Automation','Manual tracking of overdue receivables leads to missed follow-ups.','An accounts-receivable tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails on due dates and shows basic ageing.',['Google Sheets','Apps Script','Gmail']],
-['Google Apps Script','Articleship Outreach Automation','Emailing target CA firms one by one is slow and error-prone.','A Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.',['Sheets','Apps Script','Drive']],
-['HTML \u00b7 JavaScript','Audit Voucher Simulation','Voucher-checking concepts need interactive practice.','The Audit Lab on this page: spot TDS omissions, wrong GST rates and calculation errors with instant feedback.',['HTML','JavaScript']],
-['AI workflows','AI for Finance & Audit Research','Generic AI answers on tax and audit are often vague.','Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.',['Claude','ChatGPT','NotebookLM','Perplexity']]];
-$('pj').innerHTML=PJ.map((p,i)=>`<div class="card g ${i?'':'md:col-span-3'}"><div class="flex justify-between gap-2 mb-2"><span class="chip">${i?'Self-built':'Featured \u00b7 Self-built'}</span><span class="text-xs font-mono text-slate-400 text-right">${p[0]}</span></div><h3 class="${i?'text-lg':'text-2xl'} font-bold text-white mb-3">${p[1]}</h3><div class="${i?'':'md:grid md:grid-cols-2 md:gap-6'} text-base text-slate-400"><p><b class="text-slate-200">Problem:</b> ${p[2]}</p><p class="${i?'mt-2':'mt-2 md:mt-0'}"><b class="text-slate-200">Built:</b> ${p[3]}</p></div><div class="flex flex-wrap gap-2 mt-4">${p[4].map(t=>`<span class="sk" style="--c:56 189 248">${t}</span>`).join('')}</div></div>`).join('');
-
-/* typing */
-const PH=["CA Intermediate (Group 2 Cleared)","Statutory Audit & Risk Advisory","Excel \u00b7 VBA \u00b7 Apps Script"];let pi=0,ci=0,del=false;
-(function type(){const p=PH[pi];$('typ').textContent=p.slice(0,del?--ci:++ci);let d=del?35:75;
- if(!del&&ci===p.length){d=2000;del=true}else if(del&&ci===0){del=false;pi=(pi+1)%PH.length;d=400}setTimeout(type,d)})();
 
 /* CV modal */
 function openCV(){const f=$('cv-f');if(f.src.indexOf('resume.pdf')<0)f.src='resume.pdf';$('cv').classList.replace('hidden','flex');document.body.style.overflow='hidden'}
@@ -302,14 +274,8 @@ $('c-form').onsubmit=async e=>{e.preventDefault();if($('c-hp').checked)return;co
  catch(x){$('c-err').classList.remove('hidden');b.innerHTML=idle;b.disabled=false}};
 
 /* testimonials (Apps Script sheet; only ALLOWED rows are returned) */
-let admin=false,akey='';
 async function loadT(){const g=$('t-grid');try{const d=await(await fetch(API)).json();if(!Array.isArray(d)||!d.length){g.classList.add('hidden');return}
- g.classList.remove('hidden');g.innerHTML=d.map(t=>`<div class="card relative">${admin?`<button data-del="${esc(t.id)}" class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-red-900 text-red-100">Delete</button>`:''}<p class="text-sm text-slate-300 italic">&ldquo;${esc(t.testimonial)}&rdquo;</p><div class="mt-4 pt-3 border-t border-slate-800"><b class="text-sm text-white">${esc(t.name)}</b><div class="text-xs text-slate-400">${esc(t.organization)}</div><span class="chip mt-2 inline-block">${esc(t.relation)}</span></div></div>`).join('')}catch(e){g.classList.add('hidden')}}
-$('t-grid').onclick=async e=>{const id=e.target.dataset.del;if(!id||!confirm('Hide this testimonial?'))return;
- try{const j=await(await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({action:'delete',id,adminKey:akey})})).json();alert(j.success?'Done':(j.message||'Failed'));loadT()}catch(x){alert('Request failed')}};
-function toggleAdmin(){if(admin){admin=false;akey=''}else{const p=prompt('Admin passcode');if(!p)return;admin=true;akey=p}loadT()}
-addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key==='A')toggleAdmin()});
-if(/[?&]admin/.test(location.search))setTimeout(toggleAdmin,800);
+ g.classList.remove('hidden');g.innerHTML=d.map(t=>`<div class="card"><p class="text-base text-slate-300 italic">&ldquo;${esc(t.testimonial)}&rdquo;</p><div class="mt-4 pt-3 border-t border-slate-800"><b class="text-sm text-white">${esc(t.name)}</b><div class="text-sm text-slate-400">${esc(t.organization)}</div><span class="chip mt-2 inline-block">${esc(t.relation)}</span></div></div>`).join('')}catch(e){g.classList.add('hidden')}}
 $('t-form').onsubmit=async e=>{e.preventDefault();const b=$('t-btn'),m=$('t-msg');b.disabled=true;m.textContent='Sending...';
  const v=i=>$(i).value.trim();
  try{const p={subject:'[Testimonial Submission] '+v('t-name'),from_name:v('t-name'),name:v('t-name')};if(v('t-email'))p.email=v('t-email');p.message=`Name: ${v('t-name')}\nOrganization: ${v('t-org')}\nRelation: ${v('t-rel')}\nTestimonial: ${v('t-txt')}\n###END###`;await send(p);e.target.reset();m.textContent='Thank you. Your testimonial will appear after review.'}
@@ -345,13 +311,21 @@ function mv(d){li=(li+d+G.length)%G.length;showLb()}
 $('lb-x').onclick=closeLb;$('lb-p').onclick=e=>{e.stopPropagation();mv(-1)};$('lb-n').onclick=e=>{e.stopPropagation();mv(1)};$('lb').onclick=e=>{if(e.target.id==='lb')closeLb()};
 addEventListener('keydown',e=>{if(e.key==='Escape'){closeCV();closeLb()}if(!$('lb').classList.contains('hidden')){if(e.key==='ArrowLeft')mv(-1);if(e.key==='ArrowRight')mv(1)}});
 let tx=null;$('lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('lb').addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)mv(d<0?1:-1)});
-probe('images/profile',s=>{if(!s)return;['av1','av2','av3'].forEach(i=>{$(i).src=s;$(i).classList.remove('hidden');$(i+'f').classList.add('hidden')})});
+probe('images/profile',s=>{if(!s)return;['av3'].forEach(i=>{if($(i)){$(i).src=s;$(i).classList.remove('hidden');if($(i+'f'))$(i+'f').classList.add('hidden')}})});
 (function g(n){if(n>60)return;probe('images/gallery/'+n,s=>{if(!s)return;$('gal').classList.remove('hidden');const idx=G.push(s)-1,a=document.createElement('a');a.href='#';a.setAttribute('aria-label','Open photo '+(idx+1));a.className='card !p-0 overflow-hidden aspect-[4/3] block';a.onclick=e=>{e.preventDefault();openLb(idx)};a.innerHTML=`<img src="${s}" alt="Gallery photo ${idx+1}" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">`;$('gal-g').appendChild(a);g(n+1)})})(1);
 
 /* particles */
 (function(){const c=$('pc'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let P=[];
- function rs(){c.width=innerWidth;c.height=Math.max(c.parentElement.offsetHeight,400);P=Array.from({length:Math.min(innerWidth/20|0,45)},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6}))}
+ function rs(){c.width=innerWidth;c.height=Math.max(c.parentElement.offsetHeight,400);P=Array.from({length:innerWidth<640?19:Math.min(innerWidth/20|0,41)},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6}))}
  addEventListener('resize',rs);rs();(function f(){x.clearRect(0,0,c.width,c.height);P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.fillStyle='#38bdf8';x.beginPath();x.arc(p.x,p.y,1.8,0,6.3);x.fill();for(let j=i+1;j<P.length;j++){const d=Math.hypot(p.x-P[j].x,p.y-P[j].y);if(d<90){x.strokeStyle=`rgba(56,189,248,${1-d/90})`;x.lineWidth=.3;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(P[j].x,P[j].y);x.stroke()}}});requestAnimationFrame(f)})()})();
+
+/* scroll reveal (the .js class is added last, so a script error can never hide content) */
+(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ const els=[...document.querySelectorAll('main section:not(#hero) :is(.h2,.sub,.card:not(.vb),#snap)')],cnt=new Map();
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;const el=x.target;io.unobserve(el);el.classList.add('in');setTimeout(()=>{el.classList.remove('rv','in');el.style.removeProperty('--d')},1500)}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(el=>{const k=el.parentElement,i=cnt.get(k)||0;cnt.set(k,i+1);el.style.setProperty('--d',Math.min(i,6)*90+'ms');el.classList.add('rv');io.observe(el)});
+ document.documentElement.classList.add('js');
+})();
 </script>
 </body>
 </html>
