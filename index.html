@@ -55,7 +55,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .hero-kicker .dot{width:.38rem;height:.38rem;border-radius:999px;background:#34d399;box-shadow:0 0 0 5px rgba(52,211,153,.08),0 0 14px rgba(52,211,153,.45)}
 .hero-name{@apply text-sm sm:text-base font-semibold tracking-[.22em] uppercase text-slate-500 mb-4}
 .hero-title{font-family:'Poppins',sans-serif;font-size:clamp(3.4rem,6.4vw,6.15rem);line-height:.88;letter-spacing:-.06em;font-weight:800;color:#f8fafc;max-width:980px;margin:0}
-.hero-title .accent{background:linear-gradient(135deg,#67e8f9 0%,#60a5fa 45%,#c084fc 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-title .accent{display:inline-block;padding-right:.08em;background:linear-gradient(135deg,#67e8f9 0%,#60a5fa 45%,#c084fc 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;overflow:visible}
 .hero-status{@apply mt-5 text-sm sm:text-base font-semibold text-cyan-300;letter-spacing:.01em}
 .hero-copy{@apply mt-4 text-base sm:text-lg leading-relaxed text-slate-400 max-w-2xl;}
 .hero-actions{@apply mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-3}
@@ -64,7 +64,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .hero-meta{@apply mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm}
 .hero-meta .meta-item{@apply inline-flex items-center gap-2 text-slate-400}
 .hero-meta .meta-item i{font-size:.72rem;color:#67e8f9}
-.hero-visual{width:min(100%,430px)}
+.hero-visual{width:min(100%,279px)}
 .hero-photo-wrap{position:relative}
 .hero-photo-wrap::before{content:"";position:absolute;inset:-14px -18px -18px -12px;border-radius:2rem;background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.04) 50%,rgba(192,132,252,.11));filter:blur(20px);z-index:-1}
 .hero-photo-frame{position:relative;aspect-ratio:4/5;border-radius:1.75rem;padding:1px;background:linear-gradient(145deg,rgba(103,232,249,.75),rgba(96,165,250,.28) 46%,rgba(192,132,252,.72));box-shadow:0 25px 65px rgba(2,8,23,.5),0 0 45px rgba(56,189,248,.10);overflow:hidden}
@@ -72,10 +72,10 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(2,6,23,.38) 100%);pointer-events:none}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero-photo-fallback{font-size:4rem;color:#475569}
-.hero-caption{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:end;margin-top:1rem;padding:0 .25rem}
+.hero-caption{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.25rem;margin-top:1rem;padding:0 .25rem;text-align:left}
 .hero-caption .eyebrow{@apply block text-[10px] font-bold tracking-[.17em] uppercase text-slate-500 mb-1}
 .hero-caption .value{@apply block text-sm font-semibold text-slate-200}
-.hero-caption .relocation{@apply inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-300 whitespace-nowrap}
+.hero-caption .relocation{@apply inline-flex items-center justify-start gap-1.5 text-xs font-semibold text-emerald-300 whitespace-nowrap}
 .hero-proof-grid{margin-top:3.25rem;border-top:1px solid rgba(148,163,184,.16);border-bottom:1px solid rgba(148,163,184,.16);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .hero-proof-item{position:relative;padding:1.2rem 1rem 1.25rem;min-width:0}
 .hero-proof-item+.hero-proof-item::before{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:rgba(148,163,184,.15)}
@@ -84,7 +84,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 @media (max-width: 767px){
   .hero-title{font-size:clamp(3.15rem,15vw,5rem);line-height:.95}
-  .hero-visual{max-width:360px}
+  .hero-visual{max-width:233px}
   .hero-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero-proof-item:nth-child(3)::before{display:none}
   .hero-proof-item:nth-child(odd){border-top:1px solid rgba(148,163,184,.10)}
@@ -93,8 +93,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 @media (max-width: 420px){
   .hero-proof-item{padding:.95rem .65rem}
   .hero-proof-item .value{font-size:.8rem}
-  .hero-caption{grid-template-columns:1fr}
-  .hero-caption .relocation{justify-self:start}
 }
 
 .inp{@apply w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
@@ -251,10 +249,10 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
      <div class="hero-caption">
       <div>
-       <span class="eyebrow">Target Role</span>
+       <span class="eyebrow">Target Articleship Role</span>
        <span class="value">Statutory Audit · Risk Advisory</span>
       </div>
-      <span class="relocation"><i class="fa-solid fa-circle-check"></i> Open to Relocation</span>
+      <span class="relocation"><i class="fa-solid fa-circle-check"></i> Open to Relocate</span>
      </div>
     </div>
    </div>
@@ -270,8 +268,8 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
     <span class="value">IT + Orientation Completed</span>
    </div>
    <div class="hero-proof-item">
-    <span class="label">Audit Automation</span>
-    <span class="value">Excel · VBA · Apps Script</span>
+    <span class="label">AI-enabled Workflows</span>
+    <span class="value">AI Tools · Research · Automation</span>
    </div>
    <div class="hero-proof-item">
     <span class="label">Education</span>
@@ -284,20 +282,20 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 <div class="tk" aria-label="Technical audit and finance skills">
  <div class="tk-track">
   <div class="tk-set">
+   <span>ACCOUNTING STANDARDS (AS)</span><i>&bull;</i>
    <span>AUDITING STANDARDS (SAs)</span><i>&bull;</i>
-   <span>SCHEDULE III</span><i>&bull;</i>
-   <span>GSTR-2B ITC RECONCILIATION</span><i>&bull;</i>
-   <span>POWER QUERY</span><i>&bull;</i>
-   <span>EXCEL VBA</span><i>&bull;</i>
-   <span>TDS COMPLIANCE</span><i>&bull;</i>
+   <span>SCHEDULE III REPORTING</span><i>&bull;</i>
+   <span>AI TOOLS &amp; AUTOMATION</span><i>&bull;</i>
+   <span>EXCEL VBA &amp; APPS SCRIPT</span><i>&bull;</i>
+   <span>TDS &amp; TCS COMPLIANCE</span><i>&bull;</i>
   </div>
   <div class="tk-set" aria-hidden="true">
+   <span>ACCOUNTING STANDARDS (AS)</span><i>&bull;</i>
    <span>AUDITING STANDARDS (SAs)</span><i>&bull;</i>
-   <span>SCHEDULE III</span><i>&bull;</i>
-   <span>GSTR-2B ITC RECONCILIATION</span><i>&bull;</i>
-   <span>POWER QUERY</span><i>&bull;</i>
-   <span>EXCEL VBA</span><i>&bull;</i>
-   <span>TDS COMPLIANCE</span><i>&bull;</i>
+   <span>SCHEDULE III REPORTING</span><i>&bull;</i>
+   <span>AI TOOLS &amp; AUTOMATION</span><i>&bull;</i>
+   <span>EXCEL VBA &amp; APPS SCRIPT</span><i>&bull;</i>
+   <span>TDS &amp; TCS COMPLIANCE</span><i>&bull;</i>
   </div>
  </div>
 </div>
@@ -2220,10 +2218,10 @@ probe(
     {
      length:
       innerWidth<640
-       ?19
+       ?30
        :Math.min(
-        innerWidth/20|0,
-        41
+        Math.ceil((innerWidth/20|0)*1.56),
+        65
        )
     },
     ()=>({
