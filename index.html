@@ -29,8 +29,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .card{@apply bg-slate-900/70 border border-slate-800 rounded-2xl p-5}
 .card.g{@apply glass}
 
-.fchip{@apply glass rounded-xl px-3 py-1.5 text-sm font-semibold whitespace-nowrap;color:rgb(var(--c));border-color:rgb(var(--c)/.4)}
-
 .sk{@apply text-sm px-3 py-1 rounded-lg border transition duration-200;color:rgb(var(--c));border-color:rgb(var(--c)/.35);background:rgb(var(--c)/.08)}
 .sk:hover{transform:translateY(-1.2px);box-shadow:0 0 8px rgb(var(--c)/.3)}
 
@@ -73,15 +71,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   100%{transform:scale(1)}
 }
 .pop{animation:pop .4s}
-
-@keyframes fl{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-3px)}
-}
-.fchip{animation:fl 5s ease-in-out infinite}
-.fchip:nth-child(2){animation-delay:-1.3s}
-.fchip:nth-child(3){animation-delay:-2.6s}
-.fchip:nth-child(4){animation-delay:-3.9s}
 
 .tk{
   overflow:hidden;
@@ -202,13 +191,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
     </div>
    </div>
 
-   <div class="flex flex-wrap justify-center gap-2 mt-5 md:mt-0">
-    <span class="fchip md:absolute md:-left-12 md:top-4" style="--c:56 189 248">CA Intermediate Student</span>
-    <span class="fchip md:absolute md:-right-14 md:top-20" style="--c:167 139 250">Audit &amp; Risk Advisory</span>
-    <span class="fchip md:absolute md:-left-16 md:bottom-20" style="--c:52 211 153">Excel &bull; VBA &bull; Apps Script</span>
-    <span class="fchip md:absolute md:-right-10 md:bottom-4" style="--c:251 191 36">AI &amp; Finance Enthusiast</span>
-   </div>
-
   </div>
  </div>
 </section>
@@ -221,7 +203,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
    <span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i>
    <span>Artificial Intelligence</span><i>&bull;</i>
    <span>Finance</span><i>&bull;</i>
-   <span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i>
+   <span>Audit Automation</span><i>&bull;</i>
   </div>
 
   <div class="tk-set" aria-hidden="true">
@@ -229,11 +211,13 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
    <span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i>
    <span>Artificial Intelligence</span><i>&bull;</i>
    <span>Finance</span><i>&bull;</i>
-   <span>Excel &middot; VBA &middot; Apps Script</span><i>&bull;</i>
+   <span>Audit Automation</span><i>&bull;</i>
   </div>
 
  </div>
 </div>
+
+
 
 <section id="why-me" class="py-14 px-4 bg-slate-950/60 border-y border-slate-800/80">
  <div class="max-w-7xl mx-auto">
@@ -699,6 +683,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
+
 <!-- =========================================================
      INTERACTIVE AUDIT LAB
      ========================================================= -->
@@ -784,6 +769,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
+
 <section id="contact" class="sec">
 
  <div class="grid md:grid-cols-12 gap-8 items-start">
@@ -846,6 +832,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
    </div>
   </div>
 
+
   <form id="c-form" class="md:col-span-7 card sm:p-8 space-y-4">
 
    <input type="checkbox" id="c-hp" tabindex="-1" autocomplete="off" style="display:none">
@@ -891,6 +878,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
+
 <section id="beyond" class="sec border-t border-slate-800/80">
 
  <h2 class="text-2xl font-bold text-white text-center mb-1">
@@ -928,6 +916,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 </section>
 
 </main>
+
 
 <!-- CV MODAL -->
 
@@ -979,6 +968,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </div>
 
+
 <!-- PHOTO LIGHTBOX -->
 
 <div id="lb"
@@ -1014,6 +1004,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 
 </div>
+
 
 <footer class="border-t border-slate-800/80 bg-slate-950/60 py-8 px-4 text-center">
 
@@ -1058,6 +1049,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 </footer>
 
+
 <script>
 
 const API="https://script.google.com/macros/s/AKfycbzeTOOZgTfdcpr5dlvksmSVycW6d38fmPQXkXh2x49M1IUVCiySzQlFZ3afpnKnK28p/exec";
@@ -1076,6 +1068,7 @@ const esc=s=>String(s==null?'':s)
   "'":'&#39;',
   '"':'&quot;'
  }[c]));
+
 
 /* =========================================================
    NAVIGATION
@@ -1132,6 +1125,7 @@ if('IntersectionObserver' in window){
 
 }
 
+
 /* =========================================================
    CV MODAL
    ========================================================= */
@@ -1159,6 +1153,7 @@ $('cv').onclick=e=>{
  if(e.target.id==='cv')
   closeCV();
 };
+
 
 /* =========================================================
    WEB3FORMS
@@ -1188,6 +1183,7 @@ async function send(f){
  if(!j.success)
   throw new Error(j.message);
 }
+
 
 $('c-form').onsubmit=async e=>{
 
@@ -1236,6 +1232,7 @@ $('c-form').onsubmit=async e=>{
  }
 
 };
+
 
 /* =========================================================
    TESTIMONIALS
@@ -1359,6 +1356,7 @@ $('t-open').onclick=()=>{
 
 };
 
+
 /* =========================================================
    INTERACTIVE AUDIT LAB
    ========================================================= */
@@ -1386,6 +1384,7 @@ $('t-open').onclick=()=>{
   12-case question bank per session.
 */
 
+
 const QUESTION_BANK=[
 
  {
@@ -1402,6 +1401,7 @@ const QUESTION_BANK=[
   x:'Flag the case. Inventory held on behalf of another party may not belong to the entity. The auditor should verify the entity’s rights and obligations before accepting it as its inventory.'
  },
 
+
  {
   i:'AUD-002',
   t:'Depreciation — Ready for Use',
@@ -1415,6 +1415,7 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the treatment. The machinery was ready for use in April. The fact that production actually began later does not by itself justify postponing depreciation until October.'
  },
+
 
  {
   i:'AUD-003',
@@ -1430,6 +1431,7 @@ const QUESTION_BANK=[
   x:'Flag the arrangement. The external auditor should retain control over the confirmation process, including determining the information to be confirmed, selecting the confirming parties, sending requests and receiving responses.'
  },
 
+
  {
   i:'AUD-004',
   t:'Disputed Customer Balance',
@@ -1443,6 +1445,7 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the matter. Management’s refusal to obtain confirmation because of a customer dispute does not remove the auditor’s need to obtain sufficient appropriate audit evidence. The auditor should evaluate the reason and consider alternative procedures where necessary.'
  },
+
 
  {
   i:'AUD-005',
@@ -1458,6 +1461,7 @@ const QUESTION_BANK=[
   x:'Flag the matter. Potential material litigation can affect completeness and disclosure of liabilities. Direct communication with the entity’s external legal counsel may provide relevant audit evidence.'
  },
 
+
  {
   i:'AUD-006',
   t:'Revenue Analytical Procedures',
@@ -1471,6 +1475,7 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag for investigation. An unexplained movement in revenue compared with relevant operational information is an analytical-procedure indicator requiring the auditor to investigate the unexpected relationship.'
  },
+
 
  {
   i:'AUD-007',
@@ -1486,6 +1491,7 @@ const QUESTION_BANK=[
   x:'Flag the control deficiency. A control that is required but is not operating consistently, combined with inadequate supervisory monitoring, increases the risk of material misstatement or loss.'
  },
 
+
  {
   i:'AUD-008',
   t:'Perishable Inventory Monitoring',
@@ -1499,6 +1505,7 @@ const QUESTION_BANK=[
   a:'APPROVE',
   x:'Approve the control result. The auditor has tested the relevant control and found that it operated as designed. No exception is indicated by the facts provided.'
  },
+
 
  {
   i:'AUD-009',
@@ -1514,6 +1521,7 @@ const QUESTION_BANK=[
   x:'Flag the documentation deficiency. Significant matters, relevant discussions and the auditor’s conclusions should be documented sufficiently to demonstrate how the audit was performed and concluded.'
  },
 
+
  {
   i:'AUD-010',
   t:'Trade Payables Ageing',
@@ -1528,6 +1536,7 @@ const QUESTION_BANK=[
   x:'Approve the procedure result. Reperformance of the relevant control produced the expected result and no exception was identified.'
  },
 
+
  {
   i:'AUD-011',
   t:'Bank Reconciliation — Oral Inquiry',
@@ -1541,6 +1550,7 @@ const QUESTION_BANK=[
   a:'HOLD',
   x:'Hold for further procedures. Oral inquiry alone generally does not provide sufficient evidence to establish that a control operated effectively. The auditor should obtain additional evidence, such as inspection or reperformance.'
  },
+
 
  {
   i:'AUD-012',
@@ -1558,10 +1568,19 @@ const QUESTION_BANK=[
 
 ];
 
+
+/*
+  Five cases are selected randomly from the twelve-case bank.
+
+  This keeps the game concise for recruiters while providing
+  variation whenever the visitor starts a new session.
+*/
+
 let V=[];
 let vi=0;
 let sc=0;
 let busy=false;
+
 
 function shuffle(arr){
 
@@ -1570,6 +1589,7 @@ function shuffle(arr){
  );
 
 }
+
 
 function startGame(){
 
@@ -1585,6 +1605,7 @@ function startGame(){
 
 }
 
+
 function lv(){
 
  const f=$('g-f');
@@ -1599,6 +1620,7 @@ function lv(){
  document.querySelectorAll('.vb').forEach(b=>{
   b.disabled=vi>=V.length;
  });
+
 
  if(vi>=V.length){
 
@@ -1641,6 +1663,7 @@ function lv(){
   return;
  }
 
+
  const v=V[vi];
 
  $('v-t').textContent=v.t;
@@ -1654,6 +1677,7 @@ function lv(){
   `${vi+1} / ${V.length}`;
 
 }
+
 
 document.querySelectorAll('.vb').forEach(b=>{
 
@@ -1671,6 +1695,7 @@ document.querySelectorAll('.vb').forEach(b=>{
 
   const f=$('g-f');
 
+
   if(ok){
 
    sc+=20;
@@ -1687,6 +1712,7 @@ document.querySelectorAll('.vb').forEach(b=>{
 
   }
 
+
   f.className=
    'p-3.5 rounded-xl text-sm border '+
    (
@@ -1695,15 +1721,18 @@ document.querySelectorAll('.vb').forEach(b=>{
      : 'bg-red-950/80 border-red-500 text-red-200'
    );
 
+
   f.style.boxShadow=
    ok
     ? '0 0 10px rgba(16,185,129,.3)'
     : '0 0 10px rgba(239,68,68,.3)';
 
+
   f.innerHTML=`
    <b>${ok?'Correct.':'Missed.'}</b>
    ${v.x}
   `;
+
 
   setTimeout(()=>{
 
@@ -1717,6 +1746,7 @@ document.querySelectorAll('.vb').forEach(b=>{
 
 });
 
+
 function resetGame(){
 
  startGame();
@@ -1724,6 +1754,7 @@ function resetGame(){
 }
 
 startGame();
+
 
 /* =========================================================
    SYNTHESISED MUSIC PADS
@@ -1757,7 +1788,9 @@ $('pads').innerHTML=[
 
 `).join('');
 
+
 let ac;
+
 
 $('pads').onclick=e=>{
 
@@ -1818,6 +1851,7 @@ $('pads').onclick=e=>{
 
 };
 
+
 /* =========================================================
    PHOTOS + LIGHTBOX
    ========================================================= */
@@ -1856,8 +1890,10 @@ function probe(b,cb){
 
 }
 
+
 const G=[];
 let li=0;
+
 
 function showLb(){
 
@@ -1871,6 +1907,7 @@ function showLb(){
   G.length>1?'':'none';
 
 }
+
 
 function openLb(i){
 
@@ -1887,6 +1924,7 @@ function openLb(i){
 
 }
 
+
 function closeLb(){
 
  $('lb').classList.replace(
@@ -1898,6 +1936,7 @@ function closeLb(){
 
 }
 
+
 function mv(d){
 
  li=
@@ -1906,6 +1945,7 @@ function mv(d){
  showLb();
 
 }
+
 
 $('lb-x').onclick=closeLb;
 
@@ -1923,6 +1963,7 @@ $('lb').onclick=e=>{
  if(e.target.id==='lb')
   closeLb();
 };
+
 
 addEventListener('keydown',e=>{
 
@@ -1946,13 +1987,16 @@ addEventListener('keydown',e=>{
 
 });
 
+
 let tx=null;
+
 
 $('lb').addEventListener(
  'touchstart',
  e=>tx=e.touches[0].clientX,
  {passive:true}
 );
+
 
 $('lb').addEventListener(
  'touchend',
@@ -1971,6 +2015,7 @@ $('lb').addEventListener(
 
  }
 );
+
 
 probe(
  'images/profile',
@@ -1995,6 +2040,7 @@ probe(
 
  }
 );
+
 
 (function g(n){
 
@@ -2053,6 +2099,7 @@ probe(
 
 })(1);
 
+
 /* =========================================================
    HERO PARTICLES
    ========================================================= */
@@ -2071,6 +2118,7 @@ probe(
   return;
 
  let P=[];
+
 
  function rs(){
 
@@ -2103,12 +2151,14 @@ probe(
 
  }
 
+
  addEventListener(
   'resize',
   rs
  );
 
  rs();
+
 
  (function f(){
 
@@ -2119,11 +2169,13 @@ probe(
    c.height
   );
 
+
   P.forEach((p,i)=>{
 
    p.x+=p.vx;
 
    p.y+=p.vy;
+
 
    if(
     p.x<0||
@@ -2131,11 +2183,13 @@ probe(
    )
     p.vx*=-1;
 
+
    if(
     p.y<0||
     p.y>c.height
    )
     p.vy*=-1;
+
 
    x.fillStyle='#38bdf8';
 
@@ -2150,6 +2204,7 @@ probe(
    );
 
    x.fill();
+
 
    for(
     let j=i+1;
@@ -2190,11 +2245,13 @@ probe(
 
   });
 
+
   requestAnimationFrame(f);
 
  })();
 
 })();
+
 
 /* =========================================================
    SCROLL REVEAL
@@ -2210,13 +2267,16 @@ probe(
  )
   return;
 
+
  const els=[
   ...document.querySelectorAll(
    'main section:not(#hero) :is(.h2,.sub,.card:not(.vb),#snap)'
   )
  ];
 
+
  const cnt=new Map();
+
 
  const io=new IntersectionObserver(
   es=>es.forEach(x=>{
@@ -2248,6 +2308,7 @@ probe(
   }
  );
 
+
  els.forEach(el=>{
 
   const k=el.parentElement;
@@ -2266,6 +2327,7 @@ probe(
   io.observe(el);
 
  });
+
 
  document.documentElement.classList.add('js');
 
