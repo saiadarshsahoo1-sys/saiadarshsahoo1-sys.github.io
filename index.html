@@ -42,7 +42,60 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 .btn{@apply px-5 py-3 rounded-xl font-semibold text-sm inline-flex items-center gap-2 transition duration-200 hover:-translate-y-[1.2px] hover:shadow-md hover:shadow-blue-500/20}
 .btn-p{@apply btn text-white bg-gradient-to-r from-blue-500 to-violet-500 hover:opacity-90}
+.btn-cv{@apply btn text-white bg-gradient-to-r from-blue-500 via-blue-500 to-violet-500 hover:opacity-95}
+.btn-cv{box-shadow:0 0 26px rgba(56,189,248,.16),0 12px 32px rgba(37,99,235,.14)}
+.btn-cv:hover{box-shadow:0 0 34px rgba(56,189,248,.25),0 16px 36px rgba(37,99,235,.2)}
 .btn-g{@apply btn glass text-slate-200 hover:text-white}
+
+/* Premium editorial hero */
+.hero{isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 15% 25%,rgba(56,189,248,.10),transparent 32%),radial-gradient(circle at 88% 18%,rgba(129,140,248,.10),transparent 30%),linear-gradient(180deg,rgba(11,15,25,.08),rgba(11,15,25,0))}
+.hero::after{content:"";position:absolute;inset:auto -15% -30% 35%;height:55%;z-index:-1;background:radial-gradient(ellipse,rgba(124,58,237,.10),transparent 65%);pointer-events:none}
+.hero-kicker{@apply flex items-center justify-center lg:justify-start gap-2 text-[11px] sm:text-xs font-bold tracking-[.18em] uppercase text-slate-400 mb-5}
+.hero-kicker .dot{width:.38rem;height:.38rem;border-radius:999px;background:#34d399;box-shadow:0 0 0 5px rgba(52,211,153,.08),0 0 14px rgba(52,211,153,.45)}
+.hero-name{@apply text-sm sm:text-base font-semibold tracking-[.22em] uppercase text-slate-500 mb-4}
+.hero-title{font-family:'Poppins',sans-serif;font-size:clamp(3.4rem,6.4vw,6.15rem);line-height:.88;letter-spacing:-.06em;font-weight:800;color:#f8fafc;max-width:980px;margin:0}
+.hero-title .accent{background:linear-gradient(135deg,#67e8f9 0%,#60a5fa 45%,#c084fc 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-status{@apply mt-5 text-sm sm:text-base font-semibold text-cyan-300;letter-spacing:.01em}
+.hero-copy{@apply mt-4 text-base sm:text-lg leading-relaxed text-slate-400 max-w-2xl;}
+.hero-actions{@apply mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-3}
+.hero-contact{@apply text-sm font-semibold text-slate-400 hover:text-white transition duration-200 inline-flex items-center gap-1.5 px-2 py-2}
+.hero-contact:hover{transform:translateY(-1px)}
+.hero-meta{@apply mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm}
+.hero-meta .meta-item{@apply inline-flex items-center gap-2 text-slate-400}
+.hero-meta .meta-item i{font-size:.72rem;color:#67e8f9}
+.hero-visual{width:min(100%,430px)}
+.hero-photo-wrap{position:relative}
+.hero-photo-wrap::before{content:"";position:absolute;inset:-14px -18px -18px -12px;border-radius:2rem;background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.04) 50%,rgba(192,132,252,.11));filter:blur(20px);z-index:-1}
+.hero-photo-frame{position:relative;aspect-ratio:4/5;border-radius:1.75rem;padding:1px;background:linear-gradient(145deg,rgba(103,232,249,.75),rgba(96,165,250,.28) 46%,rgba(192,132,252,.72));box-shadow:0 25px 65px rgba(2,8,23,.5),0 0 45px rgba(56,189,248,.10);overflow:hidden}
+.hero-photo{width:100%;height:100%;border-radius:1.7rem;overflow:hidden;background:linear-gradient(160deg,#111827,#0f172a);position:relative}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(2,6,23,.38) 100%);pointer-events:none}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-photo-fallback{font-size:4rem;color:#475569}
+.hero-caption{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:end;margin-top:1rem;padding:0 .25rem}
+.hero-caption .eyebrow{@apply block text-[10px] font-bold tracking-[.17em] uppercase text-slate-500 mb-1}
+.hero-caption .value{@apply block text-sm font-semibold text-slate-200}
+.hero-caption .relocation{@apply inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-300 whitespace-nowrap}
+.hero-proof-grid{margin-top:3.25rem;border-top:1px solid rgba(148,163,184,.16);border-bottom:1px solid rgba(148,163,184,.16);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.hero-proof-item{position:relative;padding:1.2rem 1rem 1.25rem;min-width:0}
+.hero-proof-item+.hero-proof-item::before{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:rgba(148,163,184,.15)}
+.hero-proof-item .label{@apply block text-[10px] sm:text-[11px] font-bold tracking-[.16em] uppercase text-slate-500 mb-1.5}
+.hero-proof-item .value{@apply block text-sm sm:text-base font-semibold text-slate-200}
+
+@media (max-width: 767px){
+  .hero-title{font-size:clamp(3.15rem,15vw,5rem);line-height:.95}
+  .hero-visual{max-width:360px}
+  .hero-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-proof-item:nth-child(3)::before{display:none}
+  .hero-proof-item:nth-child(odd){border-top:1px solid rgba(148,163,184,.10)}
+  .hero-proof-item:nth-child(1),.hero-proof-item:nth-child(2){border-top:0}
+}
+@media (max-width: 420px){
+  .hero-proof-item{padding:.95rem .65rem}
+  .hero-proof-item .value{font-size:.8rem}
+  .hero-caption{grid-template-columns:1fr}
+  .hero-caption .relocation{justify-self:start}
+}
 
 .inp{@apply w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
 .lbl{@apply block text-sm font-medium text-slate-300 mb-1}
@@ -141,79 +194,111 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 <main class="flex-grow pt-20">
 
-<section id="hero" class="relative overflow-hidden py-14 px-4">
- <canvas id="pc" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+<section id="hero" class="hero relative overflow-hidden px-4 py-14 lg:py-20">
+ <canvas id="pc" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
 
- <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+ <div class="relative z-10 max-w-7xl mx-auto">
+  <div class="grid lg:grid-cols-[1.12fr_.88fr] gap-12 xl:gap-16 items-center">
 
-  <div class="text-center lg:text-left">
+   <div class="text-center lg:text-left">
 
-   <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold tracking-wide mb-6">
-    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-    <span class="text-emerald-300">AVAILABLE FOR ARTICLESHIP</span>
-    <span class="text-slate-500">&middot;</span>
-    <span class="text-slate-300 font-medium">Statutory Audit &middot; Risk Advisory</span>
-   </div>
+    <div class="hero-kicker">
+     <span class="dot" aria-hidden="true"></span>
+     <span>CA Articleship · Statutory Audit · Risk Advisory</span>
+    </div>
 
-   <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-3">
-    Sai Adarsh <span class="gt">Sahoo</span>
-   </h1>
+    <h1 class="hero-title">
+     <span>Sai Adarsh</span><br>
+     <span class="accent">Sahoo</span>
+    </h1>
 
-   <p class="text-lg sm:text-xl font-semibold text-cyan-300 mb-4">
-    CA Intermediate &mdash; Group 2 Cleared | Group 1 Result Awaited
-   </p>
+    <p class="hero-status">
+     CA Intermediate · Group 2 Cleared · Group 1 Result Awaited
+    </p>
 
-   <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">
-    CA Intermediate student and B.Com (Hons.) graduate seeking a CA Articleship in Statutory Audit or Risk Advisory. Bringing strong accounting fundamentals, careful audit verification, and technology-driven efficiency.
-   </p>
+    <p class="hero-copy">
+     B.Com (Hons.) graduate seeking a CA Articleship in Statutory Audit or Risk Advisory, with strong accounting fundamentals, careful audit verification, and technology-driven workflows.
+    </p>
 
-   <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-    <button class="btn-p" onclick="openCV()">
-     <i class="fa-solid fa-file-pdf"></i> View CV
-    </button>
+    <div class="hero-actions">
+     <button class="btn-cv" onclick="openCV()">
+      <i class="fa-solid fa-file-pdf"></i> View CV
+     </button>
 
-    <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener">
-     <i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn
-    </a>
+     <a class="btn-g" href="https://www.linkedin.com/in/sai-adarsh-sahoo/" target="_blank" rel="noopener">
+      <i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn
+     </a>
 
-    <a class="btn-g" href="#contact">
-     <i class="fa-solid fa-envelope text-violet-400"></i> Contact Me
-    </a>
-   </div>
-  </div>
+     <a class="hero-contact" href="#contact">
+      Contact Me <i class="fa-solid fa-arrow-right text-cyan-400 text-xs"></i>
+     </a>
+    </div>
 
-  <div class="relative mx-auto w-64 sm:w-72">
-
-   <div class="rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 shadow-[0_0_40px_rgba(56,189,248,.2)]">
-    <div class="aspect-square rounded-full overflow-hidden bg-slate-900 flex items-center justify-center">
-     <img id="av3" alt="Sai Adarsh Sahoo" class="hidden w-full h-full object-cover">
-     <i id="av3f" class="fa-solid fa-user text-6xl text-slate-600"></i>
+    <div class="hero-meta" aria-label="Professional details">
+     <span class="meta-item"><i class="fa-solid fa-briefcase"></i> Statutory Audit · Risk Advisory</span>
+     <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Jajpur, Odisha · Open to Relocation</span>
     </div>
    </div>
 
+   <div class="hero-visual mx-auto">
+    <div class="hero-photo-wrap">
+     <div class="hero-photo-frame">
+      <div class="hero-photo">
+       <img id="av3" alt="Sai Adarsh Sahoo" class="hidden">
+       <i id="av3f" class="fa-solid fa-user hero-photo-fallback absolute inset-0 flex items-center justify-center"></i>
+      </div>
+     </div>
+
+     <div class="hero-caption">
+      <div>
+       <span class="eyebrow">Target Role</span>
+       <span class="value">Statutory Audit · Risk Advisory</span>
+      </div>
+      <span class="relocation"><i class="fa-solid fa-circle-check"></i> Open to Relocation</span>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="hero-proof-grid" aria-label="Key credentials">
+   <div class="hero-proof-item">
+    <span class="label">Costing</span>
+    <span class="value">71 Marks · Exemption</span>
+   </div>
+   <div class="hero-proof-item">
+    <span class="label">ICITSS</span>
+    <span class="value">IT + Orientation Completed</span>
+   </div>
+   <div class="hero-proof-item">
+    <span class="label">Audit Automation</span>
+    <span class="value">Excel · VBA · Apps Script</span>
+   </div>
+   <div class="hero-proof-item">
+    <span class="label">Education</span>
+    <span class="value">B.Com (Hons.)</span>
+   </div>
   </div>
  </div>
 </section>
 
-<div class="tk" aria-label="Highlights">
+<div class="tk" aria-label="Technical audit and finance skills">
  <div class="tk-track">
-
   <div class="tk-set">
-   <span>CA Intermediate Student</span><i>&bull;</i>
-   <span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i>
-   <span>Artificial Intelligence</span><i>&bull;</i>
-   <span>Finance</span><i>&bull;</i>
-   <span>Audit Automation</span><i>&bull;</i>
+   <span>AUDITING STANDARDS (SAs)</span><i>&bull;</i>
+   <span>SCHEDULE III</span><i>&bull;</i>
+   <span>GSTR-2B ITC RECONCILIATION</span><i>&bull;</i>
+   <span>POWER QUERY</span><i>&bull;</i>
+   <span>EXCEL VBA</span><i>&bull;</i>
+   <span>TDS COMPLIANCE</span><i>&bull;</i>
   </div>
-
   <div class="tk-set" aria-hidden="true">
-   <span>CA Intermediate Student</span><i>&bull;</i>
-   <span>Statutory Audit &amp; Risk Advisory</span><i>&bull;</i>
-   <span>Artificial Intelligence</span><i>&bull;</i>
-   <span>Finance</span><i>&bull;</i>
-   <span>Audit Automation</span><i>&bull;</i>
+   <span>AUDITING STANDARDS (SAs)</span><i>&bull;</i>
+   <span>SCHEDULE III</span><i>&bull;</i>
+   <span>GSTR-2B ITC RECONCILIATION</span><i>&bull;</i>
+   <span>POWER QUERY</span><i>&bull;</i>
+   <span>EXCEL VBA</span><i>&bull;</i>
+   <span>TDS COMPLIANCE</span><i>&bull;</i>
   </div>
-
  </div>
 </div>
 
@@ -308,7 +393,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
      <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside">
       <li>ICITSS (IT &amp; Orientation Course, ICAI): completed</li>
-      <li>AI in Finance (Level 1), CA Monk: ongoing</li>
+      <li>AI &amp; Finance Enthusiast (Level 1), CA Monk: ongoing</li>
      </ul>
     </div>
 
@@ -476,7 +561,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
     </div>
 
     <h3 class="text-lg font-bold text-white mb-3">
-     AI in Finance &amp; Audit Research
+     AI &amp; Finance Enthusiast &amp; Audit Research
     </h3>
 
     <div class="text-base text-slate-400">
