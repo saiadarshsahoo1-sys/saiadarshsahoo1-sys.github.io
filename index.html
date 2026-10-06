@@ -64,7 +64,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .hero-meta{@apply mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm}
 .hero-meta .meta-item{@apply inline-flex items-center gap-2 text-slate-400}
 .hero-meta .meta-item i{font-size:.72rem;color:#67e8f9}
-.hero-visual{width:min(100%,279px)}
+.hero-visual{width:min(100%,307px)}
 .hero-photo-wrap{position:relative}
 .hero-photo-wrap::before{content:"";position:absolute;inset:-14px -18px -18px -12px;border-radius:2rem;background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(129,140,248,.04) 50%,rgba(192,132,252,.11));filter:blur(20px);z-index:-1}
 .hero-photo-frame{position:relative;aspect-ratio:4/5;border-radius:1.75rem;padding:1px;background:linear-gradient(145deg,rgba(103,232,249,.75),rgba(96,165,250,.28) 46%,rgba(192,132,252,.72));box-shadow:0 25px 65px rgba(2,8,23,.5),0 0 45px rgba(56,189,248,.10);overflow:hidden}
@@ -84,7 +84,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 @media (max-width: 767px){
   .hero-title{font-size:clamp(3.15rem,15vw,5rem);line-height:.95}
-  .hero-visual{max-width:233px}
+  .hero-visual{max-width:256px}
   .hero-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero-proof-item:nth-child(3)::before{display:none}
   .hero-proof-item:nth-child(odd){border-top:1px solid rgba(148,163,184,.10)}
@@ -165,11 +165,10 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
   </a>
 
   <nav id="nav-d" class="hidden lg:flex gap-1" aria-label="Main">
-   <a class="nl" style="--c:251 191 36" href="#why-me">Why Me</a>
+   <a class="nl" style="--c:251 191 36" href="#what-i-bring">What I Bring</a>
    <a class="nl" style="--c:167 139 250" href="#education">Education</a>
    <a class="nl" style="--c:96 165 250" href="#projects">Projects</a>
    <a class="nl" style="--c:52 211 153" href="#skills">Skills</a>
-   <a class="nl" style="--c:251 191 36" href="#testimonials">Endorsements</a>
    <a class="nl" style="--c:244 114 182" href="#audit-simulation">Simulation</a>
    <a class="cta" href="#contact">Contact</a>
   </nav>
@@ -180,11 +179,10 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 
  <nav id="nav-m" class="hidden lg:hidden glass px-4 pb-4 space-y-1">
-  <a class="nl block" style="--c:251 191 36" href="#why-me">Why Me</a>
+  <a class="nl block" style="--c:251 191 36" href="#what-i-bring">What I Bring</a>
   <a class="nl block" style="--c:167 139 250" href="#education">Education</a>
   <a class="nl block" style="--c:96 165 250" href="#projects">Projects</a>
   <a class="nl block" style="--c:52 211 153" href="#skills">Skills</a>
-  <a class="nl block" style="--c:251 191 36" href="#testimonials">Endorsements</a>
   <a class="nl block" style="--c:244 114 182" href="#audit-simulation">Simulation</a>
   <a class="nl block" style="--c:45 212 191" href="#contact">Contact</a>
  </nav>
@@ -202,7 +200,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
     <div class="hero-kicker">
      <span class="dot" aria-hidden="true"></span>
-     <span>CA Articleship · Statutory Audit · Risk Advisory</span>
+     <span>CA Articleship · 2026</span>
     </div>
 
     <h1 class="hero-title">
@@ -232,10 +230,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
      </a>
     </div>
 
-    <div class="hero-meta" aria-label="Professional details">
-     <span class="meta-item"><i class="fa-solid fa-briefcase"></i> Statutory Audit · Risk Advisory</span>
-     <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Jajpur, Odisha · Open to Relocation</span>
-    </div>
    </div>
 
    <div class="hero-visual mx-auto">
@@ -300,56 +294,149 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </div>
 
-<section id="why-me" class="py-14 px-4 bg-slate-950/60 border-y border-slate-800/80">
+
+
+<section id="projects" class="py-14 px-4 bg-slate-900/40">
  <div class="max-w-7xl mx-auto">
 
   <div class="text-center mb-3">
-   <span class="chip">VALUE PROPOSITION</span>
+   <span class="chip">SELECTED WORK</span>
   </div>
 
-  <h2 class="h2">Why Choose Me?</h2>
-  <p class="sub">Core capabilities and practical tools I would bring to audit engagements.</p>
+  <h2 class="h2">Selected Projects</h2>
+  <p class="sub">Self-built work that demonstrates audit thinking, spreadsheet discipline and practical automation.</p>
 
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+  <div id="pj" class="grid md:grid-cols-2 gap-5">
+
+   <article class="card g md:col-span-2">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+     <span class="chip">Featured · Case Study</span>
+     <span class="text-xs font-mono text-slate-400">HTML · JavaScript</span>
+    </div>
+    <h3 class="text-2xl font-bold text-white mb-3">Interactive Audit Case Simulation</h3>
+    <p class="text-base text-slate-300 leading-relaxed">
+     Built an interactive five-case audit simulation covering audit evidence, assertions, internal controls, risk assessment and financial statement considerations, with instant feedback.
+    </p>
+    <div class="grid sm:grid-cols-2 gap-4 mt-5">
+     <div>
+      <span class="text-[10px] font-bold tracking-[.16em] uppercase text-slate-500">Skills</span>
+      <p class="text-sm text-slate-200 mt-1">HTML · JavaScript · Structured audit scenarios</p>
+     </div>
+     <div>
+      <span class="text-[10px] font-bold tracking-[.16em] uppercase text-slate-500">Relevance</span>
+      <p class="text-sm text-slate-200 mt-1">Demonstrates practical application of audit concepts rather than only listing them.</p>
+     </div>
+    </div>
+    <a href="#audit-simulation" class="btn-g mt-5 !py-2">Open the Audit Case Simulation <i class="fa-solid fa-arrow-right"></i></a>
+   </article>
+
+   <article class="card g">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+     <span class="chip">Case Study</span>
+     <span class="text-xs font-mono text-slate-400">Google Sheets · Apps Script · Gmail</span>
+    </div>
+    <h3 class="text-lg font-bold text-white mb-3">Invoice Tracker &amp; Follow-up Automation</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">
+     Built an accounts-receivable tracker that classifies invoices as Pending, Paid or Overdue, sends reminder emails and surfaces basic ageing information.
+    </p>
+    <div class="mt-4 space-y-2 text-sm">
+     <p><span class="text-slate-500">Skills · </span><span class="text-slate-200">Google Sheets · Apps Script · Gmail</span></p>
+     <p><span class="text-slate-500">Relevance · </span><span class="text-slate-200">Shows structured data handling, control-minded tracking and workflow automation.</span></p>
+    </div>
+   </article>
+
+   <article class="card g">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+     <span class="chip">Case Study</span>
+     <span class="text-xs font-mono text-slate-400">Google Apps Script</span>
+    </div>
+    <h3 class="text-lg font-bold text-white mb-3">Articleship Outreach Automation</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">
+     Built a Sheets mail-merge that prepares firm-specific emails, links a CV from Drive and logs sending status with basic throttling.
+    </p>
+    <div class="mt-4 space-y-2 text-sm">
+     <p><span class="text-slate-500">Skills · </span><span class="text-slate-200">Google Sheets · Apps Script · Drive</span></p>
+     <p><span class="text-slate-500">Relevance · </span><span class="text-slate-200">Demonstrates process thinking and disciplined use of automation for repetitive tasks.</span></p>
+    </div>
+   </article>
+
+   <article class="card g">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+     <span class="chip">Case Study</span>
+     <span class="text-xs font-mono text-slate-400">AI workflows</span>
+    </div>
+    <h3 class="text-lg font-bold text-white mb-3">AI &amp; Audit Research Workflow</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">
+     Designed structured prompts and NotebookLM workflows grounded in ICAI study material, with source checks used to improve the reliability of research outputs.
+    </p>
+    <div class="mt-4 space-y-2 text-sm">
+     <p><span class="text-slate-500">Skills · </span><span class="text-slate-200">ChatGPT · Claude · NotebookLM · Perplexity</span></p>
+     <p><span class="text-slate-500">Relevance · </span><span class="text-slate-200">Shows how AI is used as a research aid while keeping professional judgement and verification central.</span></p>
+    </div>
+   </article>
+
+   <article class="card g">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+     <span class="chip">Case Study</span>
+     <span class="text-xs font-mono text-slate-400">HTML · JavaScript · Apps Script · Sheets · GitHub</span>
+    </div>
+    <h3 class="text-lg font-bold text-white mb-3">This Portfolio Website</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">
+     Designed and built a recruiter-oriented portfolio on GitHub Pages, with an embedded CV viewer, contact workflow and moderated testimonial workflow.
+    </p>
+    <div class="mt-4 space-y-2 text-sm">
+     <p><span class="text-slate-500">Skills · </span><span class="text-slate-200">HTML · JavaScript · Apps Script · Google Sheets · GitHub Pages</span></p>
+     <p><span class="text-slate-500">Relevance · </span><span class="text-slate-200">Demonstrates ownership, communication and the ability to build an end-to-end professional digital asset.</span></p>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section id="what-i-bring" class="py-14 px-4 bg-slate-950/60 border-y border-slate-800/80">
+ <div class="max-w-7xl mx-auto">
+
+  <div class="text-center mb-3">
+   <span class="chip">PROFESSIONAL FOCUS</span>
+  </div>
+
+  <h2 class="h2">What I Bring</h2>
+  <p class="sub">A practical combination of audit fundamentals, technology skills and source-grounded research.</p>
+
+  <div class="grid md:grid-cols-3 gap-5">
 
    <div class="card g hover:border-cyan-500/40 transition duration-300">
     <div class="w-10 h-10 rounded-xl bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 text-lg mb-3">
      <i class="fa-solid fa-file-invoice-dollar"></i>
     </div>
-    <h3 class="text-lg font-bold text-white mb-1">Strong Audit Foundation</h3>
+    <h3 class="text-lg font-bold text-white mb-2">Audit &amp; Financial Reporting</h3>
     <p class="text-sm text-slate-300 leading-relaxed">
-     Academic grounding in ICAI Auditing Standards (SAs), Schedule III, Ind AS and Costing (exemption), with practical exposure through self-built audit simulations.
+     Coursework across Auditing Standards (SAs), Accounting Standards (AS), Schedule III, Ind AS and financial accounting, supported by an interactive audit-case simulation.
     </p>
-   </div>
-
-   <div class="card g hover:border-violet-500/40 transition duration-300">
-    <div class="w-10 h-10 rounded-xl bg-violet-950 border border-violet-800 flex items-center justify-center text-violet-400 text-lg mb-3">
-     <i class="fa-solid fa-bolt"></i>
-    </div>
-    <h3 class="text-lg font-bold text-white mb-1">Audit Automation</h3>
-    <p class="text-sm text-slate-300 leading-relaxed">
-     Self-built Excel VBA macros, Power Query and Google Apps Script tools that reduce manual effort on repetitive schedules and reconciliations.
-    </p>
+    <p class="text-xs text-cyan-300 mt-3 font-semibold">Evidence · Audit Case Simulation</p>
    </div>
 
    <div class="card g hover:border-emerald-500/40 transition duration-300">
     <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 text-lg mb-3">
-     <i class="fa-solid fa-brain"></i>
+     <i class="fa-solid fa-gears"></i>
     </div>
-    <h3 class="text-lg font-bold text-white mb-1">AI as a Research Aid</h3>
+    <h3 class="text-lg font-bold text-white mb-2">Technology &amp; Automation</h3>
     <p class="text-sm text-slate-300 leading-relaxed">
-     I use NotebookLM, Claude and ChatGPT, grounded in ICAI study material, to speed up circular and standards research. Client data is never entered into public AI tools.
+     Hands-on work with Excel, Power Query, VBA, Google Sheets and Apps Script to automate repetitive schedules, trackers and outreach workflows.
     </p>
+    <p class="text-xs text-emerald-300 mt-3 font-semibold">Evidence · Self-built automation projects</p>
    </div>
 
-   <div class="card g hover:border-amber-500/40 transition duration-300">
-    <div class="w-10 h-10 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 text-lg mb-3">
-     <i class="fa-solid fa-people-group"></i>
+   <div class="card g hover:border-violet-500/40 transition duration-300">
+    <div class="w-10 h-10 rounded-xl bg-violet-950 border border-violet-800 flex items-center justify-center text-violet-400 text-lg mb-3">
+     <i class="fa-solid fa-brain"></i>
     </div>
-    <h3 class="text-lg font-bold text-white mb-1">Proven Leadership</h3>
+    <h3 class="text-lg font-bold text-white mb-2">Research &amp; AI Workflows</h3>
     <p class="text-sm text-slate-300 leading-relaxed">
-     Cultural Coordinator and leader of a 13-member creative team at SSSIHL, delivering under strict deadlines with disciplined teamwork.
+     Structured use of ChatGPT, Claude, NotebookLM and Perplexity for source-grounded finance and audit research, with client-data privacy kept as a hard boundary.
     </p>
+    <p class="text-xs text-violet-300 mt-3 font-semibold">Evidence · AI &amp; Audit Research project</p>
    </div>
 
   </div>
@@ -389,7 +476,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
      <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside">
       <li>ICITSS (IT &amp; Orientation Course, ICAI): completed</li>
-      <li>AI in Finance (Level 1), CA Monk: ongoing</li>
+      <li>AI &amp; Finance Enthusiast (Level 1), CA Monk: ongoing</li>
      </ul>
     </div>
 
@@ -454,167 +541,6 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
-<section id="projects" class="py-14 px-4 bg-slate-900/40">
- <div class="max-w-7xl mx-auto">
-
-  <h2 class="h2">Selected Projects</h2>
-  <p class="sub">Self-built tools showing practical data handling.</p>
-
-  <div id="pj" class="grid md:grid-cols-3 gap-5">
-
-   <div class="card g md:col-span-3">
-    <div class="flex justify-between gap-2 mb-2">
-     <span class="chip">Featured · Self-built</span>
-     <span class="text-xs font-mono text-slate-400 text-right">HTML · JavaScript</span>
-    </div>
-
-    <h3 class="text-2xl font-bold text-white mb-3">Audit Voucher Simulation</h3>
-
-    <div class="md:grid md:grid-cols-2 md:gap-6 text-base text-slate-400">
-     <p>
-      <b class="text-slate-200">Problem:</b>
-      Voucher-checking concepts need interactive practice.
-     </p>
-
-     <p class="mt-2 md:mt-0">
-      <b class="text-slate-200">Built:</b>
-      The Audit Lab on this page: evaluate audit evidence, internal controls, financial statement items and risk indicators through interactive cases with instant feedback.
-     </p>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mt-4">
-     <span class="sk" style="--c:56 189 248">HTML</span>
-     <span class="sk" style="--c:56 189 248">JavaScript</span>
-    </div>
-
-    <a href="#audit-simulation" class="btn-g mt-4 !py-2">
-     Try it in the Audit Lab <i class="fa-solid fa-arrow-down"></i>
-    </a>
-   </div>
-
-   <div class="card g">
-    <div class="flex justify-between gap-2 mb-2">
-     <span class="chip">Self-built</span>
-     <span class="text-xs font-mono text-slate-400 text-right">Google Sheets · Apps Script · Gmail</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-white mb-3">
-     Invoice Tracker &amp; Follow-up Automation
-    </h3>
-
-    <div class="text-base text-slate-400">
-     <p>
-      <b class="text-slate-200">Problem:</b>
-      Manual tracking of overdue receivables leads to missed follow-ups.
-     </p>
-
-     <p class="mt-2">
-      <b class="text-slate-200">Built:</b>
-      An accounts-receivable tracker that classifies invoices (Pending / Paid / Overdue), sends reminder emails on due dates and shows basic ageing.
-     </p>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mt-4">
-     <span class="sk" style="--c:56 189 248">Google Sheets</span>
-     <span class="sk" style="--c:56 189 248">Apps Script</span>
-     <span class="sk" style="--c:56 189 248">Gmail</span>
-    </div>
-   </div>
-
-   <div class="card g">
-    <div class="flex justify-between gap-2 mb-2">
-     <span class="chip">Self-built</span>
-     <span class="text-xs font-mono text-slate-400 text-right">Google Apps Script</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-white mb-3">
-     Articleship Outreach Automation
-    </h3>
-
-    <div class="text-base text-slate-400">
-     <p>
-      <b class="text-slate-200">Problem:</b>
-      Emailing target CA firms one by one is slow and error-prone.
-     </p>
-
-     <p class="mt-2">
-      <b class="text-slate-200">Built:</b>
-      A Sheets mail-merge that fills firm details, links my CV from Drive and logs sent status with throttling.
-     </p>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mt-4">
-     <span class="sk" style="--c:56 189 248">Sheets</span>
-     <span class="sk" style="--c:56 189 248">Apps Script</span>
-     <span class="sk" style="--c:56 189 248">Drive</span>
-    </div>
-   </div>
-
-   <div class="card g">
-    <div class="flex justify-between gap-2 mb-2">
-     <span class="chip">Self-built</span>
-     <span class="text-xs font-mono text-slate-400 text-right">AI workflows</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-white mb-3">
-     AI in Finance &amp; Audit Research
-    </h3>
-
-    <div class="text-base text-slate-400">
-     <p>
-      <b class="text-slate-200">Problem:</b>
-      Generic AI answers on tax and audit are often vague.
-     </p>
-
-     <p class="mt-2">
-      <b class="text-slate-200">Built:</b>
-      Structured prompts and NotebookLM notebooks grounded in ICAI study material, plus cited-search checks of circulars.
-     </p>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mt-4">
-     <span class="sk" style="--c:56 189 248">Claude</span>
-     <span class="sk" style="--c:56 189 248">ChatGPT</span>
-     <span class="sk" style="--c:56 189 248">NotebookLM</span>
-     <span class="sk" style="--c:56 189 248">Perplexity</span>
-    </div>
-   </div>
-
-   <div class="card g md:col-span-3">
-    <div class="flex justify-between gap-2 mb-2">
-     <span class="chip">Self-built &middot; With AI tools</span>
-     <span class="text-xs font-mono text-slate-400 text-right">HTML &middot; JavaScript &middot; Apps Script &middot; Sheets &middot; GitHub</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-white mb-3">
-     This Portfolio Website
-    </h3>
-
-    <div class="md:grid md:grid-cols-2 md:gap-6 text-base text-slate-400">
-     <p>
-      <b class="text-slate-200">Problem:</b>
-      A recruiter should see my profile, projects and contact details in under a minute, and I wanted testimonials that I review before they go live.
-     </p>
-
-     <p class="mt-2 md:mt-0">
-      <b class="text-slate-200">Built:</b>
-      Designed and built with AI tools (Claude, ChatGPT). HTML and JavaScript front end hosted on GitHub Pages, contact form delivered to my inbox, and testimonials moderated through Google Apps Script and Google Sheets.
-     </p>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mt-4">
-     <span class="sk" style="--c:56 189 248">HTML</span>
-     <span class="sk" style="--c:56 189 248">JavaScript</span>
-     <span class="sk" style="--c:56 189 248">Google Apps Script</span>
-     <span class="sk" style="--c:56 189 248">Google Sheets</span>
-     <span class="sk" style="--c:56 189 248">GitHub Pages</span>
-     <span class="sk" style="--c:56 189 248">AI tools (Claude, ChatGPT)</span>
-    </div>
-   </div>
-
-  </div>
- </div>
-</section>
 
 <section id="skills" class="py-14 px-4">
  <div class="max-w-7xl mx-auto">
@@ -707,7 +633,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
-<section id="testimonials" class="py-14 px-4">
+<section id="testimonials" class="hidden py-14 px-4">
  <div class="max-w-5xl mx-auto">
 
   <h2 class="h2">Endorsements &amp; Testimonials</h2>
@@ -764,13 +690,18 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
+
+<!-- =========================================================
+     INTERACTIVE AUDIT LAB
+     ========================================================= -->
+
 <section id="audit-simulation" class="sec">
 
  <div class="text-center mb-3">
-  <span class="chip">INTERACTIVE AUDIT LAB · ICAI-BASED</span>
+  <span class="chip">INTERACTIVE AUDIT CASE · ICAI-BASED</span>
  </div>
 
- <h2 class="h2">Test Your Audit Instincts</h2>
+ <h2 class="h2">Interactive Audit Case Simulation</h2>
 
  <p class="text-xs text-amber-400 text-center mb-1">
   <i class="fa-solid fa-circle-info"></i>
@@ -839,11 +770,12 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
   <button onclick="resetGame()" class="mt-5 text-xs text-slate-400 hover:text-cyan-400">
    <i class="fa-solid fa-rotate-right"></i>
-   New Audit Lab
+   New Audit Case
   </button>
 
  </div>
 </section>
+
 
 <section id="contact" class="sec">
 
@@ -907,6 +839,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
    </div>
   </div>
 
+
   <form id="c-form" class="md:col-span-7 card sm:p-8 space-y-4">
 
    <input type="checkbox" id="c-hp" tabindex="-1" autocomplete="off" style="display:none">
@@ -952,6 +885,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </section>
 
+
 <section id="beyond" class="sec border-t border-slate-800/80">
 
  <h2 class="text-2xl font-bold text-white text-center mb-1">
@@ -989,6 +923,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 </section>
 
 </main>
+
 
 <!-- CV MODAL -->
 
@@ -1040,6 +975,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 </div>
 
+
 <!-- PHOTO LIGHTBOX -->
 
 <div id="lb"
@@ -1075,6 +1011,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
  </div>
 
 </div>
+
 
 <footer class="border-t border-slate-800/80 bg-slate-950/60 py-8 px-4 text-center">
 
@@ -1119,10 +1056,13 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 
 </footer>
 
+
 <script>
 
 const API="https://script.google.com/macros/s/AKfycbzeTOOZgTfdcpr5dlvksmSVycW6d38fmPQXkXh2x49M1IUVCiySzQlFZ3afpnKnK28p/exec";
+
 const KEY="8a381e8a-ee6f-4bc6-84ed-eca0f1bff185";
+
 const STATUS="CA Intermediate \u2014 Group 2 Cleared | Group 1 Result Awaited";
 
 const $=i=>document.getElementById(i);
@@ -1136,9 +1076,13 @@ const esc=s=>String(s==null?'':s)
   '"':'&quot;'
  }[c]));
 
-/* NAVIGATION */
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
 const NAV=[
- ['why-me'],
+ ['what-i-bring'],
  ['education'],
  ['projects'],
  ['skills'],
@@ -1166,12 +1110,14 @@ if('IntersectionObserver' in window){
  const io=new IntersectionObserver(
   es=>es.forEach(e=>{
    if(e.isIntersecting){
+
     document.querySelectorAll('.nl').forEach(a=>{
      a.classList.toggle(
       'on',
       a.getAttribute('href')==='#'+e.target.id
      );
     });
+
    }
   }),
   {
@@ -1186,17 +1132,27 @@ if('IntersectionObserver' in window){
 
 }
 
-/* CV MODAL */
+
+/* =========================================================
+   CV MODAL
+   ========================================================= */
+
 function openCV(){
+
  const f=$('cv-f');
+
  if(f.src.indexOf('resume.pdf')<0)
   f.src='resume.pdf';
+
  $('cv').classList.replace('hidden','flex');
+
  document.body.style.overflow='hidden';
 }
 
 function closeCV(){
+
  $('cv').classList.replace('flex','hidden');
+
  document.body.style.overflow='';
 }
 
@@ -1205,8 +1161,13 @@ $('cv').onclick=e=>{
   closeCV();
 };
 
-/* WEB3FORMS */
+
+/* =========================================================
+   WEB3FORMS
+   ========================================================= */
+
 async function send(f){
+
  const r=await fetch(
   'https://api.web3forms.com/submit',
   {
@@ -1225,12 +1186,16 @@ async function send(f){
  );
 
  const j=await r.json();
+
  if(!j.success)
   throw new Error(j.message);
 }
 
+
 $('c-form').onsubmit=async e=>{
+
  e.preventDefault();
+
  if($('c-hp').checked)
   return;
 
@@ -1238,11 +1203,14 @@ $('c-form').onsubmit=async e=>{
  const idle=b.innerHTML;
 
  $('c-err').classList.add('hidden');
+
  b.disabled=true;
+
  b.innerHTML=
   '<i class="fa-solid fa-spinner animate-spin"></i> Sending...';
 
  try{
+
   await send({
    subject:'Articleship Inquiry: '+$('c-sub').value.trim(),
    from_name:$('c-name').value.trim(),
@@ -1253,6 +1221,7 @@ $('c-form').onsubmit=async e=>{
 
   b.innerHTML=
    '<i class="fa-solid fa-check"></i> Message sent';
+
   e.target.reset();
 
   setTimeout(()=>{
@@ -1261,52 +1230,81 @@ $('c-form').onsubmit=async e=>{
   },4000);
 
  }catch(x){
+
   $('c-err').classList.remove('hidden');
+
   b.innerHTML=idle;
+
   b.disabled=false;
  }
+
 };
 
-/* TESTIMONIALS */
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
 async function loadT(){
+
  const g=$('t-grid');
+
  try{
+
   const d=await(
    await fetch(API)
   ).json();
 
-  if(!Array.isArray(d)||!d.length){
+  if(!Array.isArray(d)||d.length<2){
+
    g.classList.add('hidden');
+
    return;
   }
 
+  $('testimonials').classList.remove('hidden');
   g.classList.remove('hidden');
+
   g.innerHTML=d.map(t=>`
+
    <div class="card">
+
     <p class="text-base text-slate-300 italic">
      &ldquo;${esc(t.testimonial)}&rdquo;
     </p>
+
     <div class="mt-4 pt-3 border-t border-slate-800">
+
      <b class="text-sm text-white">
       ${esc(t.name)}
      </b>
+
      <div class="text-sm text-slate-400">
       ${esc(t.organization)}
      </div>
+
      <span class="chip mt-2 inline-block">
       ${esc(t.relation)}
      </span>
+
     </div>
+
    </div>
+
   `).join('');
 
  }catch(e){
+
   g.classList.add('hidden');
+
  }
+
 }
 
 $('t-form').onsubmit=async e=>{
+
  e.preventDefault();
+
  const b=$('t-btn');
  const m=$('t-msg');
 
@@ -1316,6 +1314,7 @@ $('t-form').onsubmit=async e=>{
  const v=i=>$(i).value.trim();
 
  try{
+
   const p={
    subject:'[Testimonial Submission] '+v('t-name'),
    from_name:v('t-name'),
@@ -1333,31 +1332,69 @@ Testimonial: ${v('t-txt')}
 ###END###`;
 
   await send(p);
+
   e.target.reset();
+
   m.textContent=
    'Thank you. Your testimonial will appear after review.';
 
  }catch(x){
+
   m.textContent=
    'Could not send right now. Please try again later.';
+
  }
 
  b.disabled=false;
+
 };
 
 loadT();
 
 $('t-open').onclick=()=>{
+
  const f=$('t-form');
+
  f.classList.toggle('hidden');
+
  $('t-open').setAttribute(
   'aria-expanded',
   !f.classList.contains('hidden')
  );
+
 };
 
-/* INTERACTIVE AUDIT LAB */
+
+/* =========================================================
+   INTERACTIVE AUDIT LAB
+   ========================================================= */
+
+/*
+  Interactive Audit Case question bank.
+
+  The cases are adapted/paraphrased from ICAI Intermediate
+  Paper 5: Auditing and Ethics concepts.
+
+  Actions:
+
+  APPROVE
+  = Evidence/control is satisfactory.
+
+  FLAG
+  = An audit exception, deficiency, risk or potential
+    misstatement has been identified.
+
+  HOLD
+  = Evidence is insufficient or unreliable and additional
+    audit procedures are required.
+
+  The game displays 5 randomly selected cases from the
+  12-case question bank per session.
+*/
+
+
 const QUESTION_BANK=[
+
  {
   i:'AUD-001',
   t:'Consignment Inventory',
@@ -1371,6 +1408,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the case. Inventory held on behalf of another party may not belong to the entity. The auditor should verify the entity’s rights and obligations before accepting it as its inventory.'
  },
+
+
  {
   i:'AUD-002',
   t:'Depreciation — Ready for Use',
@@ -1384,6 +1423,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the treatment. The machinery was ready for use in April. The fact that production actually began later does not by itself justify postponing depreciation until October.'
  },
+
+
  {
   i:'AUD-003',
   t:'External Confirmation Process',
@@ -1397,6 +1438,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the arrangement. The external auditor should retain control over the confirmation process, including determining the information to be confirmed, selecting the confirming parties, sending requests and receiving responses.'
  },
+
+
  {
   i:'AUD-004',
   t:'Disputed Customer Balance',
@@ -1410,6 +1453,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the matter. Management’s refusal to obtain confirmation because of a customer dispute does not remove the auditor’s need to obtain sufficient appropriate audit evidence. The auditor should evaluate the reason and consider alternative procedures where necessary.'
  },
+
+
  {
   i:'AUD-005',
   t:'Unrecorded Litigation',
@@ -1423,6 +1468,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the matter. Potential material litigation can affect completeness and disclosure of liabilities. Direct communication with the entity’s external legal counsel may provide relevant audit evidence.'
  },
+
+
  {
   i:'AUD-006',
   t:'Revenue Analytical Procedures',
@@ -1436,6 +1483,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag for investigation. An unexplained movement in revenue compared with relevant operational information is an analytical-procedure indicator requiring the auditor to investigate the unexpected relationship.'
  },
+
+
  {
   i:'AUD-007',
   t:'Cash Deposit Control',
@@ -1449,6 +1498,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the control deficiency. A control that is required but is not operating consistently, combined with inadequate supervisory monitoring, increases the risk of material misstatement or loss.'
  },
+
+
  {
   i:'AUD-008',
   t:'Perishable Inventory Monitoring',
@@ -1462,6 +1513,8 @@ const QUESTION_BANK=[
   a:'APPROVE',
   x:'Approve the control result. The auditor has tested the relevant control and found that it operated as designed. No exception is indicated by the facts provided.'
  },
+
+
  {
   i:'AUD-009',
   t:'Audit Documentation',
@@ -1475,6 +1528,8 @@ const QUESTION_BANK=[
   a:'FLAG',
   x:'Flag the documentation deficiency. Significant matters, relevant discussions and the auditor’s conclusions should be documented sufficiently to demonstrate how the audit was performed and concluded.'
  },
+
+
  {
   i:'AUD-010',
   t:'Trade Payables Ageing',
@@ -1488,6 +1543,8 @@ const QUESTION_BANK=[
   a:'APPROVE',
   x:'Approve the procedure result. Reperformance of the relevant control produced the expected result and no exception was identified.'
  },
+
+
  {
   i:'AUD-011',
   t:'Bank Reconciliation — Oral Inquiry',
@@ -1501,6 +1558,8 @@ const QUESTION_BANK=[
   a:'HOLD',
   x:'Hold for further procedures. Oral inquiry alone generally does not provide sufficient evidence to establish that a control operated effectively. The auditor should obtain additional evidence, such as inspection or reperformance.'
  },
+
+
  {
   i:'AUD-012',
   t:'Unreliable Confirmation Response',
@@ -1514,49 +1573,83 @@ const QUESTION_BANK=[
   a:'HOLD',
   x:'Hold for further procedures. An unreliable confirmation response does not provide sufficient appropriate evidence by itself. The auditor should evaluate the reliability issue and perform appropriate alternative or additional procedures.'
  }
+
 ];
+
+
+/*
+  Five cases are selected randomly from the twelve-case bank.
+
+  This keeps the game concise for recruiters while providing
+  variation whenever the visitor starts a new session.
+*/
 
 let V=[];
 let vi=0;
 let sc=0;
 let busy=false;
 
+
 function shuffle(arr){
+
  return [...arr].sort(
   ()=>Math.random()-0.5
  );
+
 }
 
+
 function startGame(){
+
  V=shuffle(QUESTION_BANK).slice(0,5);
+
  vi=0;
  sc=0;
  busy=false;
+
  $('g-s').textContent='0';
+
  lv();
+
 }
 
+
 function lv(){
+
  const f=$('g-f');
- f.className='hidden p-3.5 rounded-xl text-sm border';
+
+ f.className=
+  'hidden p-3.5 rounded-xl text-sm border';
+
  f.style.boxShadow='';
+
  busy=false;
 
  document.querySelectorAll('.vb').forEach(b=>{
   b.disabled=vi>=V.length;
  });
 
+
  if(vi>=V.length){
+
   $('v-t').textContent='Audit Lab Complete';
-  $('v-i').textContent='DONE';$('v-d').innerHTML=`
+
+  $('v-i').textContent='DONE';
+
+  $('v-d').innerHTML=`
+
    <div class="text-center py-6">
+
     <div class="text-2xl font-bold text-white mb-2">
      Final Score
     </div>
+
     <div class="text-4xl font-extrabold gt">
      ${sc} / 100
     </div>
+
     <div class="text-sm text-slate-400 mt-3">
+
      ${
       sc===100
        ? 'Excellent audit judgement.'
@@ -1566,40 +1659,67 @@ function lv(){
        ? 'Good foundation — keep strengthening audit evidence and risk assessment.'
        : 'Review audit evidence, internal controls and financial statement assertions.'
      }
+
     </div>
+
    </div>
+
   `;
+
   $('g-p').textContent='Complete';
+
   return;
  }
 
+
  const v=V[vi];
+
  $('v-t').textContent=v.t;
+
  $('v-i').textContent=v.i;
+
  $('v-d').innerHTML=
   v.d.map(x=>`<div>${x}</div>`).join('');
+
  $('g-p').textContent=
   `${vi+1} / ${V.length}`;
+
 }
 
+
 document.querySelectorAll('.vb').forEach(b=>{
+
  b.onclick=()=>{
+
   if(busy||vi>=V.length)
    return;
 
   busy=true;
+
   const v=V[vi];
-  const ok=b.dataset.a===v.a;
+
+  const ok=
+   b.dataset.a===v.a;
+
   const f=$('g-f');
 
+
   if(ok){
+
    sc+=20;
+
    const e2=$('g-s');
+
    e2.textContent=sc;
+
    e2.classList.remove('pop');
+
    void e2.offsetWidth;
+
    e2.classList.add('pop');
+
   }
+
 
   f.className=
    'p-3.5 rounded-xl text-sm border '+
@@ -1609,65 +1729,94 @@ document.querySelectorAll('.vb').forEach(b=>{
      : 'bg-red-950/80 border-red-500 text-red-200'
    );
 
+
   f.style.boxShadow=
    ok
     ? '0 0 10px rgba(16,185,129,.3)'
     : '0 0 10px rgba(239,68,68,.3)';
+
 
   f.innerHTML=`
    <b>${ok?'Correct.':'Missed.'}</b>
    ${v.x}
   `;
 
+
   setTimeout(()=>{
+
    vi++;
+
    lv();
+
   },3000);
+
  };
+
 });
 
+
 function resetGame(){
+
  startGame();
+
 }
 
 startGame();
 
-/* SYNTHESISED MUSIC PADS */
+
+/* =========================================================
+   SYNTHESISED MUSIC PADS
+   ========================================================= */
+
 $('pads').innerHTML=[
+
  ['C4',261.63,'167 139 250'],
  ['E4',329.63,'34 211 238'],
  ['G4',392,'96 165 250'],
  ['C5',523.25,'52 211 153']
+
 ].map(n=>`
+
  <button
   class="pad"
   style="--c:${n[2]}"
   data-f="${n[1]}"
   data-n="${n[0]}"
   data-c="${n[2].replace(/ /g,',')}">
+
   <span class="block text-lg">
    ${n[0]}
   </span>
+
   <span class="block text-xs font-mono opacity-70">
    ${Math.round(n[1])} Hz
   </span>
+
  </button>
+
 `).join('');
+
 
 let ac;
 
+
 $('pads').onclick=e=>{
+
  const b=e.target.closest('button');
+
  const f=b&&+b.dataset.f;
+
  if(!f)return;
 
  b.classList.add('hit');
+
  setTimeout(
   ()=>b.classList.remove('hit'),
   350
  );
 
  try{
+
   ac=ac||
    new(
     window.AudioContext||
@@ -1675,198 +1824,491 @@ $('pads').onclick=e=>{
    )();
 
   ac.resume();
+
   const o=ac.createOscillator();
+
   const g=ac.createGain();
 
   o.frequency.value=f;
-  g.gain.setValueAtTime(.25,ac.currentTime);
-  g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+1);
+
+  g.gain.setValueAtTime(
+   .25,
+   ac.currentTime
+  );
+
+  g.gain.exponentialRampToValueAtTime(
+   .0001,
+   ac.currentTime+1
+  );
 
   o.connect(g);
+
   g.connect(ac.destination);
+
   o.start();
+
   o.stop(ac.currentTime+1);
 
-  $('syn').textContent='Playing '+b.dataset.n;
-  $('syn').style.color='rgb('+b.dataset.c+')';
+  $('syn').textContent=
+   'Playing '+b.dataset.n;
+
+  $('syn').style.color=
+   'rgb('+b.dataset.c+')';
+
  }catch(x){}
+
 };
 
-/* PHOTOS + LIGHTBOX */
+
+/* =========================================================
+   PHOTOS + LIGHTBOX
+   ========================================================= */
+
 function probe(b,cb){
- const x=['jpg','jpeg','png','webp'];
+
+ const x=[
+  'jpg',
+  'jpeg',
+  'png',
+  'webp'
+ ];
+
  let i=0;
+
  (function n(){
+
   if(i>=x.length)
    return cb(null);
+
   const m=new Image();
-  m.onload=()=>cb(b+'.'+x[i]);
+
+  m.onload=()=>cb(
+   b+'.'+x[i]
+  );
+
   m.onerror=()=>{
    i++;
    n();
   };
-  m.src=b+'.'+x[i];
+
+  m.src=
+   b+'.'+x[i];
+
  })();
+
 }
+
 
 const G=[];
 let li=0;
 
+
 function showLb(){
- $('lb-i').src=G[li];$('lb-c').textContent=`${li+1} / ${G.length}`;
- $('lb-p').style.display=$('lb-n').style.display=
+
+ $('lb-i').src=G[li];
+
+ $('lb-c').textContent=
+  `${li+1} / ${G.length}`;
+
+ $('lb-p').style.display=
+ $('lb-n').style.display=
   G.length>1?'':'none';
+
 }
+
 
 function openLb(i){
+
  li=i;
+
  showLb();
- $('lb').classList.replace('hidden','flex');
+
+ $('lb').classList.replace(
+  'hidden',
+  'flex'
+ );
+
  document.body.style.overflow='hidden';
+
 }
+
 
 function closeLb(){
- $('lb').classList.replace('flex','hidden');
+
+ $('lb').classList.replace(
+  'flex',
+  'hidden'
+ );
+
  document.body.style.overflow='';
+
 }
+
 
 function mv(d){
- li=(li+d+G.length)%G.length;
+
+ li=
+  (li+d+G.length)%G.length;
+
  showLb();
+
 }
 
+
 $('lb-x').onclick=closeLb;
-$('lb-p').onclick=e=>{e.stopPropagation();mv(-1);};
-$('lb-n').onclick=e=>{e.stopPropagation();mv(1);};$('lb').onclick=e=>{if(e.target.id==='lb')closeLb();};
+
+$('lb-p').onclick=e=>{
+ e.stopPropagation();
+ mv(-1);
+};
+
+$('lb-n').onclick=e=>{
+ e.stopPropagation();
+ mv(1);
+};
+
+$('lb').onclick=e=>{
+ if(e.target.id==='lb')
+  closeLb();
+};
+
 
 addEventListener('keydown',e=>{
+
  if(e.key==='Escape'){
+
   closeCV();
+
   closeLb();
+
  }
+
  if(!$('lb').classList.contains('hidden')){
-  if(e.key==='ArrowLeft')mv(-1);
-  if(e.key==='ArrowRight')mv(1);
+
+  if(e.key==='ArrowLeft')
+   mv(-1);
+
+  if(e.key==='ArrowRight')
+   mv(1);
+
  }
+
 });
+
 
 let tx=null;
 
-$('lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});$('lb').addEventListener('touchend',e=>{
- if(tx===null)return;
- const d=e.changedTouches[0].clientX-tx;
- tx=null;
- if(Math.abs(d)>50)mv(d<0?1:-1);
-});
 
-probe('images/profile',s=>{
- if(!s)return;
- ['av3'].forEach(i=>{
-  if($(i)){$(i).src=s;
-   $(i).classList.remove('hidden');
-   if($(i+'f'))$(i+'f').classList.add('hidden');
-  }
- });
-});
+$('lb').addEventListener(
+ 'touchstart',
+ e=>tx=e.touches[0].clientX,
+ {passive:true}
+);
+
+
+$('lb').addEventListener(
+ 'touchend',
+ e=>{
+
+  if(tx===null)
+   return;
+
+  const d=
+   e.changedTouches[0].clientX-tx;
+
+  tx=null;
+
+  if(Math.abs(d)>50)
+   mv(d<0?1:-1);
+
+ }
+);
+
+
+probe(
+ 'images/profile',
+ s=>{
+
+  if(!s)return;
+
+  ['av3'].forEach(i=>{
+
+   if($(i)){
+
+    $(i).src=s;
+
+    $(i).classList.remove('hidden');
+
+    if($(i+'f'))
+     $(i+'f').classList.add('hidden');
+
+   }
+
+  });
+
+ }
+);
+
 
 (function g(n){
- if(n>60)return;
- probe('images/gallery/'+n,s=>{
-  if(!s)return;
-  $('gal').classList.remove('hidden');
-  const idx=G.push(s)-1;
-  const a=document.createElement('a');
-  a.href='#';
-  a.setAttribute('aria-label','Open photo '+(idx+1));
-  a.className='card !p-0 overflow-hidden aspect-[4/3] block';
-  a.onclick=e=>{
-   e.preventDefault();
-   openLb(idx);
-  };
-  a.innerHTML=`
-   <img src="${s}" alt="Gallery photo ${idx+1}" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-  `;
-  $('gal-g').appendChild(a);
-  g(n+1);
- });
+
+ if(n>60)
+  return;
+
+ probe(
+  'images/gallery/'+n,
+  s=>{
+
+   if(!s)
+    return;
+
+   $('gal').classList.remove('hidden');
+
+   const idx=
+    G.push(s)-1;
+
+   const a=
+    document.createElement('a');
+
+   a.href='#';
+
+   a.setAttribute(
+    'aria-label',
+    'Open photo '+(idx+1)
+   );
+
+   a.className=
+    'card !p-0 overflow-hidden aspect-[4/3] block';
+
+   a.onclick=e=>{
+
+    e.preventDefault();
+
+    openLb(idx);
+
+   };
+
+   a.innerHTML=`
+
+    <img
+     src="${s}"
+     alt="Gallery photo ${idx+1}"
+     loading="lazy"
+     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+   `;
+
+   $('gal-g').appendChild(a);
+
+   g(n+1);
+
+  }
+ );
+
 })(1);
 
-/* HERO PARTICLES */
+
+/* =========================================================
+   HERO PARTICLES
+   ========================================================= */
+
 (function(){
+
  const c=$('pc');
+
  const x=c.getContext('2d');
- if(matchMedia('(prefers-reduced-motion:reduce)').matches)
+
+ if(
+  matchMedia(
+   '(prefers-reduced-motion:reduce)'
+  ).matches
+ )
   return;
 
  let P=[];
 
+
  function rs(){
+
   c.width=innerWidth;
-  c.height=Math.max(c.parentElement.offsetHeight,400);
-  P=Array.from(
-   {length: innerWidth<640 ? 30 : Math.min(Math.ceil((innerWidth/20|0)*1.56), 65)},
-   ()=>({
-    x:Math.random()*c.width,
-    y:Math.random()*c.height,
-    vx:(Math.random()-.5)*.6,
-    vy:(Math.random()-.5)*.6
-   })
-  );
+
+  c.height=
+   Math.max(
+    c.parentElement.offsetHeight,
+    400
+   );
+
+  P=
+   Array.from(
+    {
+     length:
+      innerWidth<640
+       ?30
+       :Math.min(
+        Math.ceil((innerWidth/20|0)*1.56),
+        65
+       )
+    },
+    ()=>({
+     x:Math.random()*c.width,
+     y:Math.random()*c.height,
+     vx:(Math.random()-.5)*.6,
+     vy:(Math.random()-.5)*.6
+    })
+   );
+
  }
 
- addEventListener('resize',rs);
+
+ addEventListener(
+  'resize',
+  rs
+ );
+
  rs();
 
+
  (function f(){
-  x.clearRect(0,0,c.width,c.height);
+
+  x.clearRect(
+   0,
+   0,
+   c.width,
+   c.height
+  );
+
+
   P.forEach((p,i)=>{
+
    p.x+=p.vx;
+
    p.y+=p.vy;
 
-   if(p.x<0||p.x>c.width)p.vx*=-1;
-   if(p.y<0||p.y>c.height)p.vy*=-1;
+
+   if(
+    p.x<0||
+    p.x>c.width
+   )
+    p.vx*=-1;
+
+
+   if(
+    p.y<0||
+    p.y>c.height
+   )
+    p.vy*=-1;
+
 
    x.fillStyle='#38bdf8';
+
    x.beginPath();
-   x.arc(p.x,p.y,1.8,0,6.3);
+
+   x.arc(
+    p.x,
+    p.y,
+    1.8,
+    0,
+    6.3
+   );
+
    x.fill();
 
-   for(let j=i+1;j<P.length;j++){
-    const d=Math.hypot(p.x-P[j].x,p.y-P[j].y);
+
+   for(
+    let j=i+1;
+    j<P.length;
+    j++
+   ){
+
+    const d=
+     Math.hypot(
+      p.x-P[j].x,
+      p.y-P[j].y
+     );
+
     if(d<90){
-     x.strokeStyle=`rgba(56,189,248,${1-d/90})`;
+
+     x.strokeStyle=
+      `rgba(56,189,248,${1-d/90})`;
+
      x.lineWidth=.3;
+
      x.beginPath();
-     x.moveTo(p.x,p.y);
-     x.lineTo(P[j].x,P[j].y);
+
+     x.moveTo(
+      p.x,
+      p.y
+     );
+
+     x.lineTo(
+      P[j].x,
+      P[j].y
+     );
+
      x.stroke();
+
     }
+
    }
+
   });
 
+
   requestAnimationFrame(f);
+
  })();
+
 })();
 
-/* SCROLL REVEAL */
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
 (function(){
- if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)
+
+ if(
+  !('IntersectionObserver' in window)||
+  matchMedia(
+   '(prefers-reduced-motion:reduce)'
+  ).matches
+ )
   return;
 
- const els=[...document.querySelectorAll('main section:not(#hero) :is(.h2,.sub,.card:not(.vb),#snap)')];
+
+ const els=[
+  ...document.querySelectorAll(
+   'main section:not(#hero) :is(.h2,.sub,.card:not(.vb),#snap)'
+  )
+ ];
+
+
  const cnt=new Map();
+
 
  const io=new IntersectionObserver(
   es=>es.forEach(x=>{
-   if(!x.isIntersecting)return;
+
+   if(!x.isIntersecting)
+    return;
+
    const el=x.target;
+
    io.unobserve(el);
+
    el.classList.add('in');
 
    setTimeout(()=>{
-    el.classList.remove('rv','in');
+
+    el.classList.remove(
+     'rv',
+     'in'
+    );
+
     el.style.removeProperty('--d');
+
    },1500);
+
   }),
   {
    threshold:.12,
@@ -1874,16 +2316,29 @@ probe('images/profile',s=>{
   }
  );
 
+
  els.forEach(el=>{
+
   const k=el.parentElement;
+
   const i=cnt.get(k)||0;
+
   cnt.set(k,i+1);
-  el.style.setProperty('--d',Math.min(i,6)*90+'ms');
+
+  el.style.setProperty(
+   '--d',
+   Math.min(i,6)*90+'ms'
+  );
+
   el.classList.add('rv');
+
   io.observe(el);
+
  });
 
+
  document.documentElement.classList.add('js');
+
 })();
 
 </script>
