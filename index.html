@@ -82,6 +82,38 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 .hero-proof-item .label{@apply block text-[10px] sm:text-[11px] font-bold tracking-[.16em] uppercase text-slate-500 mb-1.5}
 .hero-proof-item .value{@apply block text-sm sm:text-base font-semibold text-slate-200}
 
+.edu-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:3rem;align-items:start}
+.edu-heading{@apply text-sm font-bold tracking-[.16em] uppercase text-slate-500 mb-5}
+.edu-timeline{position:relative;padding-left:2.25rem}
+.edu-timeline::before{content:"";position:absolute;left:.45rem;top:.5rem;bottom:.5rem;width:1px;background:linear-gradient(180deg,rgba(56,189,248,.7),rgba(148,163,184,.16),rgba(192,132,252,.5))}
+.edu-item{position:relative;padding-bottom:2.15rem}
+.edu-item:last-child{padding-bottom:.25rem}
+.edu-dot{position:absolute;left:-2.05rem;top:.2rem;width:.85rem;height:.85rem;border-radius:999px;background:#0f172a;border:2px solid #38bdf8;box-shadow:0 0 0 5px rgba(56,189,248,.08),0 0 16px rgba(56,189,248,.2)}
+.edu-year{@apply text-xs font-bold tracking-[.14em] uppercase text-cyan-400 mb-1}
+.edu-degree{@apply text-lg font-bold text-white}
+.edu-school{@apply text-sm text-violet-300 mt-1}
+.edu-detail{@apply text-sm text-slate-400 mt-1}
+.edu-plates{display:flex;flex-direction:column;gap:1rem}
+.edu-plate{@apply card g;position:relative;overflow:hidden}
+.edu-plate::before{content:"";position:absolute;left:0;top:1rem;bottom:1rem;width:2px;background:linear-gradient(180deg,rgba(56,189,248,.9),rgba(129,140,248,.28));border-radius:999px}
+.edu-plate.featured::before{background:linear-gradient(180deg,rgba(56,189,248,1),rgba(192,132,252,.85))}
+.edu-plate .plate-inner{padding-left:.55rem}
+.edu-plate .plate-title{@apply text-lg font-bold text-white}
+.edu-plate .plate-copy{@apply text-sm text-slate-300 leading-relaxed mt-2}
+.edu-plate .plate-meta{@apply text-xs text-slate-500 mt-2}
+.edu-badge-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+ .edu-badge{@apply text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-950/60 border border-slate-700 text-slate-300}
+.cert-list{display:flex;flex-direction:column}
+.cert-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+.cert-row+.cert-row{border-top:1px solid rgba(148,163,184,.12)}
+.cert-status{@apply shrink-0 text-[11px] font-bold uppercase tracking-[.12em] px-2.5 py-1 rounded-full border}
+.cert-status.completed{color:#6ee7b7;background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.25)}
+.cert-status.ongoing{color:#fcd34d;background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25)}
+@media (max-width: 767px){
+ .edu-layout{grid-template-columns:1fr;gap:2.25rem}
+ .edu-heading{margin-bottom:1rem}
+}
+
 @media (max-width: 767px){
   .hero-title{font-size:clamp(3.15rem,15vw,5rem);line-height:.95}
   .hero-visual{max-width:256px}
@@ -352,100 +384,141 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif}
 <section id="education" class="py-14 px-4 bg-slate-950/40">
  <div class="max-w-7xl mx-auto">
 
-  <h2 class="h2">Education &amp; Credentials</h2>
-  <p class="sub">Academic record and responsibilities.</p>
+  <div class="text-center mb-8">
+   <span class="chip">EDUCATION &amp; DEVELOPMENT</span>
+  </div>
 
-  <div class="grid md:grid-cols-2 gap-6">
+  <h2 class="h2">Education &amp; Development</h2>
+  <p class="sub">Academic journey and professional development on the left. Co-curricular experience on the right.</p>
 
-   <div class="space-y-6">
+  <div class="edu-layout">
 
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">ICAI</span>
-      <span class="text-xs text-slate-400">CA Intermediate</span>
+   <!-- LEFT: Academic Journey + Certifications -->
+   <div>
+    <div class="edu-heading">Academic Journey</div>
+
+    <div class="edu-timeline">
+
+     <div class="edu-item">
+      <span class="edu-dot" aria-hidden="true"></span>
+      <div class="edu-year">2018</div>
+      <div class="edu-degree">Class X · ICSE</div>
+      <div class="edu-school">St. Mary's School, Jajpur Road, Odisha</div>
+      <div class="edu-detail">79.6%</div>
      </div>
 
-     <h4 class="text-lg font-bold text-white mb-2">
-      CA Intermediate &mdash; Group 2 Cleared | Group 1 Result Awaited
-     </h4>
-
-     <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside">
-      <li>Group 2 passed with exemption in Costing</li>
-      <li>Group 1 appeared; result awaited</li>
-     </ul>
-    </div>
-
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">Certifications</span>
+     <div class="edu-item">
+      <span class="edu-dot" aria-hidden="true"></span>
+      <div class="edu-year">2020</div>
+      <div class="edu-degree">Class XII · CBSE</div>
+      <div class="edu-school">Mothers Public School, Bhubaneswar, Odisha</div>
+      <div class="edu-detail">83.2%</div>
      </div>
 
-     <ul class="text-sm text-slate-300 space-y-1.5 list-disc list-inside">
-      <li>ICITSS (IT &amp; Orientation Course, ICAI): completed</li>
-      <li>AI in Finance (Level 1), CA Monk: ongoing</li>
-     </ul>
-    </div>
-
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">CGPA 7.0 / 10</span>
-      <span class="text-xs text-slate-400">2021 &ndash; 2024</span>
+     <div class="edu-item">
+      <span class="edu-dot" aria-hidden="true"></span>
+      <div class="edu-year">2021–2024</div>
+      <div class="edu-degree">B.Com (Hons.)</div>
+      <div class="edu-school">Sri Sathya Sai Institute of Higher Learning, Puttaparthi</div>
+      <div class="edu-detail">CGPA 7.0 / 10</div>
      </div>
 
-     <h4 class="text-lg font-bold text-white">B.Com (Hons.)</h4>
-     <p class="text-sm text-violet-300 mb-2">
-      Sri Sathya Sai Institute of Higher Learning, Puttaparthi
-     </p>
+     <div class="edu-item">
+      <span class="edu-dot" aria-hidden="true"></span>
+      <div class="edu-year">2024–Ongoing</div>
+      <div class="edu-degree">CA Intermediate</div>
+      <div class="edu-school">Institute of Chartered Accountants of India (ICAI)</div>
+      <div class="edu-detail space-y-1">
+       <div><strong class="text-slate-200">Group 2:</strong> Cleared · Costing Exemption · 71 Marks</div>
+       <div><strong class="text-slate-200">Group 1:</strong> Appeared · Result Awaited</div>
+      </div>
+     </div>
 
-     <p class="text-sm text-slate-300 mt-3 pt-3 border-t border-slate-800">
-      Class XII (CBSE), Mothers Public School, Bhubaneswar, Odisha &middot; 2020<br>
-      Class X (ICSE), St. Mary's School, Jajpur Road, Odisha &middot; 2018
-     </p>
     </div>
 
+    <div class="edu-heading mt-8">Certifications</div>
+
+    <article class="edu-plate">
+     <div class="plate-inner">
+      <div class="flex items-center justify-between gap-3 mb-3">
+       <span class="chip">CERTIFICATIONS</span>
+       <span class="text-xs text-slate-500">3 items</span>
+      </div>
+
+      <div class="cert-list">
+       <div class="cert-row">
+        <div>
+         <div class="plate-title text-base">ICITSS IT Training</div>
+         <p class="plate-copy !mt-1">Information Technology Training</p>
+        </div>
+        <span class="cert-status completed">Completed</span>
+       </div>
+
+       <div class="cert-row">
+        <div>
+         <div class="plate-title text-base">ICITSS OC Training</div>
+         <p class="plate-copy !mt-1">Orientation Course Training</p>
+        </div>
+        <span class="cert-status completed">Completed</span>
+       </div>
+
+       <div class="cert-row">
+        <div>
+         <div class="plate-title text-base">AI in Finance (Level 1), CA Monk</div>
+         <p class="plate-copy !mt-1">AI in Finance learning programme</p>
+        </div>
+        <span class="cert-status ongoing">Ongoing</span>
+       </div>
+      </div>
+     </div>
+    </article>
    </div>
 
-   <div class="space-y-6">
+   <!-- RIGHT: Co-curriculars -->
+   <div>
+    <div class="edu-heading">Co-curriculars</div>
 
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">Leadership</span>
-      <span class="text-xs text-slate-400">SSSIHL</span>
-     </div>
+    <div class="edu-plates">
 
-     <h4 class="text-lg font-bold text-white">Cultural Coordinator</h4>
-     <p class="text-sm text-slate-300 mt-1">
-      Directed logistics and schedules across departments for large university cultural events, delivered without delays.
-     </p>
+     <article class="edu-plate">
+      <div class="plate-inner">
+       <div class="flex items-center justify-between gap-3 mb-2">
+        <span class="chip">LEADERSHIP</span>
+        <span class="text-xs text-slate-500">SSSIHL</span>
+       </div>
+       <div class="plate-title">Cultural Coordinator</div>
+       <p class="plate-copy">Coordinated logistics and schedules across departments for university cultural events and led a 13-member creative team.</p>
+      </div>
+     </article>
+
+     <article class="edu-plate">
+      <div class="plate-inner">
+       <div class="flex items-center justify-between gap-3 mb-2">
+        <span class="chip">MUSIC &amp; ARTS</span>
+        <span class="text-xs text-slate-500">Brindavan Studio</span>
+       </div>
+       <div class="plate-title">Leader, Brindavan Studio</div>
+       <p class="plate-copy">Led a 13-member team that conceptualised, composed and managed live audio for student theatre at the annual sports and cultural meet.</p>
+      </div>
+     </article>
+
+     <article class="edu-plate">
+      <div class="plate-inner">
+       <div class="flex items-center justify-between gap-3 mb-2">
+        <span class="chip">SERVICE</span>
+        <span class="text-xs text-slate-500">Volunteer</span>
+       </div>
+       <div class="plate-title">Sri Sathya Sai Seva Organisation</div>
+       <p class="plate-copy">Volunteered in logistics for large medical camps, rural development initiatives and community service activities.</p>
+      </div>
+     </article>
+
     </div>
-
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">Music &amp; Arts</span>
-      <span class="text-xs text-slate-400">Brindavan Studio</span>
-     </div>
-
-     <h4 class="text-lg font-bold text-white">Leader, Brindavan Studio</h4>
-     <p class="text-sm text-slate-300 mt-1">
-      Led a 13-member team that conceptualised, composed and managed live audio for student theatre at the annual sports and cultural meet, before an international audience.
-     </p>
-    </div>
-
-    <div class="card g">
-     <div class="flex justify-between mb-2">
-      <span class="chip">Service</span>
-      <span class="text-xs text-slate-400">Volunteer</span>
-     </div>
-
-     <p class="text-sm text-slate-300">
-      Volunteer with the Sri Sathya Sai Seva Organisation: logistics for large medical camps and rural development initiatives.
-     </p>
-    </div>
-
    </div>
   </div>
  </div>
 </section>
+
 
 <section id="projects" class="py-14 px-4 bg-slate-900/40">
  <div class="max-w-7xl mx-auto">
